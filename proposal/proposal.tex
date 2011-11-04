@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}
+
+%% Include packages
+%%\usepackage{times}
+\usepackage[margin=1in,letterpaper,portrait]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\usepackage{eucal}
+\usepackage[
+  pdftitle={},%
+  pdfauthor={},%
+  pdfsubject={},%
+  pdfkeywords={},%
+  pdfstartview=FitH,%
+  bookmarks=true,%
+  bookmarksopen=true,%
+  breaklinks=true,%
+  colorlinks=true,%
+  linkcolor=black,anchorcolor=black,%
+  citecolor=black,filecolor=black,%
+  menucolor=black,pagecolor=black,%
+  urlcolor=black,%
+  pdftex]{hyperref}
+
+%% Modify these variables
+\newcommand{\student}{Alexander Chernyakhovsky and Alan Huang}
+\newcommand{\studentemail}{achernya@mit.edu}
+\newcommand{\course}{CMS.631}
+\newcommand{\pset}{Problem Set \#8 -- Proposal}
+
+%% DO NOT MODIFY THIS SECTION
+
+\fancyhf{}
+\lhead{\course \\ \pset}
+\rhead{\student \\ \studentemail}
+\cfoot{\thepage}
+\addtolength{\headheight}{30pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\pagestyle{fancy}
+
+\newenvironment{problemset}{\begin{enumerate}}{\end{enumerate}}
+\newenvironment{problem}[1]{\item #1\\}{}
+
+%% END DO NOT MODIFY THIS SECTION
+
+%% PUT MACROS HERE
+\newcommand{\bra}{\left\langle}
+\newcommand{\ket}{\right\rangle}
+%%
+
+\begin{document}
+
+% Set up document title
+\title{\pset}
+\author{\student}
+\date{}
+\maketitle
+\thispagestyle{fancy}
+
+\section{Theme}
+The overall goal is to demonstrate the complexity behind the modern
+consumer computer; to build an appreciation for inner workings of the
+digital devices that we find are integral to our daily lives.
+
+\section{Introduction}
+The modern desktop/laptop computer is ubiquitous---yet, very few
+people outside of the engineers that design them and the programmers
+that build the software that runs them fully understand how a computer
+functions.  Most explanations cover different facets of the computer:
+logic circuits, von Neumann architecture, operating systems,
+processes, threads, interaction between programs---and so on.
+However, all of these approaches are suitable for an engineer, that
+can then extrapolate how they will interact.
+
+Such extrapolation is difficult, but provides a sense of scale to the
+overall system, and an appreciation that only comes with
+understanding.  We endevour to present a new visualization that
+accurately demonstrates the various tasks a computer must perform to
+run a simple program.  We will focus on commonly used software, e.g.,
+the Firefox web browser, OpenOffice.org document editing suite, the
+Pidgin instant messenger client, and a few other less-notable programs.
+
+\section{Audience}
+Unlike other visualizations, explanations, and visualization tools
+which target the computer-savvy that just want to know more, we will
+be targetting the average consumer.  The resulting visualization
+should be visually appealing, interactive, rich in detail, yet still
+clear.  The goal of the visualization is to break through some of the
+abstractions to bring understanding, but at the same time should still
+use these abstractions to focus the viewer's attention to important
+aspects, while still providing detail that would be appreciated by
+engineers.
+
+\section{Methods}
+We intend to use existing Linux profiling tools, namely
+\texttt{valgrind} in \texttt{callgrind} mode. If necessary, we can
+collect additional data with \texttt{OProfile} and \texttt{SystemTap}.
+
+The resulting data will then be processed by a custom collection of
+scripts, which will abstract the data and transform it into a format
+that out web-based visualization toolkit can display.  These scripts
+are already under development, and have produced functional
+visualizations for Firefox and a Tetris game.
+
+These scripts need to be further extended with context-sensitive
+layout algorithms, and multi-dimensional layout that will show linkage
+between different programs as they run on the same computer.
+
+Additionally, some work must be performed to optimize the
+visualization in Firefox---it is currently very resource intensive and
+performs well only in Chrome.
+
+\section{Data}
+Data is obtained by running the desired program under
+\texttt{valgrind}. \texttt{valgrind} was designed for use by software
+engineers to ensure that their programs are behaving correctly, by
+checking memory accesses, deadlocks, and keeping track of how many
+times a particular function was called, and from where.
+\texttt{valgrind} can also do additional checks to predict the
+performance of a program on a particular processor, by analyzing cache
+effects.
+
+With such a powerful tool at our disposal, we are able to collect data
+from any program without change, so long as debugging information is
+available, limiting us to only open source software.  Fortunately,
+many very popular programs are open source, so this is not a problem.
+
+The data collection procedure entais:
+\begin{enumerate}
+\item Install \texttt{valgrind}
+\item Install the desired program to be analyzed
+\item Install the debug information for the desired program
+\item Run the program under \texttt{valgrind}, e.g., \texttt{valgrind
+    --tool=callgrind firefox}.
+\end{enumerate}
+
+\section{References}
+The following references were surveyed in order to determine the
+current state of visualization of the workings of a computer:
+
+\begin{enumerate}
+\item pfff, an ``API to write static analysis, dynamic analysis, code
+  visualizations, code navigations, or style-preserving
+  source-to-source transformations such as refactorings on source
+  code''; \url{https://github.com/facebook/pfff/wiki/Examples}
+\item ``Visualizing IPC Messages in Fennec'', which shows
+  inter-procedure calls in Fennec, Mozilla's mobile Firefox browser;\\
+  \url{http://mozakai.blogspot.com/2010/09/visualizing-ipc-messages-in-fennec.html}
+\item ``Interactive Map of the Linux Kernel'';
+  \url{http://www.makelinux.net/kernel_map/}
+\item ``Visualizing dependencies of binaries and libraries in Linux'';\\
+  \url{http://domseichter.blogspot.com/2008/02/visualize-dependencies-of-binaries-and.html}
+\end{enumerate}
+
+\end{document}
