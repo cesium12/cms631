@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style type="text/css">
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: 0;
+  overflow: hidden;
+  background-color: black;
+  width: 100%;
+}
+
+#grid, #gover, #plot, #line, #lover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+#grid, #gover {
+  left: 0;
+}
+
+#plot, #line, #lover {
+  right: 0;
+}
+
+#lover, #gover {
+  z-index: 2;
+}
+
+#plot > div:not(#info) {
+  border: 1px solid gray;
+  position: absolute;
+  margin: -8px;
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#plot > div:not(#info).select {
+  background-color: white !important;
+  box-shadow: 0 0 20px white;
+  margin: -11px;
+  width: 20px;
+  height: 20px;
+}
+
+#plot > div:not(#info).highlight {
+  background-color: lightgray !important;
+  box-shadow: 0 0 14px lightgray;
+}
+
+#info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12pt;
+  line-height: 1em;
+  color: white;
+  font-family: "Droid Sans Mono", sans-serif;
+  white-space: nowrap;
+  text-align: right;
+}
+
+#info::first-line {
+  font-weight: bold;
+}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>
+function main() {
+  var gctx = $('#grid')[0].getContext('2d'),
+      goctx = $('#gover')[0].getContext('2d'),
+      lctx = $('#line')[0].getContext('2d'),
+      loctx = $('#lover')[0].getContext('2d'),
+      gsize, lsize;
+  document.title = document.location.pathname.match(/([^/]+)\/[^/]*$/)[1];
+  
+  $.getJSON('grind.json', function(nodes) {
+    var xy, v = [], select = null, setselect,
+        num = Math.min(nodes.length, parseInt(document.location.search.substr(1)) || 200);
+    
+    function dirname(fname) {
+      return fname.split('/').slice(0, -1).slice(0, 4).join('/');
+    }
+    
+    function drawgrid() {
+      gctx.clearRect(0, 0, gsize, gsize);
+      for(var i = 0; i < num; ++i) {
+        for(j in nodes[i][6]) {
+          gctx.fillStyle = 'rgba(255, 255, 255, ' + (nodes[i][6][j][5] / nodes[i][4]) + ')';
+          gctx.fillRect(i * gsize / num, j * gsize / num, gsize / num, gsize / num);
+          gctx.strokeRect(i * gsize / num, j * gsize / num, gsize / num, gsize / num);
+        }
+      }
+    }
+    
+    function drawover(x) {
+      goctx.clearRect(0, 0, gsize, gsize);
+      loctx.clearRect(0, 0, lsize, gsize);
+      $('.select').removeClass('select');
+      $('.highlight').removeClass('highlight');
+      $('#info').html('');
+      if(x !== undefined) {
+        goctx.strokeStyle = 'red';
+        goctx.strokeRect(x * gsize / num, 0, gsize / num, gsize);
+        goctx.strokeRect(0, x * gsize / num, gsize, gsize / num);
+        $('#info').html(nodes[x][1] + '<br>total ' + nodes[x][4] + ' / self ' + nodes[x][5]);
+        $('#' + x).addClass('select');
+        for(j in nodes[x][6])
+          if(j != x)
+            $('#' + j).addClass('highlight');
+        loctx.lineWidth = 2;
+        loctx.strokeStyle = 'red';
+        loctx.shadowColor = 'red';
+        loctx.shadowBlur = 5;
+        loctx.lineCap = 'round';
+        for(j in nodes[x][6]) {
+          loctx.beginPath();
+          loctx.moveTo(xy[x][0], xy[x][1]);
+          loctx.lineTo(xy[j][0], xy[j][1]);
+          loctx.closePath();
+          loctx.stroke();
+        }
+      }
+    }
+    
+    function drawplot() {
+      var colormap = {}, colors = 0;
+      for(var i = 0; i < num; ++i) {
+        var dir = dirname(nodes[i][1]);
+        if(typeof(colormap[dir]) !== 'number')
+          colormap[dir] = colors++;
+      }
+      for(var i = 0; i < num; ++i) {
+        var c = 256, h = 6 * colormap[dirname(nodes[i][1])] / colors, x = parseInt(c * (1 - Math.abs(h % 2 - 1)));
+        switch(parseInt(h)) {
+          case 0: color = [ c, x, 0 ].join(','); break;
+          case 1: color = [ x, c, 0 ].join(','); break;
+          case 2: color = [ 0, c, x ].join(','); break;
+          case 3: color = [ 0, x, c ].join(','); break;
+          case 4: color = [ x, 0, c ].join(','); break;
+          case 5: color = [ c, 0, x ].join(','); break;
+        }
+        $('<div>').attr('id', i).css('background-color', 'rgba(' + color + ', 0.5)').appendTo('#plot');
+      }
+    }
+    
+    function drawline() {
+      lctx.clearRect(0, 0, lsize, gsize);
+      for(var i = 0; i < num; ++i) {
+        $('#' + i).css({ right: lsize - xy[i][0], top: xy[i][1] });
+        for(var j in nodes[i][6]) {
+          var frac = 0.1 + 0.9 * nodes[i][6][j][5] / nodes[i][4];
+          lctx.strokeStyle = 'rgba(255, 255, 255, ' + frac + ')';
+          lctx.beginPath();
+          lctx.moveTo(xy[i][0], xy[i][1]);
+          lctx.lineTo(xy[j][0], xy[j][1]);
+          lctx.closePath();
+          lctx.stroke();
+        }
+      }
+    }
+    
+    drawplot();
+    
+    for(var i = 0; i < num; ++i)
+      v.push([ 0, 0 ]);
+    function updateselect(m) {
+      if(select) {
+        var n = undefined;
+        if(select.length === 2) {
+          for(var i = 0; i < num; ++i) {
+            var x = xy[i][0] - select[0], y = xy[i][1] - select[1], d2 = x * x + y * y;
+            if(d2 < m)
+              n = i, m = d2;
+          }
+        } else
+          n = select[0];
+        drawover(n);
+      }
+    }
+    function move() {
+      var any = [], com = [ 0, 0 ];
+      for(var i = 0; i < num; ++i) {
+        var xy1 = xy[i];
+        for(var j in nodes[i][6]) {
+          var xy2 = xy[j], diff = [ xy2[0] - xy1[0], xy2[1] - xy1[1] ],
+              d2 = diff[0] * diff[0] + diff[1] * diff[1];
+          if(d2 < 1)
+            continue;
+          var d = Math.sqrt(d2), x = 0.1 + 0.9 * nodes[i][6][j][5] / nodes[i][4];
+          for(var k = 0; k < 2; ++k) {
+            v[i][k] += 0.001 * x * diff[k] / d * (d - 50);
+            v[j][k] -= 0.001 * x * diff[k] / d * (d - 50);
+          }
+        }
+      }
+      for(var i = 0; i < num; ++i)
+        any[i] = v[i][0] !== 0 || v[i][1] !== 0;
+      for(var i = 0; i < num; ++i) {
+        var xy1 = xy[i];
+        for(var j = 0; j < num; ++j) {
+          var xy2 = xy[j], diff = [ xy2[0] - xy1[0], xy2[1] - xy1[1] ],
+              d2 = diff[0] * diff[0] + diff[1] * diff[1];
+          if(d2 < 1e-4)
+            continue;
+          for(var k = 0; k < 2; ++k) {
+            v[i][k] -= 0.2 * diff[k] / d2;
+            v[j][k] += 0.2 * diff[k] / d2;
+          }
+        }
+      }
+      for(var i = 0; i < num; ++i)
+        for(var k = 0; k < 2; ++k)
+          v[i][k] *= 0.95;
+      for(var i = 0; i < num; ++i)
+        for(var k = 0; k < 2; ++k) {
+          if(any[i])
+            xy[i][k] += 2 * v[i][k];
+          else
+            v[i][k] = 0;
+          com[k] += xy[i][k];
+        }
+      for(var i = 0; i < num; ++i)
+        if(any[i]) {
+          xy[i][0] += (lsize - 20) / 2 + 10 - com[0] / num;
+          xy[i][0] = Math.max(10, Math.min(lsize - 10, xy[i][0]));
+          xy[i][1] += (lsize - 20) / 2 + 10 + (gsize - lsize) / 2 - com[1] / num;
+          xy[i][1] = Math.max(10, Math.min(gsize - 10, xy[i][1]));
+        }
+      drawline();
+      updateselect(2500);
+    }
+    if(document.location.search === '?nomove') {
+      setselect = function(s) {
+        select = s;
+        updateselect(Infinity);
+      };
+    } else {
+      setselect = function(s) {
+        select = s;
+      };
+      setInterval(move, 100);
+    }
+                  
+    $(window).resize(function() {
+      gsize = $(window).height();
+      lsize = Math.min(gsize, $(window).width() - gsize);
+      $('#grid').attr({ height: gsize, width: gsize })
+                .css({ height: gsize, width: gsize });
+      $('#gover').attr({ height: gsize, width: gsize })
+                .css({ height: gsize, width: gsize });
+      $('#line').attr({ height: gsize, width: lsize })
+                .css({ height: gsize, width: lsize });
+      $('#lover').attr({ height: gsize, width: lsize })
+                .css({ height: gsize, width: lsize });
+      xy = [];
+      for(var i = 0; i < num; ++i)
+        xy.push([ (Math.sin(i * 2 * Math.PI / num) + 1) * (lsize - 20) / 2 + 10,
+                  (-Math.cos(i * 2 * Math.PI / num) + 1) * (lsize - 20) / 2 + 10 + (gsize - lsize) / 2 ]);
+      drawgrid();
+      drawline();
+    }).resize();
+    
+    $('#gover').mousemove(function(event) {
+      setselect([ parseInt(Math.min(event.pageX * num / gsize, event.pageY * num / gsize)) ]);
+    }).mouseout(function() {
+      setselect();
+      drawover();
+    });
+    $('#lover').mousemove(function(event) {
+      var p = $('#lover').offset();
+      setselect([ event.pageX - p.left, event.pageY - p.top ]);
+    }).mouseout(function() {
+      setselect();
+      drawover();
+    });
+  }).overrideMimeType("application/json");
+}
+
+WebFontConfig = {
+  google : { families : [ 'Philosopher', 'Tinos', 'Droid Sans Mono' ] },
+  active : function() { $(main); }
+};
+  </script>
+  <script async="true" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+</head>
+<body>
+  <canvas id="grid"></canvas>
+  <canvas id="gover"></canvas>
+  <div id="plot">
+    <div id="info"></div>
+    <canvas id="line"></canvas>
+    <canvas id="lover"></canvas>
+  </div>
+</body>
+</html>
