@@ -15,21 +15,17 @@ body {
   width: 100%;
 }
 
-#grid, #gover, #plot, #line, #lover {
+#plot, #line, #lover {
   position: absolute;
   top: 0;
   bottom: 0;
-}
-
-#grid, #gover {
-  left: 0;
 }
 
 #plot, #line, #lover {
   right: 0;
 }
 
-#lover, #gover {
+#lover {
   z-index: 2;
 }
 
@@ -76,11 +72,9 @@ body {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script>
 function main() {
-  var gctx = $('#grid')[0].getContext('2d'),
-      goctx = $('#gover')[0].getContext('2d'),
-      lctx = $('#line')[0].getContext('2d'),
+  var lctx = $('#line')[0].getContext('2d'),
       loctx = $('#lover')[0].getContext('2d'),
-      gsize, lsize;
+      gsize, lsize, minsize;
   document.title = document.location.pathname.match(/([^/]+)\/[^/]*$/)[1];
   
   $.getJSON('grind.json', function(nodes) {
@@ -91,27 +85,12 @@ function main() {
       return fname.split('/').slice(0, -1).slice(0, 4).join('/');
     }
     
-    function drawgrid() {
-      gctx.clearRect(0, 0, gsize, gsize);
-      for(var i = 0; i < num; ++i) {
-        for(j in nodes[i][6]) {
-          gctx.fillStyle = 'rgba(255, 255, 255, ' + (nodes[i][6][j][5] / nodes[i][4]) + ')';
-          gctx.fillRect(i * gsize / num, j * gsize / num, gsize / num, gsize / num);
-          gctx.strokeRect(i * gsize / num, j * gsize / num, gsize / num, gsize / num);
-        }
-      }
-    }
-    
     function drawover(x) {
-      goctx.clearRect(0, 0, gsize, gsize);
       loctx.clearRect(0, 0, lsize, gsize);
       $('.select').removeClass('select');
       $('.highlight').removeClass('highlight');
       $('#info').html('');
       if(x !== undefined) {
-        goctx.strokeStyle = 'red';
-        goctx.strokeRect(x * gsize / num, 0, gsize / num, gsize);
-        goctx.strokeRect(0, x * gsize / num, gsize, gsize / num);
         $('#info').html(nodes[x][1] + '<br>total ' + nodes[x][4] + ' / self ' + nodes[x][5]);
         $('#' + x).addClass('select');
         for(j in nodes[x][6])
@@ -231,10 +210,17 @@ function main() {
         }
       for(var i = 0; i < num; ++i)
         if(any[i]) {
-          xy[i][0] += (lsize - 20) / 2 + 10 - com[0] / num;
+          /**
+          xy[i][0] += (minsize - 20) / 2 + 10 + (lsize - minsize) / 2 - com[0] / num;
           xy[i][0] = Math.max(10, Math.min(lsize - 10, xy[i][0]));
-          xy[i][1] += (lsize - 20) / 2 + 10 + (gsize - lsize) / 2 - com[1] / num;
+          xy[i][1] += (minsize - 20) / 2 + 10 + (gsize - minsize) / 2 - com[1] / num;
           xy[i][1] = Math.max(10, Math.min(gsize - 10, xy[i][1]));
+          /*/
+          var theta = Math.atan2(xy[i][0] - lsize / 2, xy[i][1] - gsize / 2),
+              radius = (minsize - 20) * nodes[i][2] / layer / 2;
+          xy[i] = [ (minsize - 20) / 2 + radius * Math.sin(theta) + 10 + (lsize - minsize) / 2,
+                    (minsize - 20) / 2 + radius * Math.cos(theta) + 10 + (gsize - minsize) / 2 ];
+          /**/
         }
       drawline();
       updateselect(2500);
@@ -250,32 +236,53 @@ function main() {
       };
       setInterval(move, 100);
     }
-                  
+    
+    var todo = { 45: true }, layer = 0, adj = {};
+    for(var i = 0; i < num; ++i)
+      adj[i] = {};
+    for(var i = 0; i < num; ++i) {
+      for(var j in nodes[i][6])
+        adj[i][j] = adj[j][i] = true;
+    }
+    while(true) {
+      var next = {};
+      cont = false;
+      for(var i in todo)
+        if(nodes[i][2] === null) {
+          nodes[i][2] = layer;
+          for(var j in adj[i])
+            next[j] = true;
+          cont = true;
+        }
+      todo = next;
+      if(!cont)
+        break;
+      ++layer;
+    }
+    for(var i = 0; i < num; ++i)
+      if(nodes[i][2] === null)
+        nodes[i][2] = layer;
+    --layer;
+    
     $(window).resize(function() {
       gsize = $(window).height();
-      lsize = Math.min(gsize, $(window).width() - gsize);
-      $('#grid').attr({ height: gsize, width: gsize })
-                .css({ height: gsize, width: gsize });
-      $('#gover').attr({ height: gsize, width: gsize })
-                .css({ height: gsize, width: gsize });
+      lsize = $(window).width();
+      minsize = Math.min(gsize, lsize);
       $('#line').attr({ height: gsize, width: lsize })
                 .css({ height: gsize, width: lsize });
       $('#lover').attr({ height: gsize, width: lsize })
                 .css({ height: gsize, width: lsize });
       xy = [];
-      for(var i = 0; i < num; ++i)
-        xy.push([ (Math.sin(i * 2 * Math.PI / num) + 1) * (lsize - 20) / 2 + 10,
-                  (-Math.cos(i * 2 * Math.PI / num) + 1) * (lsize - 20) / 2 + 10 + (gsize - lsize) / 2 ]);
-      drawgrid();
+      for(var i = 0; i < num; ++i) {
+        /*xy.push([ (Math.sin(i * 2 * Math.PI / num) + 1) * (minsize - 20) / 2 + 10 + (lsize - minsize) / 2,
+                  (-Math.cos(i * 2 * Math.PI / num) + 1) * (minsize - 20) / 2 + 10 + (gsize - minsize) / 2 ]);*/
+        var theta = Math.random() * 2 * Math.PI, radius = (minsize - 20) * nodes[i][2] / layer / 2;
+        xy.push([ (minsize - 20) / 2 + radius * Math.sin(theta) + 10 + (lsize - minsize) / 2,
+                  (minsize - 20) / 2 - radius * Math.cos(theta) + 10 + (gsize - minsize) / 2 ]);
+      }
       drawline();
     }).resize();
     
-    $('#gover').mousemove(function(event) {
-      setselect([ parseInt(Math.min(event.pageX * num / gsize, event.pageY * num / gsize)) ]);
-    }).mouseout(function() {
-      setselect();
-      drawover();
-    });
     $('#lover').mousemove(function(event) {
       var p = $('#lover').offset();
       setselect([ event.pageX - p.left, event.pageY - p.top ]);
@@ -294,8 +301,6 @@ WebFontConfig = {
   <script async="true" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 </head>
 <body>
-  <canvas id="grid"></canvas>
-  <canvas id="gover"></canvas>
   <div id="plot">
     <div id="info"></div>
     <canvas id="line"></canvas>
