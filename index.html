@@ -112,10 +112,9 @@ body {
   <script src="jquery.mousewheel.min.js"></script>
   <script src="callgrind.js"></script>
   <script>
-var lctx, loctx, gsize, lsize, minsize;
+var lctx, loctx, gsize, lsize, minsize, select = null, zoom = 0, minzoom = 0, enable = true;
 
 function main() {
-  var enable = true;
   lctx = $('#line')[0].getContext('2d');
   loctx = $('#lover')[0].getContext('2d');
   
@@ -126,6 +125,20 @@ function main() {
     $('.full').css({ height: gsize, width: lsize });
     $('canvas.full').attr({ height: gsize, width: lsize });
   }).resize();
+  
+  $(document).mousemove(function(event) {
+    select = [ event.pageX, event.pageY ];
+  }).mouseout(function() {
+    select = null;
+  }).keypress(function(event) {
+    if(minzoom)
+      switch(event.which) {
+        case 45:
+          zoom /= 1.1; break;
+        case 61:
+          zoom *= 1.1; break;
+      }
+  });
   
   $.getJSON('config.json', function(config) {
     for(var i = 0; i < config.callgrind.length; ++i) {
@@ -143,19 +156,19 @@ function main() {
             return;
           enable = false;
           var cg = new Callgrind(id, function() {
-            cg.setminzoom(0);
+            minzoom = 0;
             $('#back,#container').fadeIn(2000);
             logo.animate(dim(80), {
               duration: 3000,
-              step: function(now) { cg.setzoom(now); },
+              step: function(now) { zoom = now; },
               complete: function() { cg.kill(); delete cg; enable = true; }
             });
           }, [ logo.offset().left + 40, logo.offset().top + 40 ]);
           $('#back,#container').fadeOut(2000);
           logo.animate(dim(320), {
             duration: 3000,
-            step: function(now) { cg.setzoom(now); },
-            complete: function() { logo.css(dim(160)); cg.setminzoom(160); }
+            step: function(now) { zoom = now; },
+            complete: function() { logo.css(dim(160)); minzoom = 160; }
           });
         };
       })(id));

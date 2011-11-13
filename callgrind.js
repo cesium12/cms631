@@ -1,7 +1,5 @@
 function Callgrind(id, destroy, center) {
-  var zoom = minsize, minzoom = 0, interval;
-  this.setzoom    = function(z) { zoom    = z; };
-  this.setminzoom = function(z) { minzoom = z; };
+  var interval;
   this.kill = function() {
     clearInterval(interval);
     lctx.clearRect(0, 0, lsize, gsize);
@@ -10,15 +8,15 @@ function Callgrind(id, destroy, center) {
   }
   
   $.getJSON(id + '/grind.json', function(nodes) {
-    var xy, v, any, adj, select = null, num = nodes.length, color,
+    var xy, v, any, adj, num = nodes.length, color,
         tcanvas = $('<canvas>').attr({ width: 8, height: 1 })[0],
         tctx = tcanvas.getContext('2d'),
         grad = tctx.createRadialGradient(4, 0, 0, 4, 0, 4);
-    grad.addColorStop(0, 'red');
-    grad.addColorStop(1, 'green');
+    grad.addColorStop(0, 'orange');
+    grad.addColorStop(1, 'blue');
     tctx.fillStyle = grad;
     tctx.fillRect(0, 0, 8, 1);
-    colors = [ null, 'red', 'green', loctx.createPattern(tcanvas, 'repeat') ];
+    colors = [ null, 'orange', 'blue', loctx.createPattern(tcanvas, 'repeat') ];
     
     if(Callgrind.cache[id]) {
       xy = Callgrind.cache[id][0];
@@ -147,24 +145,26 @@ function Callgrind(id, destroy, center) {
     }
     
     function updateselect(m) {
-      if(select) {
-        var n = undefined;
-        if(select.length === 2) {
-          for(var i = 0; i < num; ++i) {
-            var x = tr(xy[i], 0) - select[0], y = tr(xy[i], 1) - select[1],
-                d2 = x * x + y * y;
-            if(d2 < m)
-              n = i, m = d2;
-          }
-        } else
-          n = select[0];
-      }
+      var n = undefined;
+      if(select)
+        for(var i = 0; i < num; ++i) {
+          var x = tr(xy[i], 0) - select[0], y = tr(xy[i], 1) - select[1],
+              d2 = x * x + y * y;
+          if(d2 < m)
+            n = i, m = d2;
+        }
       drawover(n);
     }
     
     function move() {
+      if(select) {
+        if(zoom > lsize)
+          center[0] = select[0] + (lsize / 2 - select[0]) * zoom * 1.1 / lsize;
+        if(zoom > gsize)
+          center[1] = select[1] + (gsize / 2 - select[1]) * zoom * 1.1 / gsize;
+      }
       if(zoom < minzoom)
-        return destroy();
+        destroy();
       var com = [ 0, 0 ];
       for(var i = 0; i < num; ++i) {
         if(!any[i])
@@ -216,23 +216,7 @@ function Callgrind(id, destroy, center) {
       updateselect(2500);
     }
     
-    $(document).mousemove(function(event) {
-      select = [ event.pageX, event.pageY ];
-      if(zoom > minsize) {
-        center[0] = event.pageX + (lsize / 2 - event.pageX) * zoom / lsize;
-        center[1] = event.pageY + (gsize / 2 - event.pageY) * zoom / gsize;
-      }
-    }).mouseout(function() {
-      select = null;
-    }).keypress(function(event) {
-      if(minzoom)
-        switch(event.which) {
-          case 45:
-            zoom /= 1.1; break;
-          case 61:
-            zoom *= 1.1; break;
-        }
-    });
+    
     
     drawplot();
     interval = setInterval(move, 100);
