@@ -10,7 +10,7 @@ function Callgrind(id, destroy, center) {
   }
   
   $.getJSON(id + '/grind.json', function(nodes) {
-    var xy = [], v = [], select = null, any = [], adj = [], num = nodes.length, color,
+    var xy, v, any, adj, select = null, num = nodes.length, color,
         tcanvas = $('<canvas>').attr({ width: 8, height: 1 })[0],
         tctx = tcanvas.getContext('2d'),
         grad = tctx.createRadialGradient(4, 0, 0, 4, 0, 4);
@@ -20,21 +20,33 @@ function Callgrind(id, destroy, center) {
     tctx.fillRect(0, 0, 8, 1);
     colors = [ null, 'red', 'green', loctx.createPattern(tcanvas, 'repeat') ];
     
-    for(var i = 0; i < num; ++i) {
-      xy.push([ ( Math.sin(i * 2 * Math.PI / num)) / 2,
-                (-Math.cos(i * 2 * Math.PI / num)) / 2 ]);
-      v.push([ 0, 0 ]);
-      adj.push({});
-      any[i] = false;
-      for(var j in nodes[i][6])
-        if(i != j)
-          any[i] = any[j] = true;
-    }
-    for(var i = 0; i < num; ++i)
-      for(var j in nodes[i][6]) {
-        adj[i][j] |= 1;
-        adj[j][i] |= 2;
+    if(Callgrind.cache[id]) {
+      xy = Callgrind.cache[id][0];
+      v = Callgrind.cache[id][1];
+      any = Callgrind.cache[id][2];
+      adj = Callgrind.cache[id][3];
+    } else {
+      xy = [];
+      v = [];
+      any = [];
+      adj = [];
+      Callgrind.cache[id] = [ xy, v, any, adj ];
+      for(var i = 0; i < num; ++i) {
+        xy.push([ ( Math.sin(i * 2 * Math.PI / num)) / 2,
+                  (-Math.cos(i * 2 * Math.PI / num)) / 2 ]);
+        v.push([ 0, 0 ]);
+        adj.push({});
+        any[i] = false;
+        for(var j in nodes[i][6])
+          if(i != j)
+            any[i] = any[j] = true;
       }
+      for(var i = 0; i < num; ++i)
+        for(var j in nodes[i][6]) {
+          adj[i][j] |= 1;
+          adj[j][i] |= 2;
+        }
+    }
     
     function dirname(fname) {
       return fname.split('/').slice(0, -1).slice(0, 4).join('/');
@@ -205,8 +217,11 @@ function Callgrind(id, destroy, center) {
     }
     
     $(document).mousemove(function(event) {
-      var p = $('#lover').offset();
-      select = [ event.pageX - p.left, event.pageY - p.top ];
+      select = [ event.pageX, event.pageY ];
+      if(zoom > minsize) {
+        center[0] = event.pageX + (lsize / 2 - event.pageX) * zoom / lsize;
+        center[1] = event.pageY + (gsize / 2 - event.pageY) * zoom / gsize;
+      }
     }).mouseout(function() {
       select = null;
     }).keypress(function(event) {
@@ -223,3 +238,4 @@ function Callgrind(id, destroy, center) {
     interval = setInterval(move, 100);
   }).overrideMimeType("application/json");
 }
+Callgrind.cache = {};
