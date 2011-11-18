@@ -1,0 +1,1989 @@
+CPU: AMD64 family10, speed 800 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Cycles outside of halt state) with a unit mask of 0x00 (No unit mask) count 750000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+  3275094 61.1363 vmlinux
+   636205 11.8761 python
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	   604219 94.9724 libpython2.7.so.1.0
+	    12315  1.9357 vmlinux
+	     9683  1.5220 libcrypto.so.1.0.0e
+	     3149  0.4950 libc-2.14.90.so
+	     1891  0.2972 libsqlite3.so.0.8.6
+	     1601  0.2516 librpm.so.2.0.2
+	     1310  0.2059 libdb-4.8.so
+	     1025  0.1611 libpthread-2.14.90.so
+	      295  0.0464 _sqlite3.so
+	      232  0.0365 libexpat.so.1.5.2
+	      161  0.0253 ld-2.14.90.so
+	      114  0.0179 librpmio.so.2.0.1
+	       73  0.0115 _elementtree.so
+	       32  0.0050 libz.so.1.2.5
+	       23  0.0036 _rpmmodule.so
+	       18  0.0028 [vdso] (tgid:3604 range:0x7fff359ff000-0x7fff35a00000)
+	       11  0.0017 ath9k
+	        8  0.0013 libnsspem.so
+	        7  0.0011 libfreebl3.so
+	        5 7.9e-04 libcurl.so.4.2.0
+	        4 6.3e-04 mac80211
+	        4 6.3e-04 libnss3.so
+	        4 6.3e-04 pycurl.so
+	        3 4.7e-04 ath9k_hw
+	        2 3.1e-04 radeon
+	        2 3.1e-04 libdl-2.14.90.so
+	        2 3.1e-04 libnspr4.so
+	        2 3.1e-04 libplds4.so
+	        2 3.1e-04 _hashlib.so
+	        1 1.6e-04 oprofile
+	        1 1.6e-04 libnss_files-2.14.90.so
+	        1 1.6e-04 libnss_mdns4_minimal.so.2
+	        1 1.6e-04 libselinux.so.1
+	        1 1.6e-04 liblua-5.1.so
+	        1 1.6e-04 libnssutil3.so
+	        1 1.6e-04 libssl3.so
+	        1 1.6e-04 cStringIO.so
+   534026  9.9687 firefox
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	   258918 48.4842 vmlinux
+	    66922 12.5316 libxul.so
+	    38793  7.2643 libglib-2.0.so.0.3000.1
+	    29265  5.4801 libmozjs.so
+	    29173  5.4628 libpthread-2.14.90.so
+	    23665  4.4314 libsqlite3.so.0.8.6
+	    15874  2.9725 firefox
+	    10411  1.9495 libc-2.14.90.so
+	     8881  1.6630 libdbus-1.so.3.5.6
+	     8382  1.5696 nswrapper_64_64.libflashplayer.so
+	     7332  1.3730 libnspr4.so
+	     5118  0.9584 libX11.so.6.3.0
+	     4724  0.8846 [vdso] (tgid:3255 range:0x7fff261ff000-0x7fff26200000)
+	     4619  0.8649 libxcb.so.1.1.0
+	     3681  0.6893 libgdk-x11-2.0.so.0.2400.7
+	     2182  0.4086 libgobject-2.0.so.0.3000.1
+	     1715  0.3211 libcairo.so.2.11000.2
+	     1359  0.2545 libfontconfig.so.1.4.4
+	     1238  0.2318 libgio-2.0.so.0.3000.1
+	      980  0.1835 librt-2.14.90.so
+	      916  0.1715 ld-2.14.90.so
+	      827  0.1549 libgthread-2.0.so.0.3000.1
+	      797  0.1492 libz.so.1.2.5
+	      738  0.1382 libdbus-glib-1.so.2.1.0
+	      706  0.1322 libgvfscommon.so.0.0.0
+	      676  0.1266 libjpeg.so.62.0.0
+	      623  0.1167 libORBit-2.so.0.1.0
+	      591  0.1107 libmozalloc.so
+	      515  0.0964 ath9k
+	      508  0.0951 libm-2.14.90.so
+	      235  0.0440 libgtk-x11-2.0.so.0.2400.7
+	      231  0.0433 anon (tgid:3255 range:0x7fe93ae6c000-0x7fe93af9c000)
+	      185  0.0346 libfreetype.so.6.7.1
+	      165  0.0309 anon (tgid:3255 range:0x7fe939409000-0x7fe9394a9000)
+	      153  0.0287 anon (tgid:3255 range:0x7fe9394b0000-0x7fe939500000)
+	      150  0.0281 anon (tgid:3255 range:0x7fe92cb00000-0x7fe92cd00000)
+	      142  0.0266 libplds4.so
+	      123  0.0230 ath9k_hw
+	      116  0.0217 mac80211
+	      105  0.0197 libresolv-2.14.90.so
+	       93  0.0174 libfreebl3.so
+	       82  0.0154 libplc4.so
+	       79  0.0148 libXrender.so.1.3.0
+	       75  0.0140 anon (tgid:3255 range:0x7fe9387b5000-0x7fe938855000)
+	       72  0.0135 nf_conntrack
+	       71  0.0133 anon (tgid:3255 range:0x7fe938745000-0x7fe938825000)
+	       67  0.0125 anon (tgid:3255 range:0x7fe938785000-0x7fe938845000)
+	       60  0.0112 anon (tgid:3255 range:0x7fe938755000-0x7fe938855000)
+	       54  0.0101 libpixman-1.so.0.22.2
+	       49  0.0092 anon (tgid:3255 range:0x7fe91a471000-0x7fe91a491000)
+	       44  0.0082 anon (tgid:3255 range:0x7fe9387e5000-0x7fe938855000)
+	       42  0.0079 anon (tgid:3255 range:0x7fe919000000-0x7fe91a200000)
+	       42  0.0079 anon (tgid:3255 range:0x7fe9396d0000-0x7fe939700000)
+	       41  0.0077 anon (tgid:3255 range:0x7fe939803000-0x7fe939823000)
+	       37  0.0069 anon (tgid:3255 range:0x7fe938715000-0x7fe938855000)
+	       36  0.0067 anon (tgid:3255 range:0x7fe9172ff000-0x7fe9173ff000)
+	       36  0.0067 anon (tgid:3255 range:0x7fe93777f000-0x7fe9377ff000)
+	       35  0.0066 anon (tgid:3255 range:0x7fe92a700000-0x7fe92b000000)
+	       33  0.0062 [stack] (tgid:3255 range:0x7fff26086000-0x7fff260b7000)
+	       32  0.0060 anon (tgid:3255 range:0x7fe938735000-0x7fe938845000)
+	       29  0.0054 anon (tgid:3255 range:0x7fe938705000-0x7fe938845000)
+	       29  0.0054 anon (tgid:3255 range:0x7fe938755000-0x7fe9387e5000)
+	       29  0.0054 anon (tgid:3255 range:0x7fe939479000-0x7fe939500000)
+	       28  0.0052 anon (tgid:3255 range:0x7fe93ae6c000-0x7fe93af1c000)
+	       26  0.0049 anon (tgid:3255 range:0x7fe93ae06000-0x7fe93ae46000)
+	       26  0.0049 anon (tgid:3255 range:0x7fe954900000-0x7fe954a00000)
+	       25  0.0047 anon (tgid:3255 range:0x7fe938845000-0x7fe938855000)
+	       25  0.0047 anon (tgid:3255 range:0x7fe93c20b000-0x7fe93c22b000)
+	       24  0.0045 anon (tgid:3255 range:0x7fe955a66000-0x7fe955b6c000)
+	       22  0.0041 anon (tgid:3255 range:0x7fe938705000-0x7fe938855000)
+	       21  0.0039 anon (tgid:3255 range:0x7fe938825000-0x7fe938855000)
+	       21  0.0039 anon (tgid:3255 range:0x7fe938a00000-0x7fe939400000)
+	       21  0.0039 libnss3.so
+	       20  0.0037 anon (tgid:3255 range:0x7fe9387d5000-0x7fe938855000)
+	       20  0.0037 anon (tgid:3255 range:0x7fe939865000-0x7fe9398a5000)
+	       20  0.0037 libnssckbi.so
+	       18  0.0034 anon (tgid:3255 range:0x7fe91ac73000-0x7fe91b473000)
+	       17  0.0032 anon (tgid:3255 range:0x7fe938745000-0x7fe938845000)
+	       16  0.0030 anon (tgid:3255 range:0x7fe91d800000-0x7fe91da00000)
+	       16  0.0030 anon (tgid:3255 range:0x7fe938735000-0x7fe9387b5000)
+	       16  0.0030 libsoftokn3.so
+	       15  0.0028 anon (tgid:3255 range:0x7fe939865000-0x7fe939895000)
+	       14  0.0026 anon (tgid:3255 range:0x7fe91ec00000-0x7fe91ee00000)
+	       14  0.0026 anon (tgid:3255 range:0x7fe938705000-0x7fe938755000)
+	       14  0.0026 anon (tgid:3255 range:0x7fe938725000-0x7fe9387b5000)
+	       14  0.0026 anon (tgid:3255 range:0x7fe939409000-0x7fe939500000)
+	       14  0.0026 anon (tgid:3255 range:0x7fe93ae06000-0x7fe93ae36000)
+	       14  0.0026 nf_nat
+	       13  0.0024 anon (tgid:3255 range:0x7fe93ae9c000-0x7fe93af9c000)
+	       12  0.0022 cfg80211
+	       12  0.0022 iptable_nat
+	       12  0.0022 libnss_files-2.14.90.so
+	       12  0.0022 libssl3.so
+	       11  0.0021 anon (tgid:3255 range:0x7fe91a472000-0x7fe91ac72000)
+	       11  0.0021 anon (tgid:3255 range:0x7fe925900000-0x7fe925b00000)
+	       11  0.0021 anon (tgid:3255 range:0x7fe9394c0000-0x7fe939500000)
+	       11  0.0021 anon (tgid:3255 range:0x7fe93b800000-0x7fe93c200000)
+	       11  0.0021 radeon
+	       10  0.0019 anon (tgid:3255 range:0x7fe9173cf000-0x7fe9173ff000)
+	       10  0.0019 anon (tgid:3255 range:0x7fe9387d5000-0x7fe938845000)
+	       10  0.0019 anon (tgid:3255 range:0x7fe93a500000-0x7fe93ae00000)
+	       10  0.0019 libgcc_s-4.6.2-20111027.so.1
+	       10  0.0019 libnss_dns-2.14.90.so
+	       10  0.0019 libGL.so.1.2
+	        9  0.0017 anon (tgid:3255 range:0x7fe91ce00000-0x7fe91d000000)
+	        9  0.0017 anon (tgid:3255 range:0x7fe925b00000-0x7fe925d00000)
+	        9  0.0017 anon (tgid:3255 range:0x7fe936d0f000-0x7fe936dcf000)
+	        9  0.0017 anon (tgid:3255 range:0x7fe93ae36000-0x7fe93ae46000)
+	        9  0.0017 nf_conntrack_ipv4
+	        9  0.0017 libclearlooks.so
+	        9  0.0017 libpango-1.0.so.0.2904.0
+	        8  0.0015 anon (tgid:3255 range:0x7fe91c800000-0x7fe91ca00000)
+	        8  0.0015 anon (tgid:3255 range:0x7fe91de00000-0x7fe91e000000)
+	        8  0.0015 anon (tgid:3255 range:0x7fe91e400000-0x7fe91e600000)
+	        8  0.0015 anon (tgid:3255 range:0x7fe92c700000-0x7fe92c900000)
+	        8  0.0015 anon (tgid:3255 range:0x7fe935fbc000-0x7fe935ffc000)
+	        8  0.0015 anon (tgid:3255 range:0x7fe93778f000-0x7fe9377ff000)
+	        8  0.0015 anon (tgid:3255 range:0x7fe9398fe000-0x7fe939cfe000)
+	        7  0.0013 anon (tgid:3255 range:0x7fe91d400000-0x7fe91d600000)
+	        7  0.0013 anon (tgid:3255 range:0x7fe91e800000-0x7fe91ea00000)
+	        7  0.0013 anon (tgid:3255 range:0x7fe926100000-0x7fe926300000)
+	        7  0.0013 anon (tgid:3255 range:0x7fe936e00000-0x7fe937700000)
+	        7  0.0013 anon (tgid:3255 range:0x7fe93af1c000-0x7fe93af9c000)
+	        7  0.0013 anon (tgid:3255 range:0x7fe93af3c000-0x7fe93af9c000)
+	        7  0.0013 anon (tgid:3255 range:0x7fe93af4c000-0x7fe93af9c000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe917400000-0x7fe917f00000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe91ca00000-0x7fe91cc00000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe91cc00000-0x7fe91ce00000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe91dc00000-0x7fe91de00000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe91e000000-0x7fe91e200000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe924500000-0x7fe924700000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe924700000-0x7fe924900000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe924900000-0x7fe924b00000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe925f00000-0x7fe926100000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe926f00000-0x7fe927800000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe92cd00000-0x7fe92ce00000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe938745000-0x7fe938785000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe939700000-0x7fe939800000)
+	        6  0.0011 anon (tgid:3255 range:0x7fe93af2b000-0x7fe93af4b000)
+	        6  0.0011 libnss_mdns4_minimal.so.2
+	        5 9.4e-04 anon (tgid:3255 range:0x7fe918400000-0x7fe918500000)
+	        5 9.4e-04 anon (tgid:3255 range:0x7fe91d200000-0x7fe91d400000)
+	        5 9.4e-04 anon (tgid:3255 range:0x7fe91da00000-0x7fe91dc00000)
+	        5 9.4e-04 anon (tgid:3255 range:0x7fe91e200000-0x7fe91e400000)
+	        5 9.4e-04 anon (tgid:3255 range:0x7fe926500000-0x7fe926e00000)
+	        5 9.4e-04 anon (tgid:3255 range:0x7fe938400000-0x7fe938700000)
+	        5 9.4e-04 anon (tgid:3255 range:0x7fe939895000-0x7fe9398a5000)
+	        5 9.4e-04 anon (tgid:3255 range:0x7fe93af9d000-0x7fe93afcd000)
+	        5 9.4e-04 nf_defrag_ipv4
+	        5 9.4e-04 libexpat.so.1.5.2
+	        5 9.4e-04 libnssutil3.so
+	        4 7.5e-04 anon (tgid:3255 range:0x7fe91d000000-0x7fe91d200000)
+	        4 7.5e-04 anon (tgid:3255 range:0x7fe91ea00000-0x7fe91ec00000)
+	        4 7.5e-04 anon (tgid:3255 range:0x7fe925d00000-0x7fe925f00000)
+	        4 7.5e-04 anon (tgid:3255 range:0x7fe933c00000-0x7fe933e00000)
+	        4 7.5e-04 anon (tgid:3255 range:0x7fe935fcc000-0x7fe935ffc000)
+	        4 7.5e-04 anon (tgid:3255 range:0x7fe936d0f000-0x7fe936ddf000)
+	        4 7.5e-04 anon (tgid:3255 range:0x7fe93ae8c000-0x7fe93af9c000)
+	        4 7.5e-04 libXss.so.1.0.0
+	        3 5.6e-04 [stack] (tgid:3255 range:0x7fff2608e000-0x7fff260b7000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe9172bf000-0x7fe9173ff000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe91c800000-0x7fe91c900000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe91e600000-0x7fe91e800000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe91ee00000-0x7fe91ef00000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe924b00000-0x7fe924d00000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe924f00000-0x7fe925900000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe935e00000-0x7fe935f00000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe936d4f000-0x7fe936dcf000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe937800000-0x7fe938200000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe938705000-0x7fe938735000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe939409000-0x7fe939469000)
+	        3 5.6e-04 anon (tgid:3255 range:0x7fe93aedc000-0x7fe93af9c000)
+	        3 5.6e-04 ath
+	        3 5.6e-04 iptable_mangle
+	        3 5.6e-04 oprofile
+	        3 5.6e-04 r600_dri.so
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe91c3ff000-0x7fe91c600000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe91ce00000-0x7fe91cf00000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe91d600000-0x7fe91d800000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe927900000-0x7fe928200000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe935c00000-0x7fe935e00000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe936d4f000-0x7fe936d8f000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe936d9f000-0x7fe936ddf000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe936dbf000-0x7fe936ddf000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe938200000-0x7fe938400000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe9396e0000-0x7fe939700000)
+	        2 3.7e-04 anon (tgid:3255 range:0x7fe939875000-0x7fe9398a5000)
+	        2 3.7e-04 drm
+	        2 3.7e-04 UTF-16.so
+	        2 3.7e-04 libICE.so.6.3.0
+	        2 3.7e-04 libXext.so.6.4.0
+	        2 3.7e-04 libLLVM-2.9.so
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe916900000-0x7fe917200000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe918000000-0x7fe918300000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe919200000-0x7fe91a400000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe91ac82000-0x7fe91ac92000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe91c600000-0x7fe91c800000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe91d600000-0x7fe91d700000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe928b00000-0x7fe929400000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe92c900000-0x7fe92cb00000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe935fdc000-0x7fe935fec000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe936d4f000-0x7fe936d9f000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe936d5f000-0x7fe936d8f000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe936d5f000-0x7fe936dcf000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe936d6f000-0x7fe936d8f000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe936d7f000-0x7fe936dbf000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe936d8f000-0x7fe936d9f000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe936d8f000-0x7fe936daf000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe93778f000-0x7fe9377df000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe9377af000-0x7fe9377cf000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe9377df000-0x7fe9377ff000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe938705000-0x7fe938725000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe938775000-0x7fe938855000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe939439000-0x7fe9394a9000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe939500000-0x7fe939600000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe939500000-0x7fe939800000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe939605000-0x7fe939615000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe93aefc000-0x7fe93af1c000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe93af2b000-0x7fe93af3b000)
+	        1 1.9e-04 anon (tgid:3255 range:0x7fe9546fd000-0x7fe9546fe000)
+	        1 1.9e-04 bridge
+	        1 1.9e-04 r8169
+	        1 1.9e-04 snd_hda_intel
+	        1 1.9e-04 xt_state
+	        1 1.9e-04 libgcrypt.so.11.7.0
+	        1 1.9e-04 IcedTeaPlugin.so
+	        1 1.9e-04 libgdk_pixbuf-2.0.so.0.2400.0
+	        1 1.9e-04 libgnomeui-2.so.0.2400.5
+	        1 1.9e-04 libpangoft2-1.0.so.0.2904.0
+	        1 1.9e-04 libpng12.so.0.46.0
+	        1 1.9e-04 librpm.so.2.0.2
+	        1 1.9e-04 libsmime3.so
+   368410  6.8771 npviewer.bin
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	   205047 55.6573 vmlinux
+	    85847 23.3020 libflashplayer.so
+	    17240  4.6796 libglib-2.0.so.0.3000.1
+	    16812  4.5634 libc-2.14.90.so
+	    13480  3.6590 libpthread-2.14.90.so
+	     6728  1.8262 npviewer.bin
+	     5803  1.5751 [vdso] (tgid:3341 range:0x7fff25102000-0x7fff25103000)
+	     3910  1.0613 libX11.so.6.3.0
+	     2795  0.7587 libxcb.so.1.1.0
+	     2332  0.6330 libm-2.14.90.so
+	     2316  0.6286 libgdk-x11-2.0.so.0.2400.7
+	     1298  0.3523 libgobject-2.0.so.0.3000.1
+	     1163  0.3157 libfontconfig.so.1.4.4
+	     1131  0.3070 librt-2.14.90.so
+	      410  0.1113 libgthread-2.0.so.0.3000.1
+	      139  0.0377 anon (tgid:3341 range:0x7ff19d4b9000-0x7ff19d597000)
+	      138  0.0375 libfreetype.so.6.7.1
+	      136  0.0369 anon (tgid:3341 range:0x7ff19df81000-0x7ff19e1d0000)
+	      128  0.0347 anon (tgid:3341 range:0x7ff19d7be000-0x7ff19da1b000)
+	      121  0.0328 anon (tgid:3341 range:0x7ff19d816000-0x7ff19d9e4000)
+	      110  0.0299 anon (tgid:3341 range:0x7ff19cb50000-0x7ff19d4a9000)
+	      110  0.0299 ath9k
+	      109  0.0296 ld-2.14.90.so
+	      102  0.0277 anon (tgid:3341 range:0x7ff19dbd1000-0x7ff19df71000)
+	       89  0.0242 anon (tgid:3341 range:0x7ff19db14000-0x7ff19dc24000)
+	       84  0.0228 anon (tgid:3341 range:0x7ff19e1d0000-0x7ff19e350000)
+	       61  0.0166 libgtk-x11-2.0.so.0.2400.7
+	       57  0.0155 anon (tgid:3341 range:0x7ff19dc58000-0x7ff19de82000)
+	       53  0.0144 anon (tgid:3341 range:0x7ff19d373000-0x7ff19d4c8000)
+	       47  0.0128 anon (tgid:3341 range:0x7ff19d641000-0x7ff19d651000)
+	       42  0.0114 anon (tgid:3341 range:0x7ff19d9e4000-0x7ff19db14000)
+	       39  0.0106 anon (tgid:3341 range:0x7ff19e16e000-0x7ff19e1ce000)
+	       37  0.0100 anon (tgid:3341 range:0x7ff19d5e0000-0x7ff19d665000)
+	       36  0.0098 anon (tgid:3341 range:0x7ff19d363000-0x7ff19d373000)
+	       36  0.0098 anon (tgid:3341 range:0x7ff19de92000-0x7ff19df8f000)
+	       35  0.0095 ath9k_hw
+	       33  0.0090 anon (tgid:3341 range:0x7ff19d5a7000-0x7ff19d806000)
+	       29  0.0079 [heap] (tgid:3341 range:0x1c7a000-0x1f5a000)
+	       28  0.0076 [heap] (tgid:3341 range:0x1c7a000-0x1fd4000)
+	       27  0.0073 anon (tgid:3341 range:0x7ff19df9f000-0x7ff19e053000)
+	       23  0.0062 mac80211
+	       20  0.0054 anon (tgid:3341 range:0x7ff19dc24000-0x7ff19dc34000)
+	       18  0.0049 anon (tgid:3341 range:0x7ff19def5000-0x7ff19df05000)
+	       16  0.0043 anon (tgid:3341 range:0x7ff19d579000-0x7ff19d5d0000)
+	       13  0.0035 anon (tgid:3341 range:0x7ff19da8f000-0x7ff19db24000)
+	       12  0.0033 anon (tgid:3341 range:0x7ff19e0c0000-0x7ff19e15e000)
+	       11  0.0030 anon (tgid:3341 range:0x7ff19da1b000-0x7ff19da7f000)
+	       11  0.0030 anon (tgid:3341 range:0x7ff19dd0e000-0x7ff19dd1e000)
+	        9  0.0024 [stack] (tgid:3341 range:0x7fff25056000-0x7fff25077000)
+	        9  0.0024 anon (tgid:3341 range:0x7ff19cb50000-0x7ff19d363000)
+	        9  0.0024 anon (tgid:3341 range:0x7ff19d597000-0x7ff19d5a7000)
+	        8  0.0022 anon (tgid:3341 range:0x7ff19d4d8000-0x7ff19d569000)
+	        8  0.0022 anon (tgid:3341 range:0x7ff19d675000-0x7ff19d69a000)
+	        7  0.0019 anon (tgid:3341 range:0x7ff19d6aa000-0x7ff19d777000)
+	        7  0.0019 anon (tgid:3341 range:0x7ff19da30000-0x7ff19da40000)
+	        7  0.0019 anon (tgid:3341 range:0x7ff19e063000-0x7ff19e0b0000)
+	        7  0.0019 anon (tgid:3341 range:0x7ff19e20a000-0x7ff19e2d0000)
+	        6  0.0016 anon (tgid:3341 range:0x7ff19e0b0000-0x7ff19e0c0000)
+	        5  0.0014 anon (tgid:3341 range:0x7ff19d569000-0x7ff19d579000)
+	        5  0.0014 anon (tgid:3341 range:0x7ff19dd90000-0x7ff19dda0000)
+	        5  0.0014 cfg80211
+	        4  0.0011 anon (tgid:3341 range:0x7ff19d665000-0x7ff19d675000)
+	        4  0.0011 anon (tgid:3341 range:0x7ff19db34000-0x7ff19db94000)
+	        4  0.0011 libexpat.so.1.5.2
+	        3 8.1e-04 anon (tgid:3341 range:0x7ff19ddb0000-0x7ff19ddc0000)
+	        3 8.1e-04 anon (tgid:3341 range:0x7ff19e0a8000-0x7ff19e0b8000)
+	        3 8.1e-04 anon (tgid:3341 range:0x7ff19e1fa000-0x7ff19e20a000)
+	        3 8.1e-04 nf_conntrack
+	        2 5.4e-04 anon (tgid:3341 range:0x7ff19cb50000-0x7ff19d4c8000)
+	        2 5.4e-04 anon (tgid:3341 range:0x7ff19d787000-0x7ff19d7be000)
+	        2 5.4e-04 anon (tgid:3341 range:0x7ff19db73000-0x7ff19db83000)
+	        2 5.4e-04 ath9k_common
+	        2 5.4e-04 libQtCore.so.4.8.0
+	        1 2.7e-04 [heap] (tgid:3341 range:0x1c7a000-0x1ed2000)
+	        1 2.7e-04 [heap] (tgid:3341 range:0x1c7a000-0x1ef9000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19d37f000-0x7ff19d38f000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19d4a9000-0x7ff19d4b9000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19d4c8000-0x7ff19d4d8000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19d5d0000-0x7ff19d5e0000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19d67a000-0x7ff19d8ba000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19db94000-0x7ff19dba4000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19de35000-0x7ff19de45000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19df71000-0x7ff19df81000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19df8f000-0x7ff19df9f000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19e053000-0x7ff19e063000)
+	        1 2.7e-04 anon (tgid:3341 range:0x7ff19e193000-0x7ff19e1a3000)
+	        1 2.7e-04 iptable_mangle
+	        1 2.7e-04 iptable_nat
+	        1 2.7e-04 r8169
+	        1 2.7e-04 radeon
+	        1 2.7e-04 xt_state
+	        1 2.7e-04 libdl-2.14.90.so
+	        1 2.7e-04 libcurl.so.4.2.0
+	        1 2.7e-04 libnssdbm3.so
+	        1 2.7e-04 libssl3.so
+   120779  2.2546 gnome-shell
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    48798 40.4027 r600_dri.so
+	    23014 19.0546 vmlinux
+	     6554  5.4264 libglib-2.0.so.0.3000.1
+	     5602  4.6382 libgobject-2.0.so.0.3000.1
+	     5547  4.5927 libc-2.14.90.so
+	     5278  4.3700 libclutter-glx-1.0.so.0.800.2
+	     4983  4.1257 libcogl.so.5.0.1
+	     4326  3.5817 libmozjs185.so.1.0.0
+	     2083  1.7246 libgnome-shell.so
+	     2061  1.7064 radeon
+	     2056  1.7023 libpthread-2.14.90.so
+	     1473  1.2196 libmutter.so.0.0.0
+	     1006  0.8329 libgirepository-1.0.so.1.0.0
+	      927  0.7675 libdbus-1.so.3.5.6
+	      822  0.6806 libgjs.so.0.0.0
+	      821  0.6798 libgdk-3.so.0.200.1
+	      750  0.6210 libX11.so.6.3.0
+	      643  0.5324 libxcb.so.1.1.0
+	      431  0.3569 libcairo.so.2.11000.2
+	      402  0.3328 libGL.so.1.2
+	      338  0.2798 ttm
+	      251  0.2078 ld-2.14.90.so
+	      251  0.2078 libpixman-1.so.0.22.2
+	      179  0.1482 libgthread-2.0.so.0.3000.1
+	      160  0.1325 [vdso] (tgid:1718 range:0x7fffbcfe8000-0x7fffbcfe9000)
+	      154  0.1275 libgio-2.0.so.0.3000.1
+	      148  0.1225 libm-2.14.90.so
+	      135  0.1118 libffi.so.5.0.10
+	      125  0.1035 libdbus-glib-1.so.2.1.0
+	      111  0.0919 libnspr4.so
+	      109  0.0902 libpango-1.0.so.0.2904.0
+	      104  0.0861 drm
+	       91  0.0753 libgtk-3.so.0.200.1
+	       79  0.0654 libdl-2.14.90.so
+	       77  0.0638 libgvfscommon.so.0.0.0
+	       71  0.0588 libxklavier.so.16.1.0
+	       70  0.0580 libXfixes.so.3.1.0
+	       59  0.0488 libstartup-notification-1.so.0.0.0
+	       52  0.0431 libgmodule-2.0.so.0.3000.1
+	       47  0.0389 libgdk_pixbuf-2.0.so.0.2400.0
+	       42  0.0348 libXdamage.so.1.1.0
+	       42  0.0348 libXext.so.6.4.0
+	       40  0.0331 libpulse-mainloop-glib.so.0.0.4
+	       37  0.0306 ath9k
+	       37  0.0306 libdrm.so.2.4.0
+	       35  0.0290 rfkill
+	       32  0.0265 librt-2.14.90.so
+	       25  0.0207 libgcc_s-4.6.2-20111027.so.1
+	       25  0.0207 libnm-glib.so.4.2.0
+	       25  0.0207 libpulsecommon-0.9.23.so
+	       24  0.0199 libdconfsettings.so
+	       23  0.0190 libfontconfig.so.1.4.4
+	       21  0.0174 libcroco-0.6.so.3.0.1
+	       19  0.0157 libgnomekbdui.so.7.0.0
+	       19  0.0157 libpulse.so.0.12.4
+	       18  0.0149 [heap] (tgid:1718 range:0x858000-0x20e9000)
+	       17  0.0141 libfreetype.so.6.7.1
+	       11  0.0091 mainloop.so
+	       11  0.0091 libcogl-pango.so.0.0.0
+	       11  0.0091 libpangocairo-1.0.so.0.2904.0
+	       10  0.0083 ath9k_hw
+	       10  0.0083 libpangoft2-1.0.so.0.2904.0
+	        9  0.0075 libgjs-dbus.so.0.0.0
+	        8  0.0066 gettextNative.so
+	        6  0.0050 mac80211
+	        5  0.0041 oprofile
+	        5  0.0041 libXrender.so.1.3.0
+	        4  0.0033 libXcursor.so.1.0.2
+	        4  0.0033 librsvg-2.so.2.34.1
+	        3  0.0025 nf_conntrack
+	        3  0.0025 libcanberra.so.0.2.5
+	        2  0.0017 libcanberra-pulse.so
+	        1 8.3e-04 gnome-shell
+	        1 8.3e-04 [heap] (tgid:1718 range:0x858000-0x1efc000)
+	        1 8.3e-04 [heap] (tgid:1718 range:0x858000-0x20a7000)
+	        1 8.3e-04 cfg80211
+	        1 8.3e-04 libgvfsdbus.so
+	        1 8.3e-04 libgconf-2.so.4.1.5
+	        1 8.3e-04 libnm-util.so.2.1.0
+	        1 8.3e-04 libxml2.so.2.7.8
+    96050  1.7930 opreport
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    67923 70.7163 opreport
+	    12770 13.2952 libc-2.14.90.so
+	     9058  9.4305 vmlinux
+	     6256  6.5133 libstdc++.so.6.0.16
+	       33  0.0344 ld-2.14.90.so
+	        3  0.0031 radeon
+	        2  0.0021 oprofile
+	        1  0.0010 ath9k
+	        1  0.0010 ath9k_hw
+	        1  0.0010 mac80211
+	        1  0.0010 libgcc_s-4.6.2-20111027.so.1
+	        1  0.0010 libpopt.so.0.0.0
+    67394  1.2580 Xorg
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    33223 49.2967 vmlinux
+	     8863 13.1510 Xorg
+	     6037  8.9578 radeon
+	     4604  6.8315 libc-2.14.90.so
+	     3698  5.4871 radeon_drv.so
+	     3006  4.4603 libpixman-1.so.0.22.2
+	     2064  3.0626 libdrm_radeon.so.1.0.0
+	     1910  2.8341 libexa.so
+	     1175  1.7435 ttm
+	     1121  1.6634 drm
+	      329  0.4882 libfb.so
+	      213  0.3161 libpthread-2.14.90.so
+	      194  0.2879 evdev_drv.so
+	      189  0.2804 libdrm.so.2.4.0
+	      173  0.2567 [vdso] (tgid:1264 range:0x7fff69bff000-0x7fff69c00000)
+	      127  0.1884 librt-2.14.90.so
+	      112  0.1662 libdri2.so
+	       89  0.1321 libextmod.so
+	       74  0.1098 libudev.so.0.12.0
+	       61  0.0905 synaptics_drv.so
+	       24  0.0356 ld-2.14.90.so
+	       22  0.0326 libXfont.so.1.4.1
+	       18  0.0267 ath9k
+	       16  0.0237 libfreetype.so.6.7.1
+	       14  0.0208 libcrypto.so.1.0.0e
+	        8  0.0119 libm-2.14.90.so
+	        7  0.0104 ath9k_hw
+	        7  0.0104 oprofile
+	        6  0.0089 libz.so.1.2.5
+	        3  0.0045 mac80211
+	        3  0.0045 nf_conntrack
+	        1  0.0015 [heap] (tgid:1264 range:0x1194000-0x2cd8000)
+	        1  0.0015 [heap] (tgid:1264 range:0x1194000-0x3051000)
+	        1  0.0015 libflashplayer.so
+	        1  0.0015 libglx.so
+    60702  1.1331 oprofiled
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    38759 63.8513 oprofiled
+	    20581 33.9050 vmlinux
+	     1309  2.1564 libc-2.14.90.so
+	       16  0.0264 ath9k
+	       13  0.0214 libpython2.7.so.1.0
+	       10  0.0165 oprofile
+	        4  0.0066 ath9k_hw
+	        4  0.0066 mac80211
+	        2  0.0033 radeon
+	        2  0.0033 libpthread-2.14.90.so
+	        1  0.0016 nf_conntrack
+	        1  0.0016 snd_hda_intel
+    34105  0.6366 emacs-23.3
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    24357 71.4177 emacs-23.3
+	     3587 10.5175 vmlinux
+	     1292  3.7883 libc-2.14.90.so
+	      788  2.3105 libglib-2.0.so.0.3000.1
+	      731  2.1434 libgobject-2.0.so.0.3000.1
+	      691  2.0261 libcairo.so.2.11000.2
+	      459  1.3458 libX11.so.6.3.0
+	      393  1.1523 libgdk-x11-2.0.so.0.2400.7
+	      362  1.0614 libgtk-x11-2.0.so.0.2400.7
+	      285  0.8357 libXft.so.2.2.0
+	      279  0.8181 libpthread-2.14.90.so
+	      196  0.5747 libfontconfig.so.1.4.4
+	      148  0.4340 libdbus-1.so.3.5.6
+	      126  0.3694 libxcb.so.1.1.0
+	       61  0.1789 libm-2.14.90.so
+	       53  0.1554 libXrender.so.1.3.0
+	       40  0.1173 ld-2.14.90.so
+	       39  0.1144 libclearlooks.so
+	       37  0.1085 [vdso] (tgid:5260 range:0x7fffad723000-0x7fffad724000)
+	       35  0.1026 libfreetype.so.6.7.1
+	       33  0.0968 libgvfscommon.so.0.0.0
+	       21  0.0616 libgio-2.0.so.0.3000.1
+	       20  0.0586 libgthread-2.0.so.0.3000.1
+	       19  0.0557 libdbus-glib-1.so.2.1.0
+	       10  0.0293 libpango-1.0.so.0.2904.0
+	        8  0.0235 libpixman-1.so.0.22.2
+	        6  0.0176 ath9k
+	        5  0.0147 libXpm.so.4.11.0
+	        5  0.0147 librsvg-2.so.2.34.1
+	        4  0.0117 libexpat.so.1.5.2
+	        3  0.0088 mac80211
+	        2  0.0059 ath9k_hw
+	        2  0.0059 libxml2.so.2.7.8
+	        1  0.0029 [heap] (tgid:5260 range:0x25f7000-0x35ef000)
+	        1  0.0029 ath9k_common
+	        1  0.0029 cfg80211
+	        1  0.0029 oprofile
+	        1  0.0029 radeon
+	        1  0.0029 librt-2.14.90.so
+	        1  0.0029 libpixbufloader-svg.so
+	        1  0.0029 libSM.so.6.0.1
+    21361  0.3987 mono
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     8604 40.2790 vmlinux
+	     4553 21.3145 mono
+	     4166 19.5028 libc-2.14.90.so
+	      889  4.1618 anon (tgid:1811 range:0x40bc7000-0x40bd8000)
+	      669  3.1319 anon (tgid:1811 range:0x40178000-0x40189000)
+	      666  3.1178 anon (tgid:1811 range:0x418e7000-0x418f8000)
+	      512  2.3969 libglib-2.0.so.0.3000.1
+	      313  1.4653 anon (tgid:1811 range:0x4174f000-0x41760000)
+	      192  0.8988 anon (tgid:1811 range:0x41232000-0x41243000)
+	      168  0.7865 anon (tgid:1811 range:0x4162c000-0x4163d000)
+	      121  0.5665 libpthread-2.14.90.so
+	       90  0.4213 anon (tgid:1811 range:0x40ed0000-0x40ee1000)
+	       83  0.3886 anon (tgid:1811 range:0x414bf000-0x414d0000)
+	       72  0.3371 anon (tgid:1811 range:0x41fb6000-0x41fc7000)
+	       62  0.2902 anon (tgid:1811 range:0x40987000-0x40998000)
+	       40  0.1873 anon (tgid:1811 range:0x7fab61a4f000-0x7fab61a77000)
+	       31  0.1451 anon (tgid:1811 range:0x7fab6dcc8000-0x7fab6dd08000)
+	       26  0.1217 anon (tgid:1811 range:0x404c7000-0x404d8000)
+	       20  0.0936 anon (tgid:1811 range:0x7fab4c000000-0x7fab4c021000)
+	       19  0.0889 libgnome-desktop-2.so.17.1.4
+	       14  0.0655 [heap] (tgid:1811 range:0xd55000-0x141a000)
+	        9  0.0421 libglibsharpglue-2.so
+	        8  0.0375 anon (tgid:1811 range:0x401e1000-0x401f2000)
+	        5  0.0234 anon (tgid:1811 range:0x7fab52df2000-0x7fab53094000)
+	        4  0.0187 [vdso] (tgid:1811 range:0x7fff0b1ff000-0x7fff0b200000)
+	        4  0.0187 libgtk-x11-2.0.so.0.2400.7
+	        3  0.0140 anon (tgid:1811 range:0x40aca000-0x40adb000)
+	        3  0.0140 libdbus-1.so.3.5.6
+	        3  0.0140 libgobject-2.0.so.0.3000.1
+	        2  0.0094 anon (tgid:1811 range:0x7fab59c98000-0x7fab59cef000)
+	        2  0.0094 radeon
+	        2  0.0094 libX11.so.6.3.0
+	        2  0.0094 libgdk-x11-2.0.so.0.2400.7
+	        1  0.0047 anon (tgid:1811 range:0x7fab58d36000-0x7fab58e12000)
+	        1  0.0047 ath
+	        1  0.0047 ath9k
+	        1  0.0047 ath9k_hw
+    16418  0.3065 dbus-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    10675 65.0201 dbus-daemon
+	     2959 18.0229 vmlinux
+	     2628 16.0068 libc-2.14.90.so
+	       58  0.3533 libpthread-2.14.90.so
+	       58  0.3533 libselinux.so.1
+	       24  0.1462 [vdso] (tgid:1078 range:0x7fff8275f000-0x7fff82760000)
+	        7  0.0426 librt-2.14.90.so
+	        4  0.0244 ath9k
+	        2  0.0122 [vdso] (tgid:1507 range:0x7fff07f53000-0x7fff07f54000)
+	        1  0.0061 [heap] (tgid:1078 range:0x2634000-0x2827000)
+	        1  0.0061 [heap] (tgid:1078 range:0x2634000-0x2848000)
+	        1  0.0061 anon (tgid:1078 range:0x7fcbbe88c000-0x7fcbbe8f2000)
+    14906  0.2783 NetworkManager
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     3261 21.8771 libgobject-2.0.so.0.3000.1
+	     3015 20.2268 libdbus-1.so.3.5.6
+	     2214 14.8531 libglib-2.0.so.0.3000.1
+	     1807 12.1226 vmlinux
+	     1773 11.8945 libc-2.14.90.so
+	     1239  8.3121 NetworkManager
+	      876  5.8768 libpthread-2.14.90.so
+	      471  3.1598 libdbus-glib-1.so.2.1.0
+	      135  0.9057 libnm-util.so.2.1.0
+	       30  0.2013 libgthread-2.0.so.0.3000.1
+	       29  0.1946 [vdso] (tgid:1023 range:0x7fff2e017000-0x7fff2e018000)
+	       13  0.0872 libm-2.14.90.so
+	       11  0.0738 libgio-2.0.so.0.3000.1
+	        9  0.0604 cfg80211
+	        7  0.0470 librt-2.14.90.so
+	        6  0.0403 mac80211
+	        3  0.0201 [heap] (tgid:1023 range:0x1bc2000-0x1c9e000)
+	        3  0.0201 libnl.so.1.1
+	        2  0.0134 radeon
+	        1  0.0067 [stack] (tgid:1023 range:0x7fff2dfe9000-0x7fff2e00a000)
+	        1  0.0067 drm
+    12143  0.2267 oprofile
+     9517  0.1777 ath9k
+     8551  0.1596 gnome-terminal
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     1576 18.4306 vmlinux
+	     1474 17.2377 libglib-2.0.so.0.3000.1
+	     1241 14.5129 libvte2_90.so.9.3000.1
+	      899 10.5134 libc-2.14.90.so
+	      891 10.4198 libcairo.so.2.11000.2
+	      884 10.3380 libgobject-2.0.so.0.3000.1
+	      463  5.4146 libgtk-3.so.0.200.1
+	      396  4.6310 libgdk-3.so.0.200.1
+	      164  1.9179 libpthread-2.14.90.so
+	      110  1.2864 libX11.so.6.3.0
+	       79  0.9239 libm-2.14.90.so
+	       59  0.6900 libdbus-1.so.3.5.6
+	       54  0.6315 libpixman-1.so.0.22.2
+	       48  0.5613 libxcb.so.1.1.0
+	       34  0.3976 libXrender.so.1.3.0
+	       27  0.3158 ld-2.14.90.so
+	       22  0.2573 [vdso] (tgid:1928 range:0x7fff40bff000-0x7fff40c00000)
+	       19  0.2222 libpango-1.0.so.0.2904.0
+	       18  0.2105 libgvfscommon.so.0.0.0
+	       14  0.1637 librsvg-2.so.2.34.1
+	       13  0.1520 libgio-2.0.so.0.3000.1
+	       13  0.1520 libXi.so.6.1.0
+	       13  0.1520 libxml2.so.2.7.8
+	        8  0.0936 librt-2.14.90.so
+	        7  0.0819 libgthread-2.0.so.0.3000.1
+	        4  0.0468 radeon
+	        4  0.0468 libdbus-glib-1.so.2.1.0
+	        3  0.0351 libfreetype.so.6.7.1
+	        3  0.0351 libXext.so.6.4.0
+	        2  0.0234 ath9k
+	        2  0.0234 libadwaita.so
+	        1  0.0117 [vdso] (tgid:5227 range:0x7fff0b7ff000-0x7fff0b800000)
+	        1  0.0117 ath9k_hw
+	        1  0.0117 drm
+	        1  0.0117 libICE.so.6.3.0
+	        1  0.0117 libatk-1.0.so.0.20209.1
+	        1  0.0117 libgconf-2.so.4.1.5
+	        1  0.0117 libpangoft2-1.0.so.0.2904.0
+     7611  0.1421 ps
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     5907 77.6114 vmlinux
+	     1350 17.7375 libc-2.14.90.so
+	      170  2.2336 libproc-3.2.8.so
+	      156  2.0497 ld-2.14.90.so
+	       19  0.2496 ps
+	        4  0.0526 libselinux.so.1
+	        3  0.0394 ath9k
+	        2  0.0263 radeon
+     7093  0.1324 wpa_supplicant
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     3823 53.8982 libdbus-1.so.3.5.6
+	     2255 31.7919 libc-2.14.90.so
+	      706  9.9535 vmlinux
+	      255  3.5951 wpa_supplicant
+	       19  0.2679 [vdso] (tgid:1124 range:0x7fff05bff000-0x7fff05c00000)
+	       15  0.2115 libnl.so.1.1
+	       10  0.1410 libpthread-2.14.90.so
+	        5  0.0705 ath9k
+	        2  0.0282 ath9k_hw
+	        2  0.0282 cfg80211
+	        1  0.0141 mac80211
+     6814  0.1272 oprof_start
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     2472 36.2783 libQtCore.so.4.8.0
+	     2008 29.4687 libQtGui.so.4.8.0
+	     1261 18.5060 vmlinux
+	      522  7.6607 libc-2.14.90.so
+	      234  3.4341 libstdc++.so.6.0.16
+	       85  1.2474 libglib-2.0.so.0.3000.1
+	       56  0.8218 libX11.so.6.3.0
+	       56  0.8218 libxcb.so.1.1.0
+	       28  0.4109 libpthread-2.14.90.so
+	       25  0.3669 ld-2.14.90.so
+	       21  0.3082 oprof_start
+	       14  0.2055 [vdso] (tgid:2223 range:0x7fffa1473000-0x7fffa1474000)
+	       11  0.1614 libXext.so.6.4.0
+	        8  0.1174 libm-2.14.90.so
+	        5  0.0734 librt-2.14.90.so
+	        4  0.0587 libgthread-2.0.so.0.3000.1
+	        2  0.0294 ath9k
+	        2  0.0294 oprofile
+     5251  0.0980 pdftex
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     3096 58.9602 pdftex
+	     1092 20.7960 libc-2.14.90.so
+	      589 11.2169 vmlinux
+	      277  5.2752 libkpathsea.so.6.0.1
+	      145  2.7614 libz.so.1.2.5
+	       51  0.9712 ld-2.14.90.so
+	        1  0.0190 ath9k
+     4957  0.0925 evince
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      886 17.8737 vmlinux
+	      853 17.2080 libpoppler.so.18.0.0
+	      574 11.5796 libglib-2.0.so.0.3000.1
+	      540 10.8937 libgobject-2.0.so.0.3000.1
+	      499 10.0666 libc-2.14.90.so
+	      299  6.0319 libgtk-3.so.0.200.1
+	      289  5.8301 libcairo.so.2.11000.2
+	      216  4.3575 libgdk-3.so.0.200.1
+	      188  3.7926 libpixman-1.so.0.22.2
+	       90  1.8156 libpthread-2.14.90.so
+	       88  1.7753 ld-2.14.90.so
+	       66  1.3315 libfreetype.so.6.7.1
+	       58  1.1701 libfontconfig.so.1.4.4
+	       38  0.7666 libpango-1.0.so.0.2904.0
+	       37  0.7464 libX11.so.6.3.0
+	       30  0.6052 libxcb.so.1.1.0
+	       27  0.5447 libm-2.14.90.so
+	       23  0.4640 libevview3.so.3.0.0
+	       21  0.4236 libdbus-1.so.3.5.6
+	       17  0.3429 libpoppler-glib.so.8.2.0
+	       16  0.3228 libxml2.so.2.7.8
+	       14  0.2824 [vdso] (tgid:5382 range:0x7fff125a0000-0x7fff125a1000)
+	       14  0.2824 libgio-2.0.so.0.3000.1
+	       11  0.2219 libgthread-2.0.so.0.3000.1
+	       10  0.2017 libevdocument3.so.3.0.0
+	       10  0.2017 libpangoft2-1.0.so.0.2904.0
+	        7  0.1412 librsvg-2.so.2.34.1
+	        6  0.1210 libgdk_pixbuf-2.0.so.0.2400.0
+	        5  0.1009 libexpat.so.1.5.2
+	        5  0.1009 libXrender.so.1.3.0
+	        4  0.0807 libXi.so.6.1.0
+	        3  0.0605 libXext.so.6.4.0
+	        3  0.0605 libstdc++.so.6.0.16
+	        2  0.0403 librt-2.14.90.so
+	        1  0.0202 evince
+	        1  0.0202 anon (tgid:5382 range:0x7f7058000000-0x7f705813b000)
+	        1  0.0202 anon (tgid:5382 range:0x7f7058195000-0x7f705c000000)
+	        1  0.0202 ath
+	        1  0.0202 oprofile
+	        1  0.0202 libdl-2.14.90.so
+	        1  0.0202 libgvfscommon.so.0.0.0
+	        1  0.0202 libpangocairo-1.0.so.0.2904.0
+     4465  0.0833 ath9k_hw
+     3984  0.0744 radeon
+     3517  0.0657 packagekitd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      760 21.6093 libgobject-2.0.so.0.3000.1
+	      745 21.1828 libc-2.14.90.so
+	      724 20.5857 libglib-2.0.so.0.3000.1
+	      722 20.5289 vmlinux
+	      128  3.6395 libpthread-2.14.90.so
+	      111  3.1561 libdbus-1.so.3.5.6
+	      109  3.0992 libpackagekit-glib2.so.14.0.10
+	       52  1.4785 ld-2.14.90.so
+	       47  1.3364 libsqlite3.so.0.8.6
+	       39  1.1089 packagekitd
+	       31  0.8814 libgthread-2.0.so.0.3000.1
+	       14  0.3981 libgio-2.0.so.0.3000.1
+	       12  0.3412 [vdso] (tgid:3601 range:0x7fff6fd21000-0x7fff6fd22000)
+	       12  0.3412 libdbus-glib-1.so.2.1.0
+	        7  0.1990 librt-2.14.90.so
+	        1  0.0284 [vdso] (tgid:3967 range:0x7fff7e1ff000-0x7fff7e200000)
+	        1  0.0284 [vdso] (tgid:5067 range:0x7fff727ff000-0x7fff72800000)
+	        1  0.0284 libutil-2.14.90.so
+	        1  0.0284 libpk_backend_yum.so
+     3313  0.0618 gnome-settings-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     1522 45.9402 vmlinux
+	      597 18.0199 libc-2.14.90.so
+	      440 13.2810 libglib-2.0.so.0.3000.1
+	      128  3.8636 libpthread-2.14.90.so
+	       92  2.7769 libgobject-2.0.so.0.3000.1
+	       90  2.7166 libgio-2.0.so.0.3000.1
+	       90  2.7166 libgdk-3.so.0.200.1
+	       80  2.4147 libdbus-1.so.3.5.6
+	       74  2.2336 libX11.so.6.3.0
+	       74  2.2336 libxcb.so.1.1.0
+	       19  0.5735 libxklavier.so.16.1.0
+	       18  0.5433 libpulsecommon-0.9.23.so
+	       14  0.4226 [vdso] (tgid:1662 range:0x7ffff4f05000-0x7ffff4f06000)
+	       13  0.3924 libdbus-glib-1.so.2.1.0
+	       12  0.3622 libpulse-mainloop-glib.so.0.0.4
+	       10  0.3018 libpulse.so.0.12.4
+	        8  0.2415 libgthread-2.0.so.0.3000.1
+	        7  0.2113 librt-2.14.90.so
+	        5  0.1509 libgvfscommon.so.0.0.0
+	        4  0.1207 liba11y-keyboard.so
+	        4  0.1207 libpower.so
+	        3  0.0906 libkeyboard.so
+	        3  0.0906 libmedia-keys.so
+	        2  0.0604 libgtk-3.so.0.200.1
+	        1  0.0302 radeon
+	        1  0.0302 libdconfsettings.so
+	        1  0.0302 libhousekeeping.so
+	        1  0.0302 libcups.so.2
+     3308  0.0618 nm-applet
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      970 29.3229 vmlinux
+	      651 19.6796 libdbus-1.so.3.5.6
+	      415 12.5453 libglib-2.0.so.0.3000.1
+	      336 10.1572 libgobject-2.0.so.0.3000.1
+	      333 10.0665 libc-2.14.90.so
+	      133  4.0206 libpthread-2.14.90.so
+	       85  2.5695 libdbus-glib-1.so.2.1.0
+	       66  1.9952 libnm-glib.so.4.2.0
+	       60  1.8138 libgdk-3.so.0.200.1
+	       58  1.7533 libxcb.so.1.1.0
+	       54  1.6324 libX11.so.6.3.0
+	       35  1.0580 libgtk-3.so.0.200.1
+	       28  0.8464 libcairo.so.2.11000.2
+	       16  0.4837 nm-applet
+	       16  0.4837 libXi.so.6.1.0
+	       11  0.3325 libgvfscommon.so.0.0.0
+	       10  0.3023 libgthread-2.0.so.0.3000.1
+	        8  0.2418 libnm-util.so.2.1.0
+	        5  0.1511 [vdso] (tgid:1808 range:0x7fffb29ff000-0x7fffb2a00000)
+	        4  0.1209 libgio-2.0.so.0.3000.1
+	        2  0.0605 ath9k_hw
+	        2  0.0605 libXext.so.6.4.0
+	        2  0.0605 libXrender.so.1.3.0
+	        2  0.0605 libgconf-2.so.4.1.5
+	        2  0.0605 libgdk_pixbuf-2.0.so.0.2400.0
+	        2  0.0605 libpixman-1.so.0.22.2
+	        1  0.0302 libm-2.14.90.so
+	        1  0.0302 librt-2.14.90.so
+     2577  0.0481 gnome-screensaver
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      797 30.9274 libgdk_pixbuf-2.0.so.0.2400.0
+	      411 15.9488 libz.so.1.2.5
+	      355 13.7757 vmlinux
+	      194  7.5281 libglib-2.0.so.0.3000.1
+	      183  7.1013 libpng12.so.0.46.0
+	      135  5.2386 libc-2.14.90.so
+	       94  3.6477 libgobject-2.0.so.0.3000.1
+	       82  3.1820 libgdk-3.so.0.200.1
+	       52  2.0179 libgtk-3.so.0.200.1
+	       41  1.5910 libpthread-2.14.90.so
+	       34  1.3194 libcairo.so.2.11000.2
+	       33  1.2806 libX11.so.6.3.0
+	       30  1.1641 libdbus-1.so.3.5.6
+	       27  1.0477 libpango-1.0.so.0.2904.0
+	       18  0.6985 libfontconfig.so.1.4.4
+	       16  0.6209 libgio-2.0.so.0.3000.1
+	        9  0.3492 gnome-screensaver
+	        9  0.3492 libxcb.so.1.1.0
+	        7  0.2716 [vdso] (tgid:1733 range:0x7fffca7c1000-0x7fffca7c2000)
+	        6  0.2328 libexpat.so.1.5.2
+	        5  0.1940 libfreetype.so.6.7.1
+	        5  0.1940 libpixman-1.so.0.22.2
+	        4  0.1552 ld-2.14.90.so
+	        4  0.1552 libXext.so.6.4.0
+	        3  0.1164 libgthread-2.0.so.0.3000.1
+	        3  0.1164 librt-2.14.90.so
+	        3  0.1164 libXrender.so.1.3.0
+	        3  0.1164 libdbus-glib-1.so.2.1.0
+	        2  0.0776 radeon
+	        2  0.0776 libpangocairo-1.0.so.0.2904.0
+	        2  0.0776 libpangoft2-1.0.so.0.2904.0
+	        2  0.0776 libxml2.so.2.7.8
+	        1  0.0388 libdconfsettings.so
+	        1  0.0388 libXrandr.so.2.2.0
+	        1  0.0388 libatk-1.0.so.0.20209.1
+	        1  0.0388 libcroco-0.6.so.3.0.1
+	        1  0.0388 libgvfscommon.so.0.0.0
+	        1  0.0388 librsvg-2.so.2.34.1
+     2533  0.0473 mac80211
+     2232  0.0417 bash
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     1416 63.4409 vmlinux
+	      403 18.0556 bash
+	      351 15.7258 libc-2.14.90.so
+	       56  2.5090 ld-2.14.90.so
+	        3  0.1344 libtinfo.so.5.9
+	        2  0.0896 libdl-2.14.90.so
+	        1  0.0448 ath9k
+     2203  0.0411 udisks-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     1885 85.5651 libc-2.14.90.so
+	      269 12.2106 vmlinux
+	       15  0.6809 libglib-2.0.so.0.3000.1
+	       11  0.4993 libdbus-1.so.3.5.6
+	       10  0.4539 libgobject-2.0.so.0.3000.1
+	        5  0.2270 libpthread-2.14.90.so
+	        5  0.2270 libatasmart.so.4.0.3
+	        2  0.0908 libdbus-glib-1.so.2.1.0
+	        1  0.0454 ath9k
+     2134  0.0398 rpc.gssd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     2032 95.2202 vmlinux
+	       55  2.5773 rpc.gssd
+	       46  2.1556 libc-2.14.90.so
+	        1  0.0469 radeon
+     2017  0.0377 libsocialweb-core
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      881 43.6787 libc-2.14.90.so
+	      464 23.0045 libtasn1.so.3.1.9
+	      248 12.2955 libgcrypt.so.11.7.0
+	      145  7.1889 vmlinux
+	       60  2.9747 libglib-2.0.so.0.3000.1
+	       59  2.9251 libgobject-2.0.so.0.3000.1
+	       44  2.1815 libgnutls.so.26.21.1
+	       22  1.0907 ath9k
+	       20  0.9916 libdbus-1.so.3.5.6
+	       17  0.8428 libpthread-2.14.90.so
+	       13  0.6445 libsoup-2.4.so.1.4.0
+	       12  0.5949 libgiognutls.so
+	        9  0.4462 libgio-2.0.so.0.3000.1
+	        5  0.2479 ath9k_hw
+	        3  0.1487 [vdso] (tgid:1862 range:0x7fff93113000-0x7fff93114000)
+	        3  0.1487 mac80211
+	        3  0.1487 libdbus-glib-1.so.2.1.0
+	        2  0.0992 nf_conntrack
+	        2  0.0992 libgthread-2.0.so.0.3000.1
+	        1  0.0496 iptable_mangle
+	        1  0.0496 ld-2.14.90.so
+	        1  0.0496 libnm-glib.so.4.2.0
+	        1  0.0496 librest-0.7.so.0.0.0
+	        1  0.0496 libtwitter.so
+     1734  0.0324 gawk
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     1069 61.6494 vmlinux
+	      228 13.1488 libc-2.14.90.so
+	      225 12.9758 ld-2.14.90.so
+	      204 11.7647 gawk
+	        4  0.2307 libm-2.14.90.so
+	        2  0.1153 oprofile
+	        1  0.0577 drm
+	        1  0.0577 radeon
+     1615  0.0301 less
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     1117 69.1641 less
+	      206 12.7554 vmlinux
+	      160  9.9071 libc-2.14.90.so
+	      108  6.6873 libpcre.so.0.0.1
+	       16  0.9907 libtinfo.so.5.9
+	        7  0.4334 ld-2.14.90.so
+	        1  0.0619 drm
+     1431  0.0267 irqbalance
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     1192 83.2984 vmlinux
+	      202 14.1160 libc-2.14.90.so
+	       23  1.6073 irqbalance
+	       10  0.6988 libglib-2.0.so.0.3000.1
+	        3  0.2096 libpthread-2.14.90.so
+	        1  0.0699 ath9k
+     1353  0.0253 drm
+     1073  0.0200 pulseaudio
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      568 52.9357 libasound.so.2.0.0
+	      218 20.3169 vmlinux
+	       73  6.8034 libc-2.14.90.so
+	       52  4.8462 libpulsecommon-0.9.23.so
+	       40  3.7279 libpulsecore-0.9.23.so
+	       31  2.8891 snd_hda_intel
+	       30  2.7959 libpulse.so.0.12.4
+	       14  1.3048 libdbus-1.so.3.5.6
+	       11  1.0252 libalsa-util.so
+	       10  0.9320 snd_pcm
+	        7  0.6524 libpthread-2.14.90.so
+	        5  0.4660 libm-2.14.90.so
+	        4  0.3728 [vdso] (tgid:1661 range:0x7fffe89ff000-0x7fffe8a00000)
+	        4  0.3728 snd
+	        3  0.2796 ld-2.14.90.so
+	        1  0.0932 mac80211
+	        1  0.0932 snd_hda_codec
+	        1  0.0932 libprotocol-native.so
+     1026  0.0192 gnome-screensaver-dialog
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      201 19.5906 vmlinux
+	      183 17.8363 libc-2.14.90.so
+	      145 14.1326 libglib-2.0.so.0.3000.1
+	       84  8.1871 ld-2.14.90.so
+	       66  6.4327 libgobject-2.0.so.0.3000.1
+	       58  5.6530 libcairo.so.2.11000.2
+	       54  5.2632 libgtk-3.so.0.200.1
+	       51  4.9708 libfontconfig.so.1.4.4
+	       25  2.4366 librsvg-2.so.2.34.1
+	       25  2.4366 libxml2.so.2.7.8
+	       20  1.9493 libpthread-2.14.90.so
+	       16  1.5595 libfreetype.so.6.7.1
+	       14  1.3645 libgdk-3.so.0.200.1
+	       12  1.1696 libgio-2.0.so.0.3000.1
+	       11  1.0721 libexpat.so.1.5.2
+	        8  0.7797 libm-2.14.90.so
+	        8  0.7797 libpixman-1.so.0.22.2
+	        7  0.6823 libxcb.so.1.1.0
+	        7  0.6823 libxkbfile.so.1.0.2
+	        6  0.5848 libX11.so.6.3.0
+	        5  0.4873 libgthread-2.0.so.0.3000.1
+	        4  0.3899 libdbus-1.so.3.5.6
+	        4  0.3899 libpango-1.0.so.0.2904.0
+	        2  0.1949 oprofile
+	        2  0.1949 libpam.so.0.83.1
+	        2  0.1949 libXrender.so.1.3.0
+	        2  0.1949 libpangoft2-1.0.so.0.2904.0
+	        1  0.0975 [vdso] (tgid:4158 range:0x7fff369ff000-0x7fff36a00000)
+	        1  0.0975 [vdso] (tgid:5202 range:0x7fff14bc3000-0x7fff14bc4000)
+	        1  0.0975 libcap.so.2.22
+	        1  0.0975 libXext.so.6.4.0
+      874  0.0163 gpm
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      809 92.5629 vmlinux
+	       48  5.4920 libc-2.14.90.so
+	       16  1.8307 gpm
+	        1  0.1144 ath9k
+      741  0.0138 sendmail.sendmail
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      549 74.0891 vmlinux
+	      122 16.4642 sendmail.sendmail
+	       62  8.3671 libc-2.14.90.so
+	        3  0.4049 ld-2.14.90.so
+	        2  0.2699 [vdso] (tgid:1919 range:0x7fff781ff000-0x7fff78200000)
+	        2  0.2699 libdb-5.2.so
+	        1  0.1350 ath9k
+      606  0.0113 sleep
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      471 77.7228 vmlinux
+	       77 12.7063 ld-2.14.90.so
+	       53  8.7459 libc-2.14.90.so
+	        4  0.6601 sleep
+	        1  0.1650 oprofile
+      601  0.0112 git
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      397 66.0566 vmlinux
+	       70 11.6473 ld-2.14.90.so
+	       68 11.3145 git
+	       62 10.3161 libc-2.14.90.so
+	        4  0.6656 libz.so.1.2.5
+      555  0.0104 dconf-service
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      243 43.7838 libglib-2.0.so.0.3000.1
+	      108 19.4595 libc-2.14.90.so
+	      105 18.9189 vmlinux
+	       38  6.8468 dconf-service
+	       28  5.0450 libgio-2.0.so.0.3000.1
+	       14  2.5225 libgobject-2.0.so.0.3000.1
+	       10  1.8018 libpthread-2.14.90.so
+	        9  1.6216 libgthread-2.0.so.0.3000.1
+      298  0.0056 automount
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      233 78.1879 vmlinux
+	       48 16.1074 libc-2.14.90.so
+	       10  3.3557 libpthread-2.14.90.so
+	        6  2.0134 automount
+	        1  0.3356 oprofile
+      287  0.0054 krb5-auth-dialog
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      108 37.6307 vmlinux
+	       59 20.5575 libc-2.14.90.so
+	       41 14.2857 libglib-2.0.so.0.3000.1
+	       25  8.7108 libkrb5.so.3.3
+	       16  5.5749 libpthread-2.14.90.so
+	       11  3.8328 libdbus-1.so.3.5.6
+	        4  1.3937 libX11.so.6.3.0
+	        4  1.3937 libgdk-3.so.0.200.1
+	        4  1.3937 libxcb.so.1.1.0
+	        3  1.0453 libgio-2.0.so.0.3000.1
+	        2  0.6969 krb5-auth-dialog
+	        2  0.6969 [vdso] (tgid:1736 range:0x7fffbc7ff000-0x7fffbc800000)
+	        2  0.6969 libgobject-2.0.so.0.3000.1
+	        2  0.6969 libgthread-2.0.so.0.3000.1
+	        2  0.6969 libdbus-glib-1.so.2.1.0
+	        1  0.3484 libkrb5support.so.0.1
+	        1  0.3484 libgvfscommon.so.0.0.0
+      256  0.0048 tcsh
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      110 42.9688 vmlinux
+	       82 32.0312 libc-2.14.90.so
+	       64 25.0000 tcsh
+      246  0.0046 cfg80211
+      218  0.0041 rtkit-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      190 87.1560 vmlinux
+	       12  5.5046 libc-2.14.90.so
+	        6  2.7523 rtkit-daemon
+	        6  2.7523 librt-2.14.90.so
+	        4  1.8349 [vdso] (tgid:1453 range:0x7fff0c3ff000-0x7fff0c400000)
+      203  0.0038 unix_chkpwd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       97 47.7833 libfreebl3.so
+	       65 32.0197 vmlinux
+	       28 13.7931 libc-2.14.90.so
+	        7  3.4483 unix_chkpwd
+	        4  1.9704 ld-2.14.90.so
+	        1  0.4926 ath9k
+	        1  0.4926 libcrypt-2.14.90.so
+      177  0.0033 su
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       77 43.5028 libc-2.14.90.so
+	       76 42.9379 vmlinux
+	       10  5.6497 libselinux.so.1
+	        8  4.5198 ld-2.14.90.so
+	        1  0.5650 ath9k
+	        1  0.5650 libaudit.so.1.0.0
+	        1  0.5650 libcap.so.2.22
+	        1  0.5650 libdbus-1.so.3.5.6
+	        1  0.5650 libnsl-2.14.90.so
+	        1  0.5650 libpam.so.0.83.1
+      177  0.0033 systemd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      165 93.2203 vmlinux
+	        4  2.2599 libc-2.14.90.so
+	        3  1.6949 libdbus-1.so.3.5.6
+	        3  1.6949 libselinux.so.1
+	        1  0.5650 systemd
+	        1  0.5650 librt-2.14.90.so
+      173  0.0032 rm
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      159 91.9075 vmlinux
+	        9  5.2023 libc-2.14.90.so
+	        5  2.8902 rm
+      150  0.0028 plugin-config
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	      114 76.0000 vmlinux
+	       25 16.6667 ld-2.14.90.so
+	        6  4.0000 plugin-config
+	        4  2.6667 libc-2.14.90.so
+	        1  0.6667 libsasl2.so.2.0.23
+      148  0.0028 systemd-tmpfiles
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       96 64.8649 vmlinux
+	       45 30.4054 libc-2.14.90.so
+	        5  3.3784 libselinux.so.1
+	        2  1.3514 systemd-tmpfiles
+      139  0.0026 i2c_algo_bit
+      131  0.0024 ath
+      128  0.0024 ttm
+      123  0.0023 ntpd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       85 69.1057 vmlinux
+	       22 17.8862 ntpd
+	        5  4.0650 mac80211
+	        3  2.4390 libc-2.14.90.so
+	        2  1.6260 [vdso] (tgid:987 range:0x7fff3b989000-0x7fff3b98a000)
+	        1  0.8130 ath9k
+	        1  0.8130 iptable_mangle
+	        1  0.8130 iptable_nat
+	        1  0.8130 nf_conntrack_ipv4
+	        1  0.8130 nf_nat
+	        1  0.8130 ld-2.14.90.so
+      122  0.0023 gnome-session
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       45 36.8852 vmlinux
+	       21 17.2131 libdbus-1.so.3.5.6
+	       21 17.2131 libglib-2.0.so.0.3000.1
+	       10  8.1967 libpthread-2.14.90.so
+	        9  7.3770 libc-2.14.90.so
+	        5  4.0984 libgobject-2.0.so.0.3000.1
+	        5  4.0984 libX11.so.6.3.0
+	        2  1.6393 gnome-session
+	        1  0.8197 libgthread-2.0.so.0.3000.1
+	        1  0.8197 libXi.so.6.1.0
+	        1  0.8197 libdbus-glib-1.so.2.1.0
+	        1  0.8197 libgdk-3.so.0.200.1
+      110  0.0021 kpsewhich
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       55 50.0000 libc-2.14.90.so
+	       34 30.9091 libkpathsea.so.6.0.1
+	       18 16.3636 vmlinux
+	        3  2.7273 ld-2.14.90.so
+       99  0.0018 git
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       66 66.6667 vmlinux
+	       10 10.1010 libafs
+	        8  8.0808 ld-2.14.90.so
+	        5  5.0505 git
+	        5  5.0505 libz.so.1.2.5
+	        4  4.0404 libc-2.14.90.so
+	        1  1.0101 ath9k
+       95  0.0018 nf_conntrack
+       92  0.0017 rpm
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       35 38.0435 vmlinux
+	       22 23.9130 libc-2.14.90.so
+	       13 14.1304 librpmio.so.2.0.1
+	        7  7.6087 ld-2.14.90.so
+	        5  5.4348 libdb-4.8.so
+	        4  4.3478 librpm.so.2.0.2
+	        2  2.1739 libfreebl3.so
+	        2  2.1739 libpthread-2.14.90.so
+	        1  1.0870 libnss3.so
+	        1  1.0870 libsoftokn3.so
+       88  0.0016 gvfsd-metadata
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       35 39.7727 libglib-2.0.so.0.3000.1
+	       19 21.5909 libc-2.14.90.so
+	       14 15.9091 vmlinux
+	        8  9.0909 gvfsd-metadata
+	        8  9.0909 libdbus-1.so.3.5.6
+	        4  4.5455 ld-2.14.90.so
+       85  0.0016 rsyslogd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       51 60.0000 vmlinux
+	       17 20.0000 rsyslogd
+	        9 10.5882 libc-2.14.90.so
+	        3  3.5294 libpthread-2.14.90.so
+	        2  2.3529 ath9k
+	        2  2.3529 imuxsock.so
+	        1  1.1765 [vdso] (tgid:1098 range:0x7fff7b4db000-0x7fff7b4dc000)
+       84  0.0016 libafs
+       79  0.0015 aspell
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       38 48.1013 vmlinux
+	       25 31.6456 ld-2.14.90.so
+	        9 11.3924 libaspell.so.15.1.4
+	        7  8.8608 libc-2.14.90.so
+       75  0.0014 tracker-store
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       31 41.3333 libglib-2.0.so.0.3000.1
+	       14 18.6667 vmlinux
+	       12 16.0000 libgobject-2.0.so.0.3000.1
+	        8 10.6667 libgio-2.0.so.0.3000.1
+	        5  6.6667 libc-2.14.90.so
+	        3  4.0000 libpthread-2.14.90.so
+	        1  1.3333 libdbus-1.so.3.5.6
+	        1  1.3333 libgthread-2.0.so.0.3000.1
+       73  0.0014 evolution-alarm-notify
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       20 27.3973 vmlinux
+	       17 23.2877 libglib-2.0.so.0.3000.1
+	       10 13.6986 libc-2.14.90.so
+	        7  9.5890 libgio-2.0.so.0.3000.1
+	        6  8.2192 libdbus-1.so.3.5.6
+	        5  6.8493 libgobject-2.0.so.0.3000.1
+	        3  4.1096 libpthread-2.14.90.so
+	        1  1.3699 [vdso] (tgid:1805 range:0x7ffff11ec000-0x7ffff11ed000)
+	        1  1.3699 libgthread-2.0.so.0.3000.1
+	        1  1.3699 libgdk-3.so.0.200.1
+	        1  1.3699 libgtk-3.so.0.200.1
+	        1  1.3699 libical.so.0.46.0
+       70  0.0013 polkitd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       27 38.5714 libglib-2.0.so.0.3000.1
+	       18 25.7143 vmlinux
+	        8 11.4286 libgio-2.0.so.0.3000.1
+	        7 10.0000 libgobject-2.0.so.0.3000.1
+	        6  8.5714 libc-2.14.90.so
+	        3  4.2857 libpthread-2.14.90.so
+	        1  1.4286 libgthread-2.0.so.0.3000.1
+       67  0.0013 aklog
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       31 46.2687 vmlinux
+	       11 16.4179 libc-2.14.90.so
+	       10 14.9254 aklog
+	        7 10.4478 libnss_files-2.14.90.so
+	        4  5.9701 ld-2.14.90.so
+	        2  2.9851 ath9k
+	        1  1.4925 iptable_nat
+	        1  1.4925 oprofile
+       66  0.0012 snd_hda_intel
+       66  0.0012 gvfs-gdu-volume-monitor
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       19 28.7879 libc-2.14.90.so
+	       15 22.7273 vmlinux
+	       12 18.1818 libgobject-2.0.so.0.3000.1
+	        8 12.1212 libglib-2.0.so.0.3000.1
+	        4  6.0606 libdbus-1.so.3.5.6
+	        2  3.0303 libpthread-2.14.90.so
+	        2  3.0303 libdbus-glib-1.so.2.1.0
+	        2  3.0303 libgdu.so.0.0.0
+	        1  1.5152 libgthread-2.0.so.0.3000.1
+	        1  1.5152 libgvfscommon.so.0.0.0
+       62  0.0012 file
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       21 33.8710 libmagic.so.1.0.0
+	       20 32.2581 libc-2.14.90.so
+	       20 32.2581 vmlinux
+	        1  1.6129 ld-2.14.90.so
+       61  0.0011 gdu-notification-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       12 19.6721 libgobject-2.0.so.0.3000.1
+	       12 19.6721 vmlinux
+	       11 18.0328 libglib-2.0.so.0.3000.1
+	       10 16.3934 libdbus-1.so.3.5.6
+	        7 11.4754 libc-2.14.90.so
+	        3  4.9180 libgdu.so.0.0.0
+	        1  1.6393 ld-2.14.90.so
+	        1  1.6393 libgio-2.0.so.0.3000.1
+	        1  1.6393 libpthread-2.14.90.so
+	        1  1.6393 libX11.so.6.3.0
+	        1  1.6393 libgdk-3.so.0.200.1
+	        1  1.6393 libxcb.so.1.1.0
+       60  0.0011 libvirtd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       25 41.6667 libc-2.14.90.so
+	       24 40.0000 vmlinux
+	        5  8.3333 libdbus-1.so.3.5.6
+	        4  6.6667 libvirt.so.0.9.6
+	        2  3.3333 [vdso] (tgid:1144 range:0x7fff13bf9000-0x7fff13bfa000)
+       57  0.0011 gconfd-2
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       19 33.3333 vmlinux
+	       12 21.0526 libglib-2.0.so.0.3000.1
+	        9 15.7895 libdbus-1.so.3.5.6
+	        8 14.0351 libc-2.14.90.so
+	        3  5.2632 [vdso] (tgid:1649 range:0x7fffdcc9a000-0x7fffdcc9b000)
+	        2  3.5088 libgconfbackend-xml.so
+	        2  3.5088 libgconf-2.so.4.1.5
+	        1  1.7544 gconfd-2
+	        1  1.7544 libdbus-glib-1.so.2.1.0
+       56  0.0010 r8169
+       48 9.0e-04 ath9k_common
+       46 8.6e-04 udevd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       40 86.9565 vmlinux
+	        4  8.6957 udevd
+	        2  4.3478 libc-2.14.90.so
+       46 8.6e-04 udisks-helper-ata-smart-collect
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       33 71.7391 vmlinux
+	        7 15.2174 ld-2.14.90.so
+	        5 10.8696 libc-2.14.90.so
+	        1  2.1739 libglib-2.0.so.0.3000.1
+       44 8.2e-04 dhclient
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       25 56.8182 vmlinux
+	       10 22.7273 libc-2.14.90.so
+	        6 13.6364 libisc-export.so.83.0.1
+	        2  4.5455 nf_conntrack
+	        1  2.2727 [vdso] (tgid:1478 range:0x7fff0c4f2000-0x7fff0c4f3000)
+       41 7.7e-04 grep
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       21 51.2195 vmlinux
+	       11 26.8293 libc-2.14.90.so
+	        6 14.6341 ld-2.14.90.so
+	        2  4.8780 grep
+	        1  2.4390 radeon
+       41 7.7e-04 sed
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       30 73.1707 vmlinux
+	        8 19.5122 libc-2.14.90.so
+	        3  7.3171 ld-2.14.90.so
+       41 7.7e-04 systemd-stdout-syslog-bridge
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       36 87.8049 vmlinux
+	        3  7.3171 libc-2.14.90.so
+	        2  4.8780 systemd-stdout-syslog-bridge
+       38 7.1e-04 mission-control-5
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       13 34.2105 libdbus-1.so.3.5.6
+	        8 21.0526 vmlinux
+	        5 13.1579 libc-2.14.90.so
+	        3  7.8947 libglib-2.0.so.0.3000.1
+	        3  7.8947 libgobject-2.0.so.0.3000.1
+	        3  7.8947 libdbus-glib-1.so.2.1.0
+	        1  2.6316 libgthread-2.0.so.0.3000.1
+	        1  2.6316 libpthread-2.14.90.so
+	        1  2.6316 libmissioncontrol-server-5.9.3.so
+       37 6.9e-04 ls
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       25 67.5676 vmlinux
+	        6 16.2162 libc-2.14.90.so
+	        4 10.8108 ld-2.14.90.so
+	        2  5.4054 ls
+       37 6.9e-04 tracker-miner-fs
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       15 40.5405 vmlinux
+	        8 21.6216 libc-2.14.90.so
+	        8 21.6216 libglib-2.0.so.0.3000.1
+	        3  8.1081 libpthread-2.14.90.so
+	        2  5.4054 libdbus-1.so.3.5.6
+	        1  2.7027 librt-2.14.90.so
+       36 6.7e-04 cupsd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       25 69.4444 vmlinux
+	        8 22.2222 libdbus-1.so.3.5.6
+	        2  5.5556 libcups.so.2
+	        1  2.7778 cupsd
+       35 6.5e-04 e-calendar-factory
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       12 34.2857 libglib-2.0.so.0.3000.1
+	        7 20.0000 vmlinux
+	        5 14.2857 libc-2.14.90.so
+	        5 14.2857 libgio-2.0.so.0.3000.1
+	        4 11.4286 libgobject-2.0.so.0.3000.1
+	        2  5.7143 libpthread-2.14.90.so
+       35 6.5e-04 console-kit-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       15 42.8571 vmlinux
+	        5 14.2857 libdbus-1.so.3.5.6
+	        4 11.4286 libc-2.14.90.so
+	        4 11.4286 libglib-2.0.so.0.3000.1
+	        3  8.5714 libgobject-2.0.so.0.3000.1
+	        2  5.7143 libpthread-2.14.90.so
+	        1  2.8571 librt-2.14.90.so
+	        1  2.8571 libdbus-glib-1.so.2.1.0
+       34 6.3e-04 uname
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       26 76.4706 vmlinux
+	        6 17.6471 libc-2.14.90.so
+	        2  5.8824 ld-2.14.90.so
+       27 5.0e-04 modprobe
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       20 74.0741 vmlinux
+	        6 22.2222 libc-2.14.90.so
+	        1  3.7037 modprobe
+       27 5.0e-04 id
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       23 85.1852 vmlinux
+	        4 14.8148 ld-2.14.90.so
+       26 4.9e-04 upowerd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       12 46.1538 vmlinux
+	        7 26.9231 libc-2.14.90.so
+	        3 11.5385 libglib-2.0.so.0.3000.1
+	        2  7.6923 libdbus-1.so.3.5.6
+	        1  3.8462 ld-2.14.90.so
+	        1  3.8462 libgobject-2.0.so.0.3000.1
+       25 4.7e-04 libflashplayer.so
+       23 4.3e-04 crda
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       22 95.6522 vmlinux
+	        1  4.3478 ld-2.14.90.so
+       23 4.3e-04 ophelp
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       10 43.4783 libc-2.14.90.so
+	        9 39.1304 vmlinux
+	        2  8.6957 ophelp
+	        1  4.3478 ld-2.14.90.so
+	        1  4.3478 libpopt.so.0.0.0
+       23 4.3e-04 evinced
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       10 43.4783 vmlinux
+	        4 17.3913 libglib-2.0.so.0.3000.1
+	        4 17.3913 libgobject-2.0.so.0.3000.1
+	        2  8.6957 libc-2.14.90.so
+	        2  8.6957 libgio-2.0.so.0.3000.1
+	        1  4.3478 ld-2.14.90.so
+       22 4.1e-04 git-upload-pack
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       18 81.8182 vmlinux
+	        2  9.0909 libafs
+	        1  4.5455 git-upload-pack
+	        1  4.5455 ld-2.14.90.so
+       22 4.1e-04 gsd-printer
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        6 27.2727 libglib-2.0.so.0.3000.1
+	        5 22.7273 vmlinux
+	        4 18.1818 libgobject-2.0.so.0.3000.1
+	        3 13.6364 libc-2.14.90.so
+	        2  9.0909 libgio-2.0.so.0.3000.1
+	        2  9.0909 libpthread-2.14.90.so
+       21 3.9e-04 xauth
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       18 85.7143 vmlinux
+	        2  9.5238 ld-2.14.90.so
+	        1  4.7619 libc-2.14.90.so
+       21 3.9e-04 mozilla-xremote-client
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       16 76.1905 vmlinux
+	        3 14.2857 ld-2.14.90.so
+	        1  4.7619 libX11.so.6.3.0
+	        1  4.7619 libstdc++.so.6.0.16
+       19 3.5e-04 bridge
+       19 3.5e-04 rpcbind
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       12 63.1579 vmlinux
+	        3 15.7895 libtirpc.so.1.0.10
+	        1  5.2632 rpcbind
+	        1  5.2632 [vdso] (tgid:1131 range:0x7fff74b25000-0x7fff74b26000)
+	        1  5.2632 libc-2.14.90.so
+	        1  5.2632 libpthread-2.14.90.so
+       19 3.5e-04 deja-dup-monitor
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        8 42.1053 libglib-2.0.so.0.3000.1
+	        5 26.3158 vmlinux
+	        4 21.0526 libgobject-2.0.so.0.3000.1
+	        1  5.2632 libgio-2.0.so.0.3000.1
+	        1  5.2632 libpthread-2.14.90.so
+       19 3.5e-04 avahi-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       11 57.8947 vmlinux
+	        2 10.5263 libdbus-1.so.3.5.6
+	        2 10.5263 libavahi-common.so.3.5.3
+	        1  5.2632 avahi-daemon
+	        1  5.2632 libc-2.14.90.so
+	        1  5.2632 libpthread-2.14.90.so
+	        1  5.2632 libavahi-core.so.7.0.2
+       18 3.4e-04 basename
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       15 83.3333 vmlinux
+	        2 11.1111 libc-2.14.90.so
+	        1  5.5556 ld-2.14.90.so
+       18 3.4e-04 abrt-applet
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       10 55.5556 vmlinux
+	        2 11.1111 libc-2.14.90.so
+	        2 11.1111 libpthread-2.14.90.so
+	        2 11.1111 libX11.so.6.3.0
+	        1  5.5556 libdbus-1.so.3.5.6
+	        1  5.5556 libglib-2.0.so.0.3000.1
+       17 3.2e-04 mountpoint
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       14 82.3529 vmlinux
+	        2 11.7647 libc-2.14.90.so
+	        1  5.8824 ld-2.14.90.so
+       16 3.0e-04 libglib-2.0.so.0.3000.1
+       16 3.0e-04 git-receive-pack
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       12 75.0000 vmlinux
+	        2 12.5000 libafs
+	        1  6.2500 ld-2.14.90.so
+	        1  6.2500 libc-2.14.90.so
+       16 3.0e-04 gvfsd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        6 37.5000 vmlinux
+	        5 31.2500 libdbus-1.so.3.5.6
+	        4 25.0000 libglib-2.0.so.0.3000.1
+	        1  6.2500 libc-2.14.90.so
+       16 3.0e-04 afsd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        9 56.2500 vmlinux
+	        3 18.7500 libc-2.14.90.so
+	        2 12.5000 libafs
+	        1  6.2500 afsd
+	        1  6.2500 ld-2.14.90.so
+       15 2.8e-04 accounts-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        7 46.6667 libdbus-1.so.3.5.6
+	        4 26.6667 vmlinux
+	        2 13.3333 libpthread-2.14.90.so
+	        1  6.6667 libglib-2.0.so.0.3000.1
+	        1  6.6667 libdbus-glib-1.so.2.1.0
+       14 2.6e-04 nf_nat
+       14 2.6e-04 npconfig
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        7 50.0000 vmlinux
+	        5 35.7143 libc-2.14.90.so
+	        2 14.2857 ld-2.14.90.so
+       13 2.4e-04 nf_conntrack_ipv4
+       13 2.4e-04 tr
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        9 69.2308 vmlinux
+	        4 30.7692 libc-2.14.90.so
+       12 2.2e-04 cut
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       11 91.6667 vmlinux
+	        1  8.3333 libc-2.14.90.so
+       12 2.2e-04 systemctl
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	       10 83.3333 vmlinux
+	        2 16.6667 ld-2.14.90.so
+       12 2.2e-04 gnome-keyring-daemon
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        6 50.0000 libdbus-1.so.3.5.6
+	        5 41.6667 vmlinux
+	        1  8.3333 libc-2.14.90.so
+       12 2.2e-04 modem-manager
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        8 66.6667 vmlinux
+	        2 16.6667 libdbus-1.so.3.5.6
+	        1  8.3333 libglib-2.0.so.0.3000.1
+	        1  8.3333 libpthread-2.14.90.so
+       11 2.1e-04 iptable_nat
+       11 2.1e-04 gdm-binary
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        4 36.3636 vmlinux
+	        2 18.1818 libgobject-2.0.so.0.3000.1
+	        2 18.1818 libdbus-glib-1.so.2.1.0
+	        1  9.0909 gdm-binary
+	        1  9.0909 libdbus-1.so.3.5.6
+	        1  9.0909 libglib-2.0.so.0.3000.1
+       10 1.9e-04 mv
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        8 80.0000 vmlinux
+	        2 20.0000 ld-2.14.90.so
+        9 1.7e-04 systemd-cgroups-agent
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        9 100.000 vmlinux
+        8 1.5e-04 dircolors
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        5 62.5000 vmlinux
+	        3 37.5000 ld-2.14.90.so
+        8 1.5e-04 seapplet
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        4 50.0000 vmlinux
+	        1 12.5000 libdbus-1.so.3.5.6
+	        1 12.5000 libglib-2.0.so.0.3000.1
+	        1 12.5000 libX11.so.6.3.0
+	        1 12.5000 libgdk-x11-2.0.so.0.2400.7
+        8 1.5e-04 tput
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        6 75.0000 vmlinux
+	        1 12.5000 ld-2.14.90.so
+	        1 12.5000 libc-2.14.90.so
+        7 1.3e-04 cat
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        5 71.4286 vmlinux
+	        2 28.5714 ld-2.14.90.so
+        7 1.3e-04 echo
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        5 71.4286 vmlinux
+	        1 14.2857 ld-2.14.90.so
+	        1 14.2857 libc-2.14.90.so
+        7 1.3e-04 mkdir
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        5 71.4286 vmlinux
+	        2 28.5714 libc-2.14.90.so
+        7 1.3e-04 plymouth
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        6 85.7143 vmlinux
+	        1 14.2857 ld-2.14.90.so
+        7 1.3e-04 stty
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        4 57.1429 vmlinux
+	        3 42.8571 ld-2.14.90.so
+        7 1.3e-04 systemd-tty-ask-password-agent
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        6 85.7143 vmlinux
+	        1 14.2857 systemd-tty-ask-password-agent
+        7 1.3e-04 i2c_core
+        7 1.3e-04 mdadm
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        7 100.000 vmlinux
+        6 1.1e-04 iptable_mangle
+        6 1.1e-04 tty
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        6 100.000 vmlinux
+        5 9.3e-05 dbus-daemon-launch-helper
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        4 80.0000 vmlinux
+	        1 20.0000 libexpat.so.1.5.2
+        5 9.3e-05 consoletype
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        5 100.000 vmlinux
+        5 9.3e-05 du
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        4 80.0000 vmlinux
+	        1 20.0000 libc-2.14.90.so
+        4 7.5e-05 [
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        3 75.0000 vmlinux
+	        1 25.0000 [
+        4 7.5e-05 fs
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        3 75.0000 vmlinux
+	        1 25.0000 ld-2.14.90.so
+        4 7.5e-05 opjitconv
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        4 100.000 vmlinux
+        4 7.5e-05 seq
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        2 50.0000 ld-2.14.90.so
+	        2 50.0000 vmlinux
+        3 5.6e-05 touch
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        2 66.6667 vmlinux
+	        1 33.3333 ld-2.14.90.so
+        3 5.6e-05 systemd-logind
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        2 66.6667 vmlinux
+	        1 33.3333 libdbus-1.so.3.5.6
+        3 5.6e-05 nf_defrag_ipv4
+        3 5.6e-05 dirname
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        3 100.000 vmlinux
+        3 5.6e-05 expr
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        1 33.3333 ld-2.14.90.so
+	        1 33.3333 libc-2.14.90.so
+	        1 33.3333 vmlinux
+        3 5.6e-05 libxul.so
+        3 5.6e-05 git-merge
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        1 33.3333 git-merge
+	        1 33.3333 ld-2.14.90.so
+	        1 33.3333 vmlinux
+        3 5.6e-05 atd
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        3 100.000 vmlinux
+        3 5.6e-05 xt_state
+        2 3.7e-05 libc-2.14.90.so
+        2 3.7e-05 librt-2.14.90.so
+        2 3.7e-05 rfkill
+        2 3.7e-05 sunrpc
+        2 3.7e-05 clear
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        1 50.0000 ld-2.14.90.so
+	        1 50.0000 vmlinux
+        2 3.7e-05 librpm.so.2.0.2
+        2 3.7e-05 gnome-pty-helper
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        2 100.000 vmlinux
+        1 1.9e-05 drm_kms_helper
+        1 1.9e-05 libgobject-2.0.so.0.3000.1
+        1 1.9e-05 which
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	        1 100.000 vmlinux
+        1 1.9e-05 libpython2.7.so.1.0
