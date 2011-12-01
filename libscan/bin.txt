@@ -142,7 +142,7 @@
 /bin/systemd-notify:  System Environment/Base
 /bin/dnsdomainname:  System Environment/Base
 /bin/awk:  Applications/Text
-/sbin:  System Environment/Base
+/sbin/:  System Environment/Base
 /sbin/pvremove:  System Environment/Base
 /sbin/umount.nfs:  System Environment/Daemons
 /sbin/install-info:  System Environment/Base
@@ -634,6 +634,7 @@
 /usr/bin/ck-list-sessions:  System Environment/Libraries
 /usr/bin/POST:  Development/Libraries
 /usr/bin/byobu-export:  Applications/System
+/usr/bin/dvbscan:  Applications/Multimedia
 /usr/bin/llvm-extract:  Development/Languages
 /usr/bin/moira:  Applications/System
 /usr/bin/monop2:  Development/Languages
@@ -789,6 +790,7 @@
 /usr/bin/mogrify:  Applications/Multimedia
 /usr/bin/ppmrelief:  Applications/Multimedia
 /usr/bin/nspr-config:  Development/Libraries
+/usr/bin/xrced:  Development/Languages
 /usr/bin/system-config-printer-applet:  System Environment/Base
 /usr/bin/runhaskell:  Applications/File
 /usr/bin/scrollkeeper-rebuilddb:  System Environment/Base
@@ -863,6 +865,7 @@
 /usr/bin/pkcon:  Unspecified
 /usr/bin/rubber:  Applications/Publishing
 /usr/bin/jhat:  Applications/File
+/usr/bin/editra:  Development/Languages
 /usr/bin/pbmtoepsi:  Applications/Multimedia
 /usr/bin/myisampack:  Applications/Databases
 /usr/bin/dos2unix:  Applications/Text
@@ -882,6 +885,7 @@
 /usr/bin/seed:  Development/Languages
 /usr/bin/byobu-ctrl-a:  Applications/System
 /usr/bin/infocmp:  System Environment/Base
+/usr/bin/dst_test:  Applications/Multimedia
 /usr/bin/pamthreshold:  Applications/Multimedia
 /usr/bin/diffimg:  Applications/Multimedia
 /usr/bin/imgsize:  Development/Libraries
@@ -972,6 +976,7 @@
 /usr/bin/ghci-7.0.4:  Development/Languages
 /usr/bin/mdoc-update:  Documentation
 /usr/bin/manweb:  Applications/Multimedia
+/usr/bin/pycrust:  Development/Languages
 /usr/bin/nepomukcontroller:  User Interface/Desktops
 /usr/bin/rpmdev-diff:  Development/Tools
 /usr/bin/monodir:  Development/Languages
@@ -1179,6 +1184,7 @@
 /usr/bin/mysql-myisam-dump:  Applications/Databases
 /usr/bin/pamsumm:  Applications/Multimedia
 /usr/bin/kmag:  User Interface/Desktops
+/usr/bin/texi2pdf:  Applications/Publishing
 /usr/bin/cdxa2mpeg:  Applications/Multimedia
 /usr/bin/aplaymidi:  Applications/Multimedia
 /usr/bin/compiz-gtk:  User Interface/Desktops
@@ -1213,6 +1219,7 @@
 /usr/bin/mdvalidater:  Documentation
 /usr/bin/db_dump185:  Applications/Databases
 /usr/bin/foomatic-rip:  System Environment/Libraries
+/usr/bin/pip:  Applications/File
 /usr/bin/pnmtorast:  Applications/Multimedia
 /usr/bin/qemu-kvm:  Development/Tools
 /usr/bin/mencoder:  Applications/Multimedia
@@ -1395,6 +1402,7 @@
 /usr/bin/gpgme-config:  Development/Libraries
 /usr/bin/dbus-binding-tool:  System Environment/Libraries
 /usr/bin/gnome-dictionary:  Applications/System
+/usr/bin/gnutv:  Applications/Multimedia
 /usr/bin/ldapmodify:  Applications/Internet
 /usr/bin/byobu-select-session:  Applications/System
 /usr/bin/ntfs-3g:  System Environment/Base
@@ -1533,7 +1541,6 @@
 /usr/bin/showconsolefont:  System Environment/Base
 /usr/bin/start-pulseaudio-kde:  System Environment/Daemons
 /usr/bin/grap2graph:  Applications/Publishing
-/usr/bin/ttusb_dec_reset:  Applications/Multimedia
 /usr/bin/gunzip:  Applications/File
 /usr/bin/ppmtoacad:  Applications/Multimedia
 /usr/bin/kdeasciiquarium.kss:  Amusements/Graphics
@@ -1614,6 +1621,7 @@
 /usr/bin/symilar:  Development/Debuggers
 /usr/bin/llc:  Development/Languages
 /usr/bin/sha512sum:  System Environment/Base
+/usr/bin/pdftexi2dvi:  Applications/Publishing
 /usr/bin/xinput:  User Interface/X
 /usr/bin/smbcquotas:  Applications/System
 /usr/bin/pnmtotiffcmyk:  Applications/Multimedia
@@ -1681,6 +1689,7 @@
 /usr/bin/rfcomm:  Applications/System
 /usr/bin/runcon:  System Environment/Base
 /usr/bin/myisam_ftdump:  Applications/Databases
+/usr/bin/zap:  Applications/Multimedia
 /usr/bin/evolution:  Applications/Productivity
 /usr/bin/report-gtk:  User Interface/Desktops
 /usr/bin/celtenc051:  System Environment/Libraries
@@ -1814,6 +1823,7 @@
 /usr/bin/pkfix-helper:  Applications/Publishing
 /usr/bin/xmodmap:  User Interface/X
 /usr/bin/snmpconf:  System Environment/Daemons
+/usr/bin/img2png:  Development/Languages
 /usr/bin/fedora-cvs:  Applications/Productivity
 /usr/bin/gdaldem:  System Environment/Libraries
 /usr/bin/lzmore:  Development/Libraries
@@ -2065,6 +2075,7 @@
 /usr/bin/mtype:  Applications/System
 /usr/bin/byobu-enable:  Applications/System
 /usr/bin/rpmverify:  System Environment/Base
+/usr/bin/img2xpm:  Development/Languages
 /usr/bin/qmlviewer:  System Environment/Libraries
  System Environment/Libraries
 /usr/bin/aserver:  System Environment/Libraries
@@ -2486,6 +2497,7 @@
 /usr/bin/tracker-stats:  Applications/System
 /usr/bin/sgml2xml:  Applications/Text
 /usr/bin/db_deadlock:  Applications/Databases
+/usr/bin/texi2dvi:  Applications/Publishing
 /usr/bin/print_sum:  Development/Tools
 /usr/bin/cscope-indexer:  Development/Tools
 /usr/bin/dvicopy:  Applications/Publishing
@@ -2517,6 +2529,7 @@
 /usr/bin/userformat:  Applications/System
 /usr/bin/krb5-auth-dialog:  User Interface/X
 /usr/bin/gobject-query:  Development/Libraries
+/usr/bin/helpviewer:  Development/Languages
 /usr/bin/usermaint:  Applications/System
 /usr/bin/lzop:  Applications/Archiving
 /usr/bin/ppdi:  System Environment/Daemons
@@ -2792,6 +2805,7 @@
 /usr/bin/gst-launch-0.10:  Applications/Multimedia
  Applications/Multimedia
 /usr/bin/fribidi:  System Environment/Libraries
+ System Environment/Libraries
 /usr/bin/db47_codegen:  System Environment/Libraries
 /usr/bin/wmf2gd:  System Environment/Libraries
 /usr/bin/psktool:  Applications/System
@@ -2918,7 +2932,6 @@
 /usr/bin/geodatatest:  Unspecified
 /usr/bin/rpmgraph:  Development/Libraries
 /usr/bin/oldrdist:  Applications/System
-/usr/bin/av7110_evtest:  Applications/Multimedia
 /usr/bin/vdir:  System Environment/Base
 /usr/bin/epsg_tr.py:  Development/Libraries
 /usr/bin/hal-get-property:  System Environment/Libraries
@@ -3130,6 +3143,7 @@
 /usr/bin/ceph-mds:  System Environment/Base
 /usr/bin/xmllint:  Development/Libraries
  Development/Libraries
+/usr/bin/pyalamode:  Development/Languages
 /usr/bin/ssh-keyscan:  Applications/Internet
 /usr/bin/patgen:  Applications/Publishing
 /usr/bin/pdfcrop:  Applications/Publishing
@@ -3279,6 +3293,7 @@
 /usr/bin/gtk-builder-convert:  Development/Libraries
 /usr/bin/mvn2:  Development/Build Tools
 /usr/bin/dumphint:  Applications/Publishing
+/usr/bin/atsc_epg:  Applications/Multimedia
 /usr/bin/gnome-help:  Applications/System
 /usr/bin/flex:  Development/Tools
 /usr/bin/fdp:  Applications/Multimedia
@@ -3542,6 +3557,7 @@
 /usr/bin/circo:  Applications/Multimedia
 /usr/bin/gjar:  System Environment/Libraries
 /usr/bin/dotty:  Applications/Multimedia
+/usr/bin/img2py:  Development/Languages
 /usr/bin/smbprint:  Applications/System
 /usr/bin/krfb:  Applications/Internet
 /usr/bin/get-versions:  System Environment/Daemons
@@ -3587,6 +3603,7 @@
 /usr/bin/VBoxTunctl:  Development/Tools
 /usr/bin/podlint:  Development/Libraries
 /usr/bin/pamtojpeg2k:  Applications/Multimedia
+/usr/bin/pyalacarte:  Development/Languages
 /usr/bin/grub2-editenv:  System Environment/Base
 /usr/bin/printafm:  Applications/Publishing
 /usr/bin/cpan:  Development/Languages
@@ -3640,7 +3657,6 @@
 /usr/bin/vboxbfe:  Development/Tools
 /usr/bin/panoramagui:  Unspecified
 /usr/bin/pnminvert:  Applications/Multimedia
-/usr/bin/efj:  Text Editors/Integrated Development Environments (IDE)
 /usr/bin/ivstools:  Applications/System
 /usr/bin/blanche:  Applications/System
 /usr/bin/kfile4:  User Interface/Desktops
@@ -3717,7 +3733,6 @@
 /usr/bin/db47_archive:  System Environment/Libraries
 /usr/bin/k5srvutil:  System Environment/Base
 /usr/bin/bakefile_gen:  Development/Tools
-/usr/bin/report:  System Environment/Libraries
 /usr/bin/bluedevil-monolithic:  Applications/Communications
 /usr/bin/grep-changelog:  Applications/Editors
 /usr/bin/dvidvi:  Applications/Publishing
@@ -3765,9 +3780,11 @@
 /usr/bin/ghostscript:  Applications/Publishing
 /usr/bin/c++filt:  Development/Tools
 /usr/bin/ppmmix:  Applications/Multimedia
+/usr/bin/dib3000-watch:  Applications/Multimedia
 /usr/bin/foomatic-combo-xml:  System Environment/Libraries
 /usr/bin/tchtest:  Development/Libraries
 /usr/bin/pgmedge:  Applications/Multimedia
+/usr/bin/pywrap:  Development/Languages
 /usr/bin/speech-dispatcher:  System Environment/Libraries
 /usr/bin/airdecloak-ng:  Applications/System
 /usr/bin/bshdoc:  Development/Tools
@@ -3801,6 +3818,7 @@
 /usr/bin/kgpgconf:  Applications/Productivity
 /usr/bin/libgcrypt-config:  Development/Libraries
 /usr/bin/mailstat:  Applications/Internet
+/usr/bin/pip-2.7:  Applications/File
 /usr/bin/dolphin:  User Interface/Desktops
 /usr/bin/glookbib:  Applications/Publishing
 /usr/bin/Xephyr:  User Interface/X
@@ -3821,6 +3839,7 @@
 /usr/bin/jarsigner:  Applications/File
 /usr/bin/indxbib:  Applications/Publishing
 /usr/bin/perf:  Development/System
+/usr/bin/lsdvb:  Applications/Multimedia
 /usr/bin/screen:  Applications/System
 /usr/bin/expand:  System Environment/Base
 /usr/bin/resizecons:  System Environment/Base
@@ -4045,6 +4064,7 @@
 /usr/bin/soundstretch:  System Environment/Libraries
 /usr/bin/kmixctrl:  Applications/Multimedia
 /usr/bin/remove-links:  Development/Tools
+/usr/bin/pyshell:  Development/Languages
 /usr/bin/slabtop:  Applications/System
 /usr/bin/xwd:  User Interface/X
 /usr/bin/gettextize:  Development/Tools
@@ -4284,6 +4304,7 @@
 /usr/bin/libpng-config:  Development/Libraries
 /usr/bin/mysql_install_db:  Applications/Databases
 /usr/bin/pbmtocmuwm:  Applications/Multimedia
+/usr/bin/gotox:  Applications/Multimedia
 /usr/bin/nautilus-autorun-software:  User Interface/Desktops
 /usr/bin/mysqlbug:  Applications/Databases
 /usr/bin/pamsummcol:  Applications/Multimedia
@@ -4406,6 +4427,7 @@
 /usr/bin/gfortran:  Development/Languages
 /usr/bin/readom:  Applications/Archiving
 /usr/bin/atrm:  System Environment/Daemons
+/usr/bin/texindex:  Applications/Publishing
 /usr/bin/awk_count:  Development/Tools
 /usr/bin/cd-drive:  System Environment/Libraries
 /usr/bin/mysqladmin:  Applications/Databases
@@ -4509,6 +4531,7 @@
 /usr/bin/rcsclean:  Development/Tools
 /usr/bin/ppmntsc:  Applications/Multimedia
 /usr/bin/el5-rpmlint:  Development/Tools
+/usr/bin/pywxrc:  Development/Languages
 /usr/bin/h5mkgrp:  System Environment/Libraries
 /usr/bin/h5dump:  System Environment/Libraries
 /usr/bin/eu-strip:  Development/Tools
