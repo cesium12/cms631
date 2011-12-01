@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>?</title>
+  <title>insert title here</title>
   <style type="text/css">
 html, body {
   height: 100%;
@@ -65,11 +65,19 @@ body {
   white-space: nowrap;
 }
 
-#info {
+.topbox {
   position: fixed;
   top: 0;
-  right: 0;
   font-family: "Droid Sans Mono", sans-serif;
+}
+
+#legend {
+  left: 0;
+  text-align: left;
+}
+
+#info {
+  right: 0;
   text-align: right;
 }
 
@@ -117,6 +125,7 @@ var lctx, loctx, gsize, lsize, minsize, select = null, zoom = 0, minzoom = 0, en
 function main() {
   lctx = $('#line')[0].getContext('2d');
   loctx = $('#lover')[0].getContext('2d');
+  $('.topbox').fadeOut(0);
   
   $(window).resize(function() {
     gsize = $(window).height();
@@ -155,9 +164,11 @@ function main() {
           if(!enable)
             return;
           enable = false;
+          $('.topbox').html('').fadeIn(2000);
           var cg = new Callgrind(id, function() {
             minzoom = 0;
             $('#back,#container').fadeIn(2000);
+            $('.topbox').fadeOut(2000);
             logo.animate(dim(80), {
               duration: 3000,
               step: function(now) { zoom = now; },
@@ -181,7 +192,7 @@ WebFontConfig = {
   active : function() { $(main); }
 };
   </script>
-  <script async="true" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+  <script async="async" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 </head>
 <body>
   <div class="full" id="plot">
@@ -189,7 +200,8 @@ WebFontConfig = {
     <canvas class="full" id="lover"></canvas>
   </div>
   <img id="back" src="bliss.jpg">
-  <div class="text" id="info"></div>
+  <div class="text topbox" id="legend"></div>
+  <div class="text topbox" id="info"></div>
   <table id="container">
     <tr></tr>
   </table>

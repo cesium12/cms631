@@ -1,14 +1,16 @@
 function Callgrind(id, destroy, center) {
-  var interval;
+  var interval, title = document.title;
+  document.title = title + ' - ' + id;
   this.kill = function() {
     clearInterval(interval);
     lctx.clearRect(0, 0, lsize, gsize);
     loctx.clearRect(0, 0, lsize, gsize);
+    document.title = title;
     $('#plot > div').remove();
   }
   
   $.getJSON(id + '/grind.json', function(nodes) {
-    var xy, v, any, adj, num = nodes.length, color,
+    var xy, v, any, adj, num = nodes.length, color, categories = {},
         tcanvas = $('<canvas>').attr({ width: 8, height: 1 })[0],
         tctx = tcanvas.getContext('2d'),
         grad = tctx.createRadialGradient(4, 0, 0, 4, 0, 4);
@@ -46,8 +48,8 @@ function Callgrind(id, destroy, center) {
         }
     }
     
-    function dirname(fname) {
-      return fname.split('/').slice(0, -1).slice(0, 4).join('/');
+    function libname(fname) {
+      return categories[fname.indexOf('.so') > -1 ? (fname.split(/\.so/, 2)[0] + '.so') : fname] || '(unknown)';
     }
     
     function tr(p, k) {
@@ -55,7 +57,7 @@ function Callgrind(id, destroy, center) {
     }
     
     function colorplot(e, c, o) {
-      var h = parseFloat(e.data('h')), x = parseInt(c * (1 - Math.abs(h % 2 - 1)));
+      var h = parseFloat(e.attr('h')), x = parseInt(c * (1 - Math.abs(h % 2 - 1)));
       switch(parseInt(h)) {
         case 0: color = [ c, x, 0 ].join(','); break;
         case 1: color = [ x, c, 0 ].join(','); break;
@@ -76,6 +78,7 @@ function Callgrind(id, destroy, center) {
       $('#info').html('');
       if(i !== undefined) {
         $('#info').html('<b>' + nodes[i][1] + '</b><br>total ' + nodes[i][4] + ' / self ' + nodes[i][5]);
+        colorplot($('#legend div[h="' + $('#' + i).attr('h') + '"]').addClass('select'), 192, 1);
         colorplot($('#' + i).addClass('select'), 256, 1);
         for(j in adj[i])
           if(j != i)
@@ -116,16 +119,28 @@ function Callgrind(id, destroy, center) {
       }
     }
     
-    function drawplot() {
-      var colormap = {}, colors = 0;
+    function drawplot(things) {
+      categories = things;
+      var colorlist = [], colormap = {};
       for(var i = 0; i < num; ++i) {
-        var dir = dirname(nodes[i][1]);
-        if(typeof(colormap[dir]) !== 'number')
-          colormap[dir] = colors++;
+        var lib = libname(nodes[i][1]);
+        if(typeof(colormap[lib]) !== 'number') {
+          colorlist.push(lib);
+          colormap[lib] = 0;
+        }
+      }
+      colorlist.sort();
+      for(var i = 0; i < colorlist.length; ++i) {
+        colormap[colorlist[i]] = i;
+        colorplot($('<div>').attr('h', 6 * i / colorlist.length)
+                            .text(colorlist[i]).appendTo('#legend'), 128, 0.5);
       }
       for(var i = 0; i < num; ++i)
-        colorplot($('<div>').data('h', 6 * colormap[dirname(nodes[i][1])] / colors)
+        colorplot($('<div>').attr('h', 6 * colormap[libname(nodes[i][1])] / colorlist.length)
                             .attr('id', i).appendTo('#plot'), 128, 0.5);
+      for(var i = 0; i < num; ++i)
+        if(libname(nodes[i][1]) === '(unknown)')
+          console.log(nodes[i][1]);
     }
     
     function drawline() {
@@ -216,10 +231,8 @@ function Callgrind(id, destroy, center) {
       updateselect(2500);
     }
     
-    
-    
-    drawplot();
+    $.getJSON('libscan/things.json', drawplot).overrideMimeType('application/json');
     interval = setInterval(move, 100);
-  }).overrideMimeType("application/json");
+  }).overrideMimeType('application/json');
 }
 Callgrind.cache = {};
