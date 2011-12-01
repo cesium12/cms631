@@ -41,7 +41,7 @@ def extractSymbol(tree, id_num):
 def try_get_count(element):
     count = 1
     try:
-        count = int(binary.find('count').text)
+        count = int(element.find('count').text)
     except Exception:
         pass
     return count
@@ -57,6 +57,8 @@ def process_module(module):
     global idd
     count = try_get_count(module)
     name = module.attrib['name']
+    if 'range:' in name:
+        return None
     myid = module_id_map.get(name, idd)
     instance = Module(myid, name, count, count)
     if myid == idd:
@@ -65,31 +67,14 @@ def process_module(module):
     module_id_map[name] = myid
     for submodule in module.findall('module'):
         child = process_module(submodule)
-        instance.addConnection(child)
+        if child != None:
+            instance.addConnection(child)
     return instance
 
-for binary in data.xpath('/profile/binary[position()<40]'):
+for binary in data.xpath('/profile/binary[position()<100]'):
     b = process_module(binary)
-    modules[b.index] = b
-    # count = try_get_count(binary)
-    # aid = module_id_map.get(binary.attrib['name'], idd)
-    # m = Module(aid, binary.attrib['name'], count, count)
-    # if aid == idd:
-    #     idd += 1
-    #     modules.append(m)
-
-    # # Now, parse all of the modules inside the binary
-    # for module in binary.findall('module'):
-    #     new_id = module_id_map.get(module.attrib['name'], idd)
-    #     count = try_get_count(module)
-    #     mm = Module(new_id, module.attrib['name'], count, count)
-    #     m.addConnection(mm)
-    #     if new_id == idd:
-    #         idd += 1
-    #         modules.append(mm)
-    #     module_id_map[module.attrib['name']] = new_id
-
-    #print json.dumps(m, cls=ModuleEncoder)  
+    if b != None:
+        modules[b.index] = b
 
 print json.dumps(modules, cls=ModuleEncoder, indent=4)
 
