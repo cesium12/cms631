@@ -67,3 +67,91 @@ RhythmBox is Gnome's music player.
 
 CATEGORIES
 ----------
+
+Applications/Databases
+----------------------
+
+Programs need to store data.  Often times, this data needs to be read
+and written rapidly.  Programmers have developed "databases",
+specialized programs that handle data extremely efficiently.
+Databases are used by other programs instead of customized data
+handling.  Popular databases include MySQL (typically used in web
+development) and SQLite (typically used by smaller programs that have
+structured data).
+
+Applications/File
+-----------------
+
+Computers operate on files, and sometimes you need to manage lots of
+files.  Programs in this category provide features like mass-file-copy
+and reading old file formats, as well as identifying files by looking
+at fingerprints.
+
+Applications/Internet
+---------------------
+
+Web browsers aren't the only internet enabled programs.  Programs in
+this category include chat clients, web-based printing, and all of the
+supporting libraries.
+
+Development/Debug
+-----------------
+
+Debugging information is used by programmers to find out what went
+wrong in a program.  Programs in this category are installed either
+for use by programmers or by automatic programs that collect error
+reports, so that they can be filled out before being sent to the
+programmers.
+
+Development/Languages
+---------------------
+
+Programming languages are used by programmers to make programs.  Some
+programs can't but run without the programming language installed.
+
+Development/Libraries
+---------------------
+
+Development libraries are additional libraries used by programmers to
+make programs.
+
+Kernel
+------
+SEE ABOVE
+
+System Environment/Base
+-----------------------
+
+Programs and libraries in this group are part of the core system.
+Your computer will not work without them.
+
+System Environment/Daemons
+--------------------------
+
+Daemons are long-running programs that provide important
+services. Examples of daemons include "cron", the
+run-a-program-at-a-scheduled-time service.
+
+System Environment/Libraries
+----------------------------
+
+Additional libraries that are installed to provide common, but not
+critical, system services.
+
+
+User Interface/Desktops
+-----------------------
+
+Programs in this group provide the familiar "desktop".  You can run
+programs using the familiar menus, and drag windows around.
+
+User Interface/X
+----------------
+
+SEE Xorg Above
+
+User Interface/X Hardware Support
+---------------------------------
+
+Programs in this group enable all features of your computer's graphics
+hardware, like faster 3D graphics.
