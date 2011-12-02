@@ -48,7 +48,7 @@ function Callgrind(nodes) {
     for(var i in view)
       for(var j in nodes[i][6])
         if(view[j] && !sys.getEdges(nodes[i][1], nodes[j][1]).length)
-          sys.addEdge(nodes[i][1], nodes[j][1]);
+          sys.addEdge(nodes[i][1], nodes[j][1], { length: 10 });
     $('#legend div').hide();
     for(var i in view)
       $('#legend div[h="' + $('#' + i).attr('h') + '"]').show();
@@ -178,13 +178,18 @@ function Callgrind(nodes) {
   
   function updateselect(m) {
     var n = undefined;
-    if(select)
+    if(select) {
+      if(zoom > lsize)
+        center[0] = select[0] + (lsize / 2 - select[0]) * zoom * 1.1 / lsize;
+      if(zoom > gsize)
+        center[1] = select[1] + (gsize / 2 - select[1]) * zoom * 1.1 / gsize;
       for(var i in view) {
         var x = tr(xy[i], 0) - select[0], y = tr(xy[i], 1) - select[1],
             d2 = x * x + y * y;
         if(d2 < m)
           n = i, m = d2;
       }
+    }
     if(parseInt($('#legend').css('padding-right')))
       loctx.clearRect(0, 0, lsize, gsize);
     else
@@ -197,12 +202,6 @@ function Callgrind(nodes) {
       system.screenSize(1000, 1000);
     },
     redraw: function() {
-      if(select) {
-        if(zoom > lsize)
-          center[0] = select[0] + (lsize / 2 - select[0]) * zoom * 1.1 / lsize;
-        if(zoom > gsize)
-          center[1] = select[1] + (gsize / 2 - select[1]) * zoom * 1.1 / gsize;
-      }
       var m = 0, x = 0, y = 0, n = 0;
       this.system.eachNode(function(node, pt) {
         x += pt.x;
@@ -235,7 +234,8 @@ function Callgrind(nodes) {
     }
   };
   
-  var sys = arbor.ParticleSystem(300, 500, 0.5, true, 24);
+  var sys = arbor.ParticleSystem(10, 20, 0.6, true, 20);
+  //repulsion, stiffness, friction, gravity, fps, and dt
   sys.renderer = renderer;
   $.getJSON('libscan/things.json', drawplot).overrideMimeType('application/json');
   //interval = setInterval(move, 100);
