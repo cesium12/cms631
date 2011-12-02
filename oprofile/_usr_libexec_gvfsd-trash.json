@@ -1,0 +1,46 @@
+[
+    [
+        300, 
+        "/usr/libexec/gvfsd-trash", 
+        null, 
+        null, 
+        1, 
+        1, 
+        {
+            "20": [
+                20, 
+                "/lib64/libglib-2.0.so.0.3000.1", 
+                null, 
+                null, 
+                1, 
+                1
+            ], 
+            "12": [
+                12, 
+                "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+                null, 
+                null, 
+                1, 
+                1
+            ]
+        }
+    ], 
+    [
+        12, 
+        "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+        null, 
+        null, 
+        1, 
+        1, 
+        {}
+    ], 
+    [
+        20, 
+        "/lib64/libglib-2.0.so.0.3000.1", 
+        null, 
+        null, 
+        1, 
+        1, 
+        {}
+    ]
+]

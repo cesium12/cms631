@@ -1,0 +1,46 @@
+[
+    [
+        467, 
+        "/usr/bin/tail", 
+        null, 
+        null, 
+        7, 
+        7, 
+        {
+            "16": [
+                16, 
+                "/lib64/libc-2.14.90.so", 
+                null, 
+                null, 
+                4, 
+                4
+            ], 
+            "12": [
+                12, 
+                "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+                null, 
+                null, 
+                76, 
+                76
+            ]
+        }
+    ], 
+    [
+        16, 
+        "/lib64/libc-2.14.90.so", 
+        null, 
+        null, 
+        4, 
+        4, 
+        {}
+    ], 
+    [
+        12, 
+        "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+        null, 
+        null, 
+        76, 
+        76, 
+        {}
+    ]
+]

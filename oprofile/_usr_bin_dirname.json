@@ -1,0 +1,63 @@
+[
+    [
+        218, 
+        "/usr/bin/dirname", 
+        null, 
+        null, 
+        3, 
+        3, 
+        {
+            "28": [
+                28, 
+                "/usr/lib/debug/lib/modules/3.1.1-1.fc16.x86_64/vmlinux", 
+                null, 
+                null, 
+                2, 
+                2
+            ], 
+            "35": [
+                35, 
+                "/lib64/ld-2.14.90.so", 
+                null, 
+                null, 
+                1, 
+                1
+            ], 
+            "12": [
+                12, 
+                "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+                null, 
+                null, 
+                7, 
+                7
+            ]
+        }
+    ], 
+    [
+        12, 
+        "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+        null, 
+        null, 
+        7, 
+        7, 
+        {}
+    ], 
+    [
+        35, 
+        "/lib64/ld-2.14.90.so", 
+        null, 
+        null, 
+        1, 
+        1, 
+        {}
+    ], 
+    [
+        28, 
+        "/usr/lib/debug/lib/modules/3.1.1-1.fc16.x86_64/vmlinux", 
+        null, 
+        null, 
+        2, 
+        2, 
+        {}
+    ]
+]

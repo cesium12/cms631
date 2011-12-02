@@ -1,0 +1,29 @@
+[
+    [
+        206, 
+        "/usr/bin/clear", 
+        null, 
+        null, 
+        1, 
+        1, 
+        {
+            "12": [
+                12, 
+                "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+                null, 
+                null, 
+                46, 
+                46
+            ]
+        }
+    ], 
+    [
+        12, 
+        "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+        null, 
+        null, 
+        46, 
+        46, 
+        {}
+    ]
+]

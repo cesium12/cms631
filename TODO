@@ -1,6 +1,5 @@
 add explanatory text and clarify existing text
 page title
 
-new layout algorithm for oprofile
-filter oprofile nodes
-decide on UI (for oprofile, and overall)
+highlight selected binaries (nodes and buttons)
+rearrange and debug

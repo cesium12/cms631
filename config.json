@@ -1,1 +1,1 @@
-{"callgrind": ["oprofile"], "description": {"oprofile": "oprofile? yaprofile", "_main": "foobar"}}
+{"description": {"_main": "foobar"}, "binary": {"google chrome": "_opt_google_chrome_chrome", "gnome shell": "_usr_bin_gnome-shell", "gnome terminal": "_usr_bin_gnome-terminal"}}

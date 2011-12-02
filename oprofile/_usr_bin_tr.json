@@ -1,0 +1,29 @@
+[
+    [
+        471, 
+        "/usr/bin/tr", 
+        null, 
+        null, 
+        1, 
+        1, 
+        {
+            "28": [
+                28, 
+                "/usr/lib/debug/lib/modules/3.1.1-1.fc16.x86_64/vmlinux", 
+                null, 
+                null, 
+                1, 
+                1
+            ]
+        }
+    ], 
+    [
+        28, 
+        "/usr/lib/debug/lib/modules/3.1.1-1.fc16.x86_64/vmlinux", 
+        null, 
+        null, 
+        1, 
+        1, 
+        {}
+    ]
+]

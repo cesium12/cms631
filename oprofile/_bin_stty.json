@@ -1,0 +1,63 @@
+[
+    [
+        463, 
+        "/bin/stty", 
+        null, 
+        null, 
+        11, 
+        11, 
+        {
+            "16": [
+                16, 
+                "/lib64/libc-2.14.90.so", 
+                null, 
+                null, 
+                7, 
+                7
+            ], 
+            "35": [
+                35, 
+                "/lib64/ld-2.14.90.so", 
+                null, 
+                null, 
+                4, 
+                4
+            ], 
+            "12": [
+                12, 
+                "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+                null, 
+                null, 
+                28, 
+                28
+            ]
+        }
+    ], 
+    [
+        16, 
+        "/lib64/libc-2.14.90.so", 
+        null, 
+        null, 
+        7, 
+        7, 
+        {}
+    ], 
+    [
+        35, 
+        "/lib64/ld-2.14.90.so", 
+        null, 
+        null, 
+        4, 
+        4, 
+        {}
+    ], 
+    [
+        12, 
+        "/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux", 
+        null, 
+        null, 
+        28, 
+        28, 
+        {}
+    ]
+]

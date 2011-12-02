@@ -27,6 +27,7 @@ body {
   width: 100%;
   height: 100%;
   background: url(swirl.png) center center;
+  opacity: 0.25;
 }
 
 #spiel {
@@ -103,7 +104,6 @@ body {
 }
 
 #container {
-  height: 100%;
   margin: auto;
   border-spacing: 40px 0px;
   position: relative;
@@ -138,15 +138,14 @@ body {
 }
   </style>
   <script src="jquery.min.js"></script>
-  <script src="jquery.mousewheel.min.js"></script>
+  <script src="arbor/lib/arbor.js"></script>
   <script src="callgrind.js"></script>
   <script>
-var lctx, loctx, gsize, lsize, minsize, select = null, zoom = 0, minzoom = 0, enable = true;
+var lctx, loctx, gsize, lsize, minsize, select = null, zoom, enable = true;
 
 function main() {
   lctx = $('#line')[0].getContext('2d');
   loctx = $('#lover')[0].getContext('2d');
-  
   $(window).resize(function() {
     gsize = $(window).height();
     lsize = $(window).width();
@@ -154,73 +153,46 @@ function main() {
     $('.full').css({ height: gsize, width: lsize });
     $('canvas.full').attr({ height: gsize, width: lsize });
   }).resize();
+  zoom = gsize / 2;
   
   $(document).mousemove(function(event) {
     select = [ event.pageX, event.pageY ];
   }).mouseout(function() {
     select = null;
   }).keypress(function(event) {
-    if(minzoom)
-      switch(event.which) {
-        case 45:
-          zoom /= 1.1; break;
-        case 61:
-          zoom *= 1.1; break;
-      }
+    switch(event.which) {
+      case 45:
+        zoom /= 1.1; break;
+      case 61:
+        zoom *= 1.1; break;
+    }
   });
   
-  $.getJSON('config.json', function(config) {
-    $('.topbox,#plot').fadeOut(0);
-    $('#spiel').html(config.description._main);
-    for(var i = 0; i < config.callgrind.length; ++i) {
-      var id = config.callgrind[i],
-          dim = function(x) { return { width: x, height: x }; },
-          button = $('<a>').addClass('text label').attr('href', '#')
-                           .html('<img src="' + id + '/logos.png">' +
-                                 '<img src="' + id + '/logo.png">' +
-                                 '<div>' + id + '</div>');
-      $('<td>').html(button).appendTo('#container tr');
-      button.click((function(id) {
-        var logo = button.find('img');
-        return function() {
-          if(!enable)
-            return;
-          enable = false;
-          $('.topbox').html('');
-          $('.topbox,#plot').fadeIn(2000);
-          $('#back').fadeTo(2000, 0.25);
-          $('#container').fadeOut(2000);
-          $('#spiel').html(config.description[id]);
-          logo.animate(dim(320), {
-            duration: 3000,
-            step: function(now) { zoom = now; },
-            complete: function() { logo.css(dim(160)); minzoom = 160; }
-          });
-          var cg = new Callgrind(id, function() {
-            minzoom = 0;
-            $('.topbox,#plot').fadeOut(2000);
-            $('#back').fadeTo(2000, 1);
-            $('#container').fadeIn(2000);
-            $('#spiel').html(config.description._main);
-            logo.animate(dim(80), {
-              duration: 3000,
-              step: function(now) { zoom = now; },
-              complete: function() { cg.kill(); delete cg; enable = true; }
-            });
-          }, [ logo.offset().left + 40, logo.offset().top + 40 ]);
+  $.getJSON('oprofile/grind.json', function(nodes) {
+    var cg = new Callgrind(nodes);
+    $.getJSON('config.json', function(config) {
+      $('#spiel').html(config.description._main);
+      for(var id in config.binary) {
+        var fn = config.binary[id],
+            dim = function(x) { return { width: x, height: x }; },
+            button = $('<a>').addClass('text label').attr('href', '#')
+                             .html(/*'<img src="' + id + '/logos.png">' +
+                                   '<img src="' + id + '/logo.png">' +*/
+                                   '<div>' + id + '</div>');
+        $('<td>').html(button).appendTo('#container tr');
+        button.toggle(cg.add(fn), cg.remove(fn));
+        var ex = function(size) {
+          var logo = button.find('img');
+          return function() {
+            if(!enable)
+              return;
+            logo.stop().animate(dim(size), 'fast');
+          };
         };
-      })(id));
-      var ex = function(size) {
-        var logo = button.find('img');
-        return function() {
-          if(!enable)
-            return;
-          logo.stop().animate(dim(size), 'fast');
-        };
-      };
-      button.mouseover(ex(100)).mouseout(ex(80));
-    }
-  }).overrideMimeType("application/json");
+        button.mouseover(ex(100)).mouseout(ex(80));
+      }
+    }).overrideMimeType('application/json');
+  }).overrideMimeType('application/json');
 }
 
 WebFontConfig = {
