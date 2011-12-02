@@ -176,8 +176,31 @@ function Callgrind(nodes) {
     recalc();
   }
   
-  function updateselect(m) {
-    var n = undefined;
+  var renderer = {
+    init: function(system) {
+      system.screenSize(1000, 1000);
+    },
+    redraw: function() {
+      var m = 0, x = 0, y = 0, n = 0;
+      sys.eachNode(function(node, pt) {
+        x += pt.x;
+        y += pt.y;
+        ++n;
+      });
+      x /= n;
+      y /= n;
+      sys.eachNode(function(node, pt) {
+        m = Math.max(m, (pt.x - x) * (pt.x - x) + (pt.y - y) * (pt.y - y));
+      });
+      m = Math.sqrt(m);
+      sys.eachNode(function(node, pt) {
+        xy[node.data.i] = [ (pt.x - x) / m, (pt.y - y) / m ];
+      });
+    }
+  };
+  
+  function move() {
+    var n = undefined, m = 2500;
     if(select) {
       if(zoom > lsize)
         center[0] = select[0] + (lsize / 2 - select[0]) * zoom * 1.1 / lsize;
@@ -190,53 +213,29 @@ function Callgrind(nodes) {
           n = i, m = d2;
       }
     }
+    for(var i in view)
+      $('#' + i).css({ left: tr(xy[i], 0), top: tr(xy[i], 1) });
+    lctx.clearRect(0, 0, lsize, gsize);
+    lctx.lineWidth = 2;
+    sys.eachEdge(function(edge) {
+      var i = edge.source.data.i, j = edge.target.data.i,
+          frac = 0.1 + 0.9 * nodes[i][6][j][5] / nodes[i][4];
+      lctx.strokeStyle = 'rgba(255, 255, 255, ' + frac + ')';
+      lctx.beginPath();
+      lctx.moveTo(tr(xy[i], 0), tr(xy[i], 1));
+      lctx.lineTo(tr(xy[j], 0), tr(xy[j], 1));
+      lctx.closePath();
+      lctx.stroke();
+    });
     if(parseInt($('#legend').css('padding-right')))
       loctx.clearRect(0, 0, lsize, gsize);
     else
       drawover(n);
   }
   
-  var renderer = {
-    init: function(system) {
-      this.system = system;
-      system.screenSize(1000, 1000);
-    },
-    redraw: function() {
-      var m = 0, x = 0, y = 0, n = 0;
-      this.system.eachNode(function(node, pt) {
-        x += pt.x;
-        y += pt.y;
-        ++n;
-      });
-      x /= n;
-      y /= n;
-      this.system.eachNode(function(node, pt) {
-        m = Math.max(m, (pt.x - x) * (pt.x - x) + (pt.y - y) * (pt.y - y));
-      });
-      m = Math.sqrt(m);
-      this.system.eachNode(function(node, pt) {
-        var i = node.data.i;
-        xy[i] = [ (pt.x - x) / m, (pt.y - y) / m ];
-        $('#' + i).css({ left: tr(xy[i], 0), top: tr(xy[i], 1) });
-      });
-      lctx.clearRect(0, 0, lsize, gsize);
-      this.system.eachEdge(function(edge) {
-        var i = edge.source.data.i, j = edge.target.data.i,
-            frac = 0.1 + 0.9 * nodes[i][6][j][5] / nodes[i][4];
-        lctx.strokeStyle = 'rgba(255, 255, 255, ' + frac + ')';
-        lctx.beginPath();
-        lctx.moveTo(tr(xy[i], 0), tr(xy[i], 1));
-        lctx.lineTo(tr(xy[j], 0), tr(xy[j], 1));
-        lctx.closePath();
-        lctx.stroke();
-      });
-      updateselect(2500);
-    }
-  };
-  
   var sys = arbor.ParticleSystem(10, 20, 0.6, true, 20);
   //repulsion, stiffness, friction, gravity, fps, and dt
   sys.renderer = renderer;
   $.getJSON('libscan/things.json', drawplot).overrideMimeType('application/json');
-  //interval = setInterval(move, 100);
+  setInterval(move, 1000 / 20);
 }
