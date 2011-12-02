@@ -1,0 +1,69 @@
+Motivation
+----------
+
+Computers are everywhere.  In our pockets.  On our desks.  In our
+laps.  But few people actually know what's going on in a
+computer. It's a bit of a mystical thing: you press the on button, and
+then you can do anything.  But how are these things possible?
+Programs have to be able to interact with a user, but all of the
+computers out there are different.  Not to mention programs have to
+talk to other programs as well, to make the Internet work.  How do all
+of these things happen?  Why is the brand-new computer you just bought
+feel as slow as the old one under your desk?
+
+As computers have gotten faster, the interactions between programs
+have increased.  So once-simple tasks are actually quite complex.
+What a tangled web.
+
+
+Kernel
+------
+
+For a computer to be useful, there has to be a program that managed
+all of the hardware resources.  This program is traditionally called
+the "kernel".  Any program that needs to talk to another program, or
+use the computer hardware, must make a request to the kernel.
+Depending on what the program needs, different parts of the kernel
+will service the request.  These different parts are called "modules".
+
+Xorg
+----
+
+The graphics system is called Xorg, and has its roots from the MIT X
+Window System project.  Xorg is responsible for performing the actual
+drawing-on-the-screen for graphical programs.
+
+Chrome
+------
+
+Chrome is a popular internet browser built by Google.  Chrome needs to
+talk to the internet to download web pages, as well the graphics
+system to display content and react to user actions, like typing and
+mouse clicks.  Chrome also runs multiple copies of itself, one per web
+page, to prevent the whole thing from crashing if something goes
+wrong.  That means Chrome also needs to talk other Chrome processes.
+
+Gnome Shell
+-----------
+
+Gnome is a Desktop Environment, providing the ability to launch
+programs from the familiar menu, as well as switching between
+graphical applications.  The Shell is the program that provides these
+features, such as drawing the background image and fancy transition
+effects when you minimize/maximize a program.
+
+Gnome Terminal
+--------------
+
+The Terminal is a program that allows the user to issue commands in a
+text-based client, similar to how users interacted with computers
+before graphical user interfaces existed at all.
+
+RhythmBox
+---------
+
+RhythmBox is Gnome's music player.
+
+
+CATEGORIES
+----------
