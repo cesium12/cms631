@@ -49,7 +49,7 @@ function Callgrind(id, destroy, center) {
     }
     
     function libname(fname) {
-      return categories[fname.indexOf('.so') > -1 ? (fname.split(/\.so/, 2)[0] + '.so') : fname] || '(unknown)';
+      return categories[fname] || '(unknown)';
     }
     
     function tr(p, k) {
