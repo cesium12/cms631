@@ -71,12 +71,34 @@ def process_module(module):
             instance.addConnection(child)
     return instance
 
+def extract_subtree(root):
+    sublist = []
+    stack = [root]
+    while len(stack) > 0:
+        element = stack[0]
+        sublist.append(element)
+        stack = stack[1:]
+        for (k, v) in element.connectedTo.iteritems():
+            stack.append(v)
+    return sublist
+        
+binary_list = []
 for binary in data.xpath('/profile/binary[position()<100]'):
     b = process_module(binary)
     if b != None:
         modules[b.index] = b
+    binary_list.append(b)
 
-print json.dumps(modules, cls=ModuleEncoder, indent=4)
 
+#print json.dumps(modules, cls=ModuleEncoder, indent=4)
+
+for binary in binary_list:
+    outname = binary.name.replace('/', '_') + '.json'
+    outfile = open(outname, 'w')
+    json.dump(extract_subtree(binary), outfile, cls=ModuleEncoder,
+              indent=4)
+    outfile.close()
+
+    
 #for element in data.iter():
 #    print element
