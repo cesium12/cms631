@@ -83,14 +83,15 @@ def extract_subtree(root):
     return sublist
         
 binary_list = []
-for binary in data.xpath('/profile/binary[position()<100]'):
+for binary in data.xpath('/profile/binary'):
     b = process_module(binary)
     if b != None:
         modules[b.index] = b
     binary_list.append(b)
 
-
-#print json.dumps(modules, cls=ModuleEncoder, indent=4)
+alldump = open('grind.json', 'w')
+json.dump(modules, alldump, cls=ModuleEncoder, indent=4)
+alldump.close()
 
 for binary in binary_list:
     outname = binary.name.replace('/', '_') + '.json'
