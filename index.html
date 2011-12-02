@@ -1,59 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html class="full">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>oprofile</title>
   <style type="text/css">
-html, body {
-  height: 100%;
-}
-
 body {
   margin: 0;
   line-height: 0;
   overflow: hidden;
+  background: url(swirla.png) center center;
   background-color: black;
-  width: 100%;
 }
 
 .full {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-#back {
+#all {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(swirl.png) center center;
-  opacity: 0.25;
+  border-spacing: 0;
 }
 
-#spiel {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  width: 480px;
-  margin-left: -240px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+#info {
   border: 2px solid lightgray;
   border-bottom: none;
-  -webkit-border-radius: 3px 3px 0px 0px;
-  -moz-border-radius: 3px 3px 0px 0px;
-  border-radius: 3px 3px 0px 0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+
+#plot, #plot > div {
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+#line, #lover, #plotc {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 #lover {
   z-index: 2;
 }
 
-#plot {
-  z-index: 0;
-}
-
-#plot > div {
+#plotc > div {
   border: 1px solid gray;
   position: absolute;
   margin: -8px;
@@ -64,56 +65,64 @@ body {
   border-radius: 3px;
 }
 
-#plot > div.select {
+#plotc > div.select {
   margin: -11px;
   width: 20px;
   height: 20px;
   box-shadow: 0 0 20px white;
 }
 
-#plot > div.highlight {
+#plotc > div.highlight {
   box-shadow: 0 0 14px lightgray;
 }
 
 .text {
   font-size: 12pt;
-  line-height: 1em;
+  line-height: 1.5em;
   color: white;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.topbox {
-  position: fixed;
-  top: 0;
+#legend, #info {
   font-family: "Droid Sans Mono", sans-serif;
 }
 
+#container, #spiel {
+  font-family: "Tinos", serif;
+}
+
+#container, #info {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#legend, #spiel {
+  width: 270pt;
+  vertical-align: top;
+}
+
 #legend {
-  left: 0;
   text-align: left;
+  padding-right: 0px;
 }
 
 #legend:hover {
   padding-right: 1px;
 }
 
-#info {
-  right: 0;
+#spiel {
   text-align: right;
+}
+
+#bar {
+  height: 120px;
 }
 
 #container {
   margin: auto;
   border-spacing: 40px 0px;
-  position: relative;
-  z-index: 2;
-}
-
-.label {
-  font-family: "Tinos", serif;
-  text-align: center;
-  vertical-align: middle;
+  height: 100%;
 }
 
 .label img {
@@ -122,41 +131,49 @@ body {
 }
 
 .label div {
-  margin-top: -3px;
+  margin-top: -1em;
 }
 
 .label img:first-of-type {
   position: absolute;
 }
 
-.label:hover {
+.label.used, .label:hover {
   text-shadow: 0px 0px 1em white, 0px 0px 1em white, 0px 0px 1em white;
 }
 
-.label:not(:hover) > img:first-of-type {
-  display: none;
+.label.used > img:last-of-type, .label:hover > img:last-of-type {
+  opacity: 0;
+}
+
+.label:not(.used):not(:hover) > img:first-of-type {
+  opacity: 0;
 }
   </style>
   <script src="jquery.min.js"></script>
   <script src="arbor/lib/arbor.js"></script>
   <script src="callgrind.js"></script>
   <script>
-var lctx, loctx, gsize, lsize, minsize, select = null, zoom, enable = true;
+var lctx, loctx, gsize, lsize, minsize, select = null, zoom, enable = true, interval;
+
+interval = setInterval(function() {
+  $('#info').text(($('#info').text() + '.').replace('....', ''));
+}, 500);
 
 function main() {
   lctx = $('#line')[0].getContext('2d');
   loctx = $('#lover')[0].getContext('2d');
   $(window).resize(function() {
-    gsize = $(window).height();
-    lsize = $(window).width();
+    gsize = $('#line').height();
+    lsize = $('#line').width();
     minsize = Math.min(gsize, lsize);
-    $('.full').css({ height: gsize, width: lsize });
-    $('canvas.full').attr({ height: gsize, width: lsize });
+    $('#line,#lover').attr({ height: gsize, width: lsize });
   }).resize();
-  zoom = gsize;
+  zoom = minsize - 20;
   
   $(document).mousemove(function(event) {
-    select = [ event.pageX, event.pageY ];
+    select = [ event.pageX - $('#lover').offset().left,
+               event.pageY - $('#lover').offset().top ];
   }).mouseout(function() {
     select = null;
   }).keypress(function(event) {
@@ -169,26 +186,28 @@ function main() {
   });
   
   $.getJSON('oprofile/grind.json', function(nodes) {
+    clearInterval(interval);
     var cg = new Callgrind(nodes);
     $.getJSON('config.json', function(config) {
       $('#spiel').html(config.description._main);
+      $('#info').html('&nbsp;');
       for(var id in config.binary) {
         var fn = config.binary[id],
             dim = function(x) { return { width: x, height: x }; },
             button = $('<a>').addClass('text label').attr('href', '#')
-                             .html(/*'<img src="' + id + '/logos.png">' +
-                                   '<img src="' + id + '/logo.png">' +*/
+                             .html('<img src="logos/' + id + ' s.png">' +
+                                   '<img src="logos/' + id + '.png">' +
                                    '<div>' + id + '</div>');
         $('<td>').html(button).appendTo('#container tr');
-        button.toggle(cg.add(fn), cg.remove(fn));
-        var ex = function(size) {
+        button.toggle(cg.add(fn, button), cg.remove(fn, button));
+        function ex(size) {
           var logo = button.find('img');
           return function() {
             if(!enable)
               return;
             logo.stop().animate(dim(size), 'fast');
           };
-        };
+        }
         button.mouseover(ex(100)).mouseout(ex(80));
       }
     }).overrideMimeType('application/json');
@@ -202,17 +221,29 @@ WebFontConfig = {
   </script>
   <script async="async" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 </head>
-<body>
-  <div id="back"></div>
-  <div class="full" id="plot">
-    <canvas class="full" id="line"></canvas>
-    <canvas class="full" id="lover"></canvas>
-  </div>
-  <div class="text topbox" id="legend"></div>
-  <div class="text topbox" id="info"></div>
-  <table id="container">
-    <tr></tr>
+<body class="full">
+  <table id="all" class="full">
+    <tr>
+      <td rowspan="2" class="text" id="legend">
+        <div id="cats" style="position: absolute;"></div>
+      </td>
+      <td id="bar">
+        <table id="container">
+          <tr></tr>
+        </table>
+      </td>
+      <td rowspan="2" class="text" id="spiel"></td>
+    </tr>
+    <tr class="full">
+      <td id="plot">
+        <div class="full">
+          <canvas class="full" id="line"></canvas>
+          <canvas class="full" id="lover"></canvas>
+          <div class="text" id="info">loading</div>
+          <div class="full" id="plotc"></div>
+        </div>
+      </td>
+    </tr>
   </table>
-  <div class="text label" id="spiel"></div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 function Callgrind(nodes) {
-  var xy = [], v = [], any = [], adj = [], num = nodes.length,
-      color, categories = {}, view = {}, center = [ lsize / 2, gsize / 2 ],
+  var xy = [], v = [], any = [], adj = [], num = nodes.length, color,
+      categories = {}, view = {}, cache = {}, center = [ lsize / 2, gsize / 2 ],
       tcanvas = $('<canvas>').attr({ width: 8, height: 1 })[0],
       tctx = tcanvas.getContext('2d'),
       grad = tctx.createRadialGradient(4, 0, 0, 4, 0, 4);
@@ -49,14 +49,17 @@ function Callgrind(nodes) {
       for(var j in nodes[i][6])
         if(view[j] && !sys.getEdges(nodes[i][1], nodes[j][1]).length)
           sys.addEdge(nodes[i][1], nodes[j][1], { length: 10 });
-    $('#legend div').hide();
+    $('#cats div').hide();
     for(var i in view)
-      $('#legend div[h="' + $('#' + i).attr('h') + '"]').show();
+      $('#cats div[h="' + $('#' + i).attr('h') + '"]').show();
   }
   
-  this.add = function(fn) {
+  this.add = function(fn, button) {
     return function() {
+      $(window).resize();
+      button.addClass('used');
       $.getJSON('oprofile/' + fn + '.json', function(list) {
+        cache[fn] = list;
         for(var i = 0; i < list.length; ++i)
           view[list[i][0]] = true;
         recalc();
@@ -64,13 +67,16 @@ function Callgrind(nodes) {
     };
   };
   
-  this.remove = function(fn) {
+  this.remove = function(fn, button) {
     return function() {
-      $.getJSON('oprofile/' + fn + '.json', function(list) {
-        for(var i = 0; i < list.length; ++i)
-          delete view[list[i][0]];
-        recalc();
-      });
+      $(window).resize();
+      button.removeClass('used');
+      delete cache[fn];
+      view = {};
+      for(var f in cache)
+        for(var i = 0; i < cache[f].length; ++i)
+          view[cache[f][i][0]] = true;
+      recalc();
     };
   };
   
@@ -101,10 +107,10 @@ function Callgrind(nodes) {
     loctx.lineCap = 'round';
     $('.select,.highlight').each(function() { colorplot($(this), 128, 0.5); })
                            .removeClass('select highlight');
-    $('#info').html('');
+    $('#info').html('&nbsp;');
     if(i !== undefined) {
-      $('#info').html('<b>' + nodes[i][1] + '</b><br>total ' + nodes[i][4] + ' / self ' + nodes[i][5]);
-      colorplot($('#legend div[h="' + $('#' + i).attr('h') + '"]').addClass('select'), 192, 1);
+      $('#info').html('<b>' + nodes[i][1] + '</b>');
+      colorplot($('#cats div[h="' + $('#' + i).attr('h') + '"]').addClass('select'), 192, 1);
       colorplot($('#' + i).addClass('select'), 256, 1);
       for(j in adj[i])
         if(j != i)
@@ -161,18 +167,18 @@ function Callgrind(nodes) {
     for(var i = 0; i < colorlist.length; ++i) {
       colormap[colorlist[i]] = i;
       var h = 6 * i / colorlist.length,
-          l = $('<div>').attr('h', h).text(colorlist[i]).appendTo('#legend');
+          l = $('<div>').attr('h', h).text(colorlist[i]).appendTo('#cats');
       colorplot(l, 128, 0.5);
       l.mouseover((function(hh) {
         return function() {
           drawover();
           colorplot($('div[h="' + hh + '"]').addClass('highlight'), 256, 1);
         };
-      })(h));
+      })(h)).mouseout(function() { drawover(); });
     }
     for(var i = 0; i < num; ++i)
       colorplot($('<div>').attr('h', 6 * colormap[libname(nodes[i][1])] / colorlist.length)
-                          .attr('id', i).appendTo('#plot'), 128, 0.5);
+                          .attr('id', i).appendTo('#plotc'), 128, 0.5);
     recalc();
   }
   
@@ -181,20 +187,19 @@ function Callgrind(nodes) {
       system.screenSize(1000, 1000);
     },
     redraw: function() {
-      var m = 0, x = 0, y = 0, n = 0;
+      var x1 = Infinity, y1 = Infinity, x2 = -Infinity, y2 = -Infinity;
       sys.eachNode(function(node, pt) {
-        x += pt.x;
-        y += pt.y;
-        ++n;
+        x1 = Math.min(pt.x, x1);
+        y1 = Math.min(pt.y, y1);
+        x2 = Math.max(pt.x, x2);
+        y2 = Math.max(pt.y, y2);
       });
-      x /= n;
-      y /= n;
+      x1 = (x1 + x2) / 2;
+      y1 = (y1 + y2) / 2;
+      x2 = x2 - x1;
+      y2 = y2 - y1;
       sys.eachNode(function(node, pt) {
-        m = Math.max(m, (pt.x - x) * (pt.x - x) + (pt.y - y) * (pt.y - y));
-      });
-      m = Math.sqrt(m);
-      sys.eachNode(function(node, pt) {
-        xy[node.data.i] = [ (pt.x - x) / m, (pt.y - y) / m ];
+        xy[node.data.i] = [ (pt.x - x1) / x2, (pt.y - y1) / y2 ];
       });
     }
   };
@@ -218,8 +223,10 @@ function Callgrind(nodes) {
     lctx.clearRect(0, 0, lsize, gsize);
     lctx.lineWidth = 2;
     sys.eachEdge(function(edge) {
-      var i = edge.source.data.i, j = edge.target.data.i,
-          frac = 0.1 + 0.9 * nodes[i][6][j][5] / nodes[i][4];
+      var i = edge.source.data.i, j = edge.target.data.i;
+      if(!nodes[i][6][j])
+        return;
+      var frac = 0.1 + 0.9 * nodes[i][6][j][5] / nodes[i][4];
       lctx.strokeStyle = 'rgba(255, 255, 255, ' + frac + ')';
       lctx.beginPath();
       lctx.moveTo(tr(xy[i], 0), tr(xy[i], 1));
