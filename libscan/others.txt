@@ -1,0 +1,24 @@
+/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux:  Development/Debug
+/usr/lib/debug/lib/modules/3.1.1-1.fc16.x86_64/vmlinux:  Development/Debug
+/opt/google/chrome/chrome:  Applications/Internet
+/opt/google/talkplugin/libnpgoogletalk64.so:  Applications/Internet
+/opt/google/chrome/libpdf.so:  Applications/Internet
+/opt/google/chrome/libppGoogleNaClPluginChrome.so:  Applications/Internet
+/opt/google/chrome/chrome-sandbox:  Applications/Internet
+/usr/lib64/eclipse/eclipse:  Text Editors/Integrated Development Environments (IDE)
+/usr/lib64/firefox/firefox:  Applications/Internet
+/usr/lib64/vte-2.90/gnome-pty-helper:  User Interface/X
+/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/bin/java:  Development/Languages
+/home/alex/.eclipse/org.eclipse.platform_3.7.0_793567567/configuration/org.eclipse.osgi/bundles/614/1/.cp/libswt-gtk-3738.so:  Applications/File
+/home/alex/.eclipse/org.eclipse.platform_3.7.0_793567567/configuration/org.eclipse.osgi/bundles/614/1/.cp/libswt-pi-gtk-3738.so:  Applications/File
+/opt/google/chrome/nacl_helper_bootstrap:  Applications/Internet
+/usr/lib64/nspluginwrapper/npviewer.bin:  Applications/Internet
+/usr/lib64/openmpi/bin/opal_wrapper:  Development/Libraries
+/lib/systemd/systemd-stdout-syslog-bridge:  System Environment/Base
+/opt/google/talkplugin/GoogleTalkPlugin:  Applications/Internet
+/snd_hda_intel:  Kernel
+/snd_pcm:  Kernel
+/libafs:  Kernel
+/i2c_algo_bit:  Kernel
+/vmlinux-unknown:  Kernel
+/snd_hda_codec:  Kernel

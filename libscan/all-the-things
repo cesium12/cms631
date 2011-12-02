@@ -840,6 +840,8 @@
 /hisax_isac:  Kernel
 /hisax:  Kernel
 /hisax_st5481:  Kernel
+/home/alex/.eclipse/org.eclipse.platform_3.7.0_793567567/configuration/org.eclipse.osgi/bundles/614/1/.cp/libswt-gtk-3738.so:  Applications/File
+/home/alex/.eclipse/org.eclipse.platform_3.7.0_793567567/configuration/org.eclipse.osgi/bundles/614/1/.cp/libswt-pi-gtk-3738.so:  Applications/File
 /hopper:  Kernel
 /hostap_cs:  Kernel
 /hostap:  Kernel
@@ -863,6 +865,7 @@
 /i2400m:  Kernel
 /i2400m-sdio:  Kernel
 /i2400m-usb:  Kernel
+/i2c_algo_bit:  Kernel
 /i2c-algo-bit:  Kernel
 /i2c-algo-pca:  Kernel
 /i2c-amd756:  Kernel
@@ -1655,6 +1658,7 @@
 /lib80211_crypt_tkip:  Kernel
 /lib80211_crypt_wep:  Kernel
 /lib80211:  Kernel
+/libafs:  Kernel
 /libceph:  Kernel
 /libcrc32c:  Kernel
 /libcxgbi:  Kernel
@@ -1834,6 +1838,7 @@
 /lib/systemd/system/dbus.socket:  System Environment/Libraries
 /lib/systemd/system/dbus.target.wants/dbus.socket:  System Environment/Libraries
 /lib/systemd/system/dm-event.socket:  System Environment/Base
+/lib/systemd/systemd-stdout-syslog-bridge:  System Environment/Base
 /lib/systemd/system/nscd.socket:  System Environment/Daemons
 /lib/systemd/system/pcscd.socket:  System Environment/Daemons
 /lib/systemd/system/rpcbind.socket:  System Environment/Daemons
@@ -2158,6 +2163,13 @@
 /omninet:  Kernel
 /openafs:  Kernel
 /oprofile:  Kernel
+/opt/google/chrome/chrome:  Applications/Internet
+/opt/google/chrome/chrome-sandbox:  Applications/Internet
+/opt/google/chrome/libpdf.so:  Applications/Internet
+/opt/google/chrome/libppGoogleNaClPluginChrome.so:  Applications/Internet
+/opt/google/chrome/nacl_helper_bootstrap:  Applications/Internet
+/opt/google/talkplugin/GoogleTalkPlugin:  Applications/Internet
+/opt/google/talkplugin/libnpgoogletalk64.so:  Applications/Internet
 /opticon:  Kernel
 /option:  Kernel
 /or51132:  Kernel
@@ -2996,10 +3008,12 @@
 /snd-hda-codec-conexant:  Kernel
 /snd-hda-codec-hdmi:  Kernel
 /snd-hda-codec-idt:  Kernel
+/snd_hda_codec:  Kernel
 /snd-hda-codec:  Kernel
 /snd-hda-codec-realtek:  Kernel
 /snd-hda-codec-si3054:  Kernel
 /snd-hda-codec-via:  Kernel
+/snd_hda_intel:  Kernel
 /snd-hda-intel:  Kernel
 /snd-hdsp:  Kernel
 /snd-hdspm:  Kernel
@@ -3038,6 +3052,7 @@
 /snd-oxygen:  Kernel
 /snd-oxygen-lib:  Kernel
 /snd-page-alloc:  Kernel
+/snd_pcm:  Kernel
 /snd-pcm:  Kernel
 /snd-pcm-oss:  Kernel
 /snd-pcsp:  Kernel
@@ -7964,6 +7979,7 @@
 /usr/lib64/eclipse/dropins/sdk/plugins/org.eclipse.update.core.source_3.2.500.v20110330.jar:  Text Editors/Integrated Development Environments (IDE)
 /usr/lib64/eclipse/dropins/sdk/plugins/org.eclipse.update.scheduler.source_3.2.300.v20100512.jar:  Text Editors/Integrated Development Environments (IDE)
 /usr/lib64/eclipse/dropins/sdk/plugins/org.eclipse.update.ui.source_3.2.300.v20100512.jar:  Text Editors/Integrated Development Environments (IDE)
+/usr/lib64/eclipse/eclipse:  Text Editors/Integrated Development Environments (IDE)
 /usr/lib64/eclipse/libswt-atk-gtk-3738.so:  Text Editors/Integrated Development Environments (IDE)
 /usr/lib64/eclipse/libswt-awt-gtk-3738.so:  Text Editors/Integrated Development Environments (IDE)
 /usr/lib64/eclipse/libswt-cairo-gtk-3738.so:  Text Editors/Integrated Development Environments (IDE)
@@ -8111,6 +8127,7 @@
 /usr/lib64/fipscheck/libfipscheck.so.1.1.0.hmac:  System Environment/Libraries
 /usr/lib64/fipscheck/libfipscheck.so.1.hmac:  System Environment/Libraries
 /usr/lib64/firefox/components/libbrowsercomps.so:  Applications/Internet
+/usr/lib64/firefox/firefox:  Applications/Internet
 /usr/lib64/firefox/plugins/libnpgoogletalk64.so:  Applications/Internet
 /usr/lib64/firefox/plugins/libnpgtpo3dautoplugin.so:  Applications/Internet
 /usr/lib64/folks/29/backends/eds/eds.so:  System Environment/Libraries
@@ -14342,6 +14359,7 @@
 /usr/lib64/NetworkManager/libnm-settings-plugin-ifcfg-rh.so:  System Environment/Base
 /usr/lib64/NetworkManager/libnm-vpnc-properties.so:  System Environment/Base
 /usr/lib64/nspluginwrapper/libnoxshm.so:  Applications/Internet
+/usr/lib64/nspluginwrapper/npviewer.bin:  Applications/Internet
 /usr/lib64/nspluginwrapper/npwrapper.so:  Applications/Internet
 /usr/lib64/ogdi/libadrg.so:  Applications/Engineering
 /usr/lib64/ogdi/libdtcanada.so:  Applications/Engineering
@@ -14456,6 +14474,7 @@
 /usr/lib64/openbabel/2.3.1/xyzformat.so:  System Environment/Libraries
 /usr/lib64/openbabel/2.3.1/yasaraformat.so:  System Environment/Libraries
 /usr/lib64/openbabel/2.3.1/zindoformat.so:  System Environment/Libraries
+/usr/lib64/openmpi/bin/opal_wrapper:  Development/Libraries
 /usr/lib64/openmpi/lib/libmca_common_sm.so.2.0.0:  Development/Libraries
 /usr/lib64/openmpi/lib/libmca_common_sm.so.2:  Development/Libraries
 /usr/lib64/openmpi/lib/libmca_common_sm.so:  Development/Libraries
@@ -16331,6 +16350,7 @@
 /usr/lib64/vlc/plugins/video_output/libyuv_plugin.so:  Applications/Multimedia
 /usr/lib64/vlc/plugins/visualization/libprojectm_plugin.so:  Applications/Multimedia
 /usr/lib64/vlc/plugins/visualization/libvisual_plugin.so:  Applications/Multimedia
+/usr/lib64/vte-2.90/gnome-pty-helper:  User Interface/X
 /usr/lib64/wireshark/plugins/1.6.3/asn1.so:  Applications/Internet
 /usr/lib64/wireshark/plugins/1.6.3/coseventcomm.so:  Applications/Internet
 /usr/lib64/wireshark/plugins/1.6.3/cosnaming.so:  Applications/Internet
@@ -16642,10 +16662,12 @@
 /usr/lib/debug/lib64/libz.so.1.debug:  Development/Debug
 /usr/lib/debug/lib64/rtkaio/librtkaio-2.14.90.so.debug:  Development/Debug
 /usr/lib/debug/lib64/rtkaio/librt.so.1.debug:  Development/Debug
+/usr/lib/debug/lib/modules/3.1.1-1.fc16.x86_64/vmlinux:  Development/Debug
 /usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vdso/vdso32-int80.so.debug:  Development/Debug
 /usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vdso/vdso32-syscall.so.debug:  Development/Debug
 /usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vdso/vdso32-sysenter.so.debug:  Development/Debug
 /usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vdso/vdso.so.debug:  Development/Debug
+/usr/lib/debug/lib/modules/3.1.2-1.fc16.x86_64/vmlinux:  Development/Debug
 /usr/lib/debug/usr/lib64/alsa-lib/smixer/smixer-ac97.so.debug:  Development/Debug
 /usr/lib/debug/usr/lib64/alsa-lib/smixer/smixer-hda.so.debug:  Development/Debug
 /usr/lib/debug/usr/lib64/alsa-lib/smixer/smixer-sbase.so.debug:  Development/Debug
@@ -17643,6 +17665,1052 @@
 /usr/lib/dri/r600_dri.so:  User Interface/X Hardware Support
 /usr/lib/dri/radeon_dri.so:  User Interface/X Hardware Support
 /usr/lib/dri/swrast_dri.so:  User Interface/X Hardware Support
+/usr/libexec/abrt1-to-abrt2:  Applications/System
+/usr/libexec/abrt-action-install-debuginfo-to-abrt-cache:  System Environment/Libraries
+/usr/libexec/abrt-handle-event:  Applications/System
+/usr/libexec/abrt-hook-ccpp:  System Environment/Libraries
+/usr/libexec/accounts-daemon:  System Environment/Daemons
+/usr/libexec/antler-keyboard:  User Interface/Desktops
+/usr/libexec/at-spi2-registryd:  System Environment/Libraries
+/usr/libexec/at-spi-bus-launcher:  System Environment/Libraries
+/usr/libexec/at-spi-registryd:  System Environment/Libraries
+/usr/libexec/awk:  Applications/Text
+/usr/libexec/awk/grcat:  Applications/Text
+/usr/libexec/awk/pwcat:  Applications/Text
+/usr/libexec/bonobo-activation-server:  System Environment/Libraries
+/usr/libexec/byobu:  Applications/System
+/usr/libexec/byobu/arch:  Applications/System
+/usr/libexec/byobu/battery:  Applications/System
+/usr/libexec/byobu/color:  Applications/System
+/usr/libexec/byobu/.common:  Applications/System
+/usr/libexec/byobu/.constants:  Applications/System
+/usr/libexec/byobu/cpu_count:  Applications/System
+/usr/libexec/byobu/cpu_freq:  Applications/System
+/usr/libexec/byobu/cpu_temp:  Applications/System
+/usr/libexec/byobu/custom:  Applications/System
+/usr/libexec/byobu/date:  Applications/System
+/usr/libexec/byobu/.dirs:  Applications/System
+/usr/libexec/byobu/disk:  Applications/System
+/usr/libexec/byobu/disk_io:  Applications/System
+/usr/libexec/byobu/distro:  Applications/System
+/usr/libexec/byobu/ec2_cost:  Applications/System
+/usr/libexec/byobu/fan_speed:  Applications/System
+/usr/libexec/byobu/hostname:  Applications/System
+/usr/libexec/byobu/ip_address:  Applications/System
+/usr/libexec/byobu/load_average:  Applications/System
+/usr/libexec/byobu/logo:  Applications/System
+/usr/libexec/byobu/mail:  Applications/System
+/usr/libexec/byobu/memory:  Applications/System
+/usr/libexec/byobu/menu:  Applications/System
+/usr/libexec/byobu/network:  Applications/System
+/usr/libexec/byobu/.notify_osd:  Applications/System
+/usr/libexec/byobu/notify_osd:  Applications/System
+/usr/libexec/byobu/processes:  Applications/System
+/usr/libexec/byobu/raid:  Applications/System
+/usr/libexec/byobu/rcs_cost:  Applications/System
+/usr/libexec/byobu/reboot_required:  Applications/System
+/usr/libexec/byobu/release:  Applications/System
+/usr/libexec/byobu/services:  Applications/System
+/usr/libexec/byobu/.shutil:  Applications/System
+/usr/libexec/byobu/swap:  Applications/System
+/usr/libexec/byobu/time:  Applications/System
+/usr/libexec/byobu/time_binary:  Applications/System
+/usr/libexec/byobu/time_utc:  Applications/System
+/usr/libexec/byobu/trash:  Applications/System
+/usr/libexec/byobu/updates_available:  Applications/System
+/usr/libexec/byobu/uptime:  Applications/System
+/usr/libexec/byobu/users:  Applications/System
+/usr/libexec/byobu/whoami:  Applications/System
+/usr/libexec/byobu/wifi_quality:  Applications/System
+/usr/libexec/camel-index-control-1.2:  System Environment/Libraries
+/usr/libexec/camel-lock-helper-1.2:  System Environment/Libraries
+/usr/libexec/ck-collect-session-info:  Development/Libraries
+/usr/libexec/ck-get-x11-display-device:  Development/Libraries
+/usr/libexec/ck-get-x11-server-pid:  Development/Libraries
+/usr/libexec/clock-applet:  User Interface/Desktops
+/usr/libexec/colord:  Unspecified
+/usr/libexec/cups-pk-helper-mechanism:  System Environment/Base
+/usr/libexec/dbus-bash-completion-helper:  Development/Libraries
+/usr/libexec/dconf-service:  System Environment/Base
+/usr/libexec/deja-dup:  Applications/File
+/usr/libexec/deja-dup/deja-dup-monitor:  Applications/Archiving
+/usr/libexec/e-addressbook-factory:  System Environment/Libraries
+/usr/libexec/e-calendar-factory:  System Environment/Libraries
+/usr/libexec/emacs/23.3:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/digest-doc:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/fakemail:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/hexl:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/movemail:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/profile:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/rcs2log:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/sorted-doc:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/update-game-score:  Applications/Editors
+/usr/libexec/emacs/23.3/x86_64-redhat-linux-gnu/vcdiff:  Applications/Editors
+/usr/libexec/emacs:  Applications/Editors
+/usr/libexec/empathy-auth-client:  Applications/Communications
+/usr/libexec/empathy-av:  Applications/Communications
+/usr/libexec/empathy-chat:  Applications/Communications
+/usr/libexec/evinced:  Applications/Publishing
+/usr/libexec/evolution/3.2:  Applications/Productivity
+/usr/libexec/evolution/3.2/evolution-addressbook-export:  Applications/Productivity
+/usr/libexec/evolution/3.2/evolution-alarm-notify:  Applications/Productivity
+/usr/libexec/evolution/3.2/evolution-backup:  Applications/Productivity
+/usr/libexec/evolution/3.2/killev:  Applications/Productivity
+/usr/libexec/evolution:  Applications/Productivity
+/usr/libexec/fedpkg-fixbranches:  Applications/System
+/usr/libexec/file-roller:  Applications/Archiving
+/usr/libexec/file-roller/isoinfo.sh:  Applications/Archiving
+/usr/libexec/file-roller/rpm2cpio:  Applications/Archiving
+/usr/libexec/file-roller-server:  Applications/Archiving
+/usr/libexec/fish-applet:  User Interface/Desktops
+/usr/libexec/fprintd:  System Environment/Daemons
+/usr/libexec/gam_server:  Development/Libraries
+/usr/libexec/gcc:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/cc1:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/cc1plus:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/collect2:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/f951:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/liblto_plugin.so.0.0.0:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/liblto_plugin.so.0:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/liblto_plugin.so:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/lto1:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux/4.6.2/lto-wrapper:  Development/Languages
+/usr/libexec/gcc/x86_64-redhat-linux:  Development/Languages
+/usr/libexec/gcm-helper-exiv:  Applications/System
+/usr/libexec/gconfd-2:  System Environment/Base
+/usr/libexec/gconf-defaults-mechanism:  System Environment/Base
+/usr/libexec/gconf-sanity-check-2:  System Environment/Base
+/usr/libexec/gdm-crash-logger:  User Interface/X
+/usr/libexec/gdm-factory-slave:  User Interface/X
+/usr/libexec/gdm-host-chooser:  User Interface/X
+/usr/libexec/gdm-product-slave:  User Interface/X
+/usr/libexec/gdm-session-worker:  User Interface/X
+/usr/libexec/gdm-simple-chooser:  User Interface/X
+/usr/libexec/gdm-simple-greeter:  User Interface/X
+/usr/libexec/gdm-simple-slave:  User Interface/X
+/usr/libexec/gdm-smartcard-worker:  User Interface/X
+/usr/libexec/gdm-xdmcp-chooser-slave:  User Interface/X
+/usr/libexec/gdu-format-tool:  System Environment/Libraries
+/usr/libexec/gdu-notification-daemon:  System Environment/Libraries
+/usr/libexec/gedit:  Applications/Editors
+/usr/libexec/gedit/gedit-bugreport.sh:  Applications/Editors
+/usr/libexec/geoclue-example:  System Environment/Libraries
+/usr/libexec/geoclue-geonames:  System Environment/Libraries
+/usr/libexec/geoclue-hostip:  System Environment/Libraries
+/usr/libexec/geoclue-localnet:  System Environment/Libraries
+/usr/libexec/geoclue-manual:  System Environment/Libraries
+/usr/libexec/geoclue-master:  System Environment/Libraries
+/usr/libexec/geoclue-nominatim:  System Environment/Libraries
+/usr/libexec/geoclue-plazes:  System Environment/Libraries
+/usr/libexec/geoclue-skyhook:  System Environment/Libraries
+/usr/libexec/geoclue-yahoo:  System Environment/Libraries
+/usr/libexec/getconf/default:  Development/Languages
+/usr/libexec/getconf:  Development/Languages
+/usr/libexec/getconf/POSIX_V6_ILP32_OFF32:  System Environment/Libraries
+/usr/libexec/getconf/POSIX_V6_ILP32_OFFBIG:  System Environment/Libraries
+/usr/libexec/getconf/POSIX_V6_LP64_OFF64:  System Environment/Libraries
+/usr/libexec/getconf/POSIX_V7_ILP32_OFF32:  System Environment/Libraries
+/usr/libexec/getconf/POSIX_V7_ILP32_OFFBIG:  System Environment/Libraries
+/usr/libexec/getconf/POSIX_V7_LP64_OFF64:  System Environment/Libraries
+/usr/libexec/getconf/XBS5_ILP32_OFF32:  System Environment/Libraries
+/usr/libexec/getconf/XBS5_ILP32_OFFBIG:  System Environment/Libraries
+/usr/libexec/getconf/XBS5_LP64_OFF64:  System Environment/Libraries
+/usr/libexec/git-core:  Development/Tools
+/usr/libexec/git-core/git-add:  Development/Tools
+/usr/libexec/git-core/git-add--interactive:  Development/Tools
+/usr/libexec/git-core/git-am:  Development/Tools
+/usr/libexec/git-core/git-annotate:  Development/Tools
+/usr/libexec/git-core/git-apply:  Development/Tools
+/usr/libexec/git-core/git-archive:  Development/Tools
+/usr/libexec/git-core/git-bisect:  Development/Tools
+/usr/libexec/git-core/git-bisect--helper:  Development/Tools
+/usr/libexec/git-core/git-blame:  Development/Tools
+/usr/libexec/git-core/git-branch:  Development/Tools
+/usr/libexec/git-core/git-bundle:  Development/Tools
+/usr/libexec/git-core/git-cat-file:  Development/Tools
+/usr/libexec/git-core/git-check-attr:  Development/Tools
+/usr/libexec/git-core/git-checkout:  Development/Tools
+/usr/libexec/git-core/git-checkout-index:  Development/Tools
+/usr/libexec/git-core/git-check-ref-format:  Development/Tools
+/usr/libexec/git-core/git-cherry:  Development/Tools
+/usr/libexec/git-core/git-cherry-pick:  Development/Tools
+/usr/libexec/git-core/git-citool:  Development/Tools
+/usr/libexec/git-core/git-clean:  Development/Tools
+/usr/libexec/git-core/git-clone:  Development/Tools
+/usr/libexec/git-core/git-commit:  Development/Tools
+/usr/libexec/git-core/git-commit-tree:  Development/Tools
+/usr/libexec/git-core/git-config:  Development/Tools
+/usr/libexec/git-core/git-count-objects:  Development/Tools
+/usr/libexec/git-core/git-cvsexportcommit:  Development/Tools
+/usr/libexec/git-core/git-cvsimport:  Development/Tools
+/usr/libexec/git-core/git-cvsserver:  Development/Tools
+/usr/libexec/git-core/git-describe:  Development/Tools
+/usr/libexec/git-core/git:  Development/Tools
+/usr/libexec/git-core/git-diff:  Development/Tools
+/usr/libexec/git-core/git-diff-files:  Development/Tools
+/usr/libexec/git-core/git-diff-index:  Development/Tools
+/usr/libexec/git-core/git-difftool:  Development/Tools
+/usr/libexec/git-core/git-difftool--helper:  Development/Tools
+/usr/libexec/git-core/git-diff-tree:  Development/Tools
+/usr/libexec/git-core/git-fast-export:  Development/Tools
+/usr/libexec/git-core/git-fast-import:  Development/Tools
+/usr/libexec/git-core/git-fetch:  Development/Tools
+/usr/libexec/git-core/git-fetch-pack:  Development/Tools
+/usr/libexec/git-core/git-filter-branch:  Development/Tools
+/usr/libexec/git-core/git-fmt-merge-msg:  Development/Tools
+/usr/libexec/git-core/git-for-each-ref:  Development/Tools
+/usr/libexec/git-core/git-format-patch:  Development/Tools
+/usr/libexec/git-core/git-fsck:  Development/Tools
+/usr/libexec/git-core/git-fsck-objects:  Development/Tools
+/usr/libexec/git-core/git-gc:  Development/Tools
+/usr/libexec/git-core/git-get-tar-commit-id:  Development/Tools
+/usr/libexec/git-core/git-grep:  Development/Tools
+/usr/libexec/git-core/git-gui--askpass:  Development/Tools
+/usr/libexec/git-core/git-gui:  Development/Tools
+/usr/libexec/git-core/git-hash-object:  Development/Tools
+/usr/libexec/git-core/git-help:  Development/Tools
+/usr/libexec/git-core/git-http-backend:  Development/Tools
+/usr/libexec/git-core/git-http-fetch:  Development/Tools
+/usr/libexec/git-core/git-http-push:  Development/Tools
+/usr/libexec/git-core/git-imap-send:  Development/Tools
+/usr/libexec/git-core/git-index-pack:  Development/Tools
+/usr/libexec/git-core/git-init-db:  Development/Tools
+/usr/libexec/git-core/git-init:  Development/Tools
+/usr/libexec/git-core/git-instaweb:  Development/Tools
+/usr/libexec/git-core/git-log:  Development/Tools
+/usr/libexec/git-core/git-lost-found:  Development/Tools
+/usr/libexec/git-core/git-ls-files:  Development/Tools
+/usr/libexec/git-core/git-ls-remote:  Development/Tools
+/usr/libexec/git-core/git-ls-tree:  Development/Tools
+/usr/libexec/git-core/git-mailinfo:  Development/Tools
+/usr/libexec/git-core/git-mailsplit:  Development/Tools
+/usr/libexec/git-core/git-merge-base:  Development/Tools
+/usr/libexec/git-core/git-merge:  Development/Tools
+/usr/libexec/git-core/git-merge-file:  Development/Tools
+/usr/libexec/git-core/git-merge-index:  Development/Tools
+/usr/libexec/git-core/git-merge-octopus:  Development/Tools
+/usr/libexec/git-core/git-merge-one-file:  Development/Tools
+/usr/libexec/git-core/git-merge-ours:  Development/Tools
+/usr/libexec/git-core/git-merge-recursive:  Development/Tools
+/usr/libexec/git-core/git-merge-resolve:  Development/Tools
+/usr/libexec/git-core/git-merge-subtree:  Development/Tools
+/usr/libexec/git-core/git-mergetool:  Development/Tools
+/usr/libexec/git-core/git-mergetool--lib:  Development/Tools
+/usr/libexec/git-core/git-merge-tree:  Development/Tools
+/usr/libexec/git-core/git-mktag:  Development/Tools
+/usr/libexec/git-core/git-mktree:  Development/Tools
+/usr/libexec/git-core/git-mv:  Development/Tools
+/usr/libexec/git-core/git-name-rev:  Development/Tools
+/usr/libexec/git-core/git-notes:  Development/Tools
+/usr/libexec/git-core/git-pack-objects:  Development/Tools
+/usr/libexec/git-core/git-pack-redundant:  Development/Tools
+/usr/libexec/git-core/git-pack-refs:  Development/Tools
+/usr/libexec/git-core/git-parse-remote:  Development/Tools
+/usr/libexec/git-core/git-patch-id:  Development/Tools
+/usr/libexec/git-core/git-peek-remote:  Development/Tools
+/usr/libexec/git-core/git-prune:  Development/Tools
+/usr/libexec/git-core/git-prune-packed:  Development/Tools
+/usr/libexec/git-core/git-pull:  Development/Tools
+/usr/libexec/git-core/git-push:  Development/Tools
+/usr/libexec/git-core/git-quiltimport:  Development/Tools
+/usr/libexec/git-core/git-read-tree:  Development/Tools
+/usr/libexec/git-core/git-rebase--am:  Development/Tools
+/usr/libexec/git-core/git-rebase:  Development/Tools
+/usr/libexec/git-core/git-rebase--interactive:  Development/Tools
+/usr/libexec/git-core/git-rebase--merge:  Development/Tools
+/usr/libexec/git-core/git-receive-pack:  Development/Tools
+/usr/libexec/git-core/git-reflog:  Development/Tools
+/usr/libexec/git-core/git-relink:  Development/Tools
+/usr/libexec/git-core/git-remote:  Development/Tools
+/usr/libexec/git-core/git-remote-ext:  Development/Tools
+/usr/libexec/git-core/git-remote-fd:  Development/Tools
+/usr/libexec/git-core/git-remote-ftp:  Development/Tools
+/usr/libexec/git-core/git-remote-ftps:  Development/Tools
+/usr/libexec/git-core/git-remote-http:  Development/Tools
+/usr/libexec/git-core/git-remote-https:  Development/Tools
+/usr/libexec/git-core/git-remote-testgit:  Development/Tools
+/usr/libexec/git-core/git-repack:  Development/Tools
+/usr/libexec/git-core/git-replace:  Development/Tools
+/usr/libexec/git-core/git-repo-config:  Development/Tools
+/usr/libexec/git-core/git-request-pull:  Development/Tools
+/usr/libexec/git-core/git-rerere:  Development/Tools
+/usr/libexec/git-core/git-reset:  Development/Tools
+/usr/libexec/git-core/git-revert:  Development/Tools
+/usr/libexec/git-core/git-rev-list:  Development/Tools
+/usr/libexec/git-core/git-rev-parse:  Development/Tools
+/usr/libexec/git-core/git-rm:  Development/Tools
+/usr/libexec/git-core/git-send-email:  Development/Tools
+/usr/libexec/git-core/git-send-pack:  Development/Tools
+/usr/libexec/git-core/git-shell:  Development/Tools
+/usr/libexec/git-core/git-sh-i18n:  Development/Tools
+/usr/libexec/git-core/git-sh-i18n--envsubst:  Development/Tools
+/usr/libexec/git-core/git-shortlog:  Development/Tools
+/usr/libexec/git-core/git-show-branch:  Development/Tools
+/usr/libexec/git-core/git-show:  Development/Tools
+/usr/libexec/git-core/git-show-index:  Development/Tools
+/usr/libexec/git-core/git-show-ref:  Development/Tools
+/usr/libexec/git-core/git-sh-setup:  Development/Tools
+/usr/libexec/git-core/git-stage:  Development/Tools
+/usr/libexec/git-core/git-stash:  Development/Tools
+/usr/libexec/git-core/git-status:  Development/Tools
+/usr/libexec/git-core/git-stripspace:  Development/Tools
+/usr/libexec/git-core/git-submodule:  Development/Tools
+/usr/libexec/git-core/git-svn:  Development/Tools
+/usr/libexec/git-core/git-symbolic-ref:  Development/Tools
+/usr/libexec/git-core/git-tag:  Development/Tools
+/usr/libexec/git-core/git-tar-tree:  Development/Tools
+/usr/libexec/git-core/git-unpack-file:  Development/Tools
+/usr/libexec/git-core/git-unpack-objects:  Development/Tools
+/usr/libexec/git-core/git-update-index:  Development/Tools
+/usr/libexec/git-core/git-update-ref:  Development/Tools
+/usr/libexec/git-core/git-update-server-info:  Development/Tools
+/usr/libexec/git-core/git-upload-archive:  Development/Tools
+/usr/libexec/git-core/git-upload-pack:  Development/Tools
+/usr/libexec/git-core/git-var:  Development/Tools
+/usr/libexec/git-core/git-verify-pack:  Development/Tools
+/usr/libexec/git-core/git-verify-tag:  Development/Tools
+/usr/libexec/git-core/git-web--browse:  Development/Tools
+/usr/libexec/git-core/git-whatchanged:  Development/Tools
+/usr/libexec/git-core/git-write-tree:  Development/Tools
+/usr/libexec/git-core/mergetools:  Applications/File
+/usr/libexec/git-core/mergetools/araxis:  Development/Tools
+/usr/libexec/git-core/mergetools/bc3:  Development/Tools
+/usr/libexec/git-core/mergetools/defaults:  Development/Tools
+/usr/libexec/git-core/mergetools/diffuse:  Development/Tools
+/usr/libexec/git-core/mergetools/ecmerge:  Development/Tools
+/usr/libexec/git-core/mergetools/emerge:  Development/Tools
+/usr/libexec/git-core/mergetools/kdiff3:  Development/Tools
+/usr/libexec/git-core/mergetools/kompare:  Development/Tools
+/usr/libexec/git-core/mergetools/meld:  Development/Tools
+/usr/libexec/git-core/mergetools/opendiff:  Development/Tools
+/usr/libexec/git-core/mergetools/p4merge:  Development/Tools
+/usr/libexec/git-core/mergetools/tkdiff:  Development/Tools
+/usr/libexec/git-core/mergetools/tortoisemerge:  Development/Tools
+/usr/libexec/git-core/mergetools/vim:  Development/Tools
+/usr/libexec/git-core/mergetools/xxdiff:  Development/Tools
+/usr/libexec/glib-pacrunner:  Development/Libraries
+/usr/libexec/glusterfs/gsyncd:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/configinterface.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/configinterface.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/configinterface.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/gconf.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/gconf.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/gconf.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/gsyncd.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/gsyncd.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/gsyncd.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/__init__.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/__init__.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/__init__.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/libcxattr.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/libcxattr.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/libcxattr.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/master.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/master.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/master.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/monitor.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/monitor.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/monitor.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/README.md:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/repce.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/repce.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/repce.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/resource.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/resource.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/resource.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/syncdutils.pyc:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/syncdutils.pyo:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon/syncdutils.py:  System Environment/Base
+/usr/libexec/glusterfs/python/syncdaemon:  System Environment/Base
+/usr/libexec/glusterfs/python:  System Environment/Base
+/usr/libexec/glusterfs:  System Environment/Base
+/usr/libexec/gnome-fallback-mount-helper:  System Environment/Daemons
+/usr/libexec/gnome-keyring-prompt-3:  System Environment/Libraries
+/usr/libexec/gnome-keyring-prompt:  System Environment/Libraries
+/usr/libexec/gnome-panel-add:  User Interface/Desktops
+/usr/libexec/gnome-screensaver-dialog:  Amusements/Graphics
+/usr/libexec/gnome-session-check-accelerated-helper:  User Interface/Desktops
+/usr/libexec/gnome-session-check-accelerated:  User Interface/Desktops
+/usr/libexec/gnome-settings-daemon:  System Environment/Daemons
+/usr/libexec/gnome-shell-calendar-server:  User Interface/Desktops
+/usr/libexec/gnome-shell-hotplug-sniffer:  User Interface/Desktops
+/usr/libexec/gnome-shell-perf-helper:  User Interface/Desktops
+/usr/libexec/gnome-user-share:  System Environment/Libraries
+/usr/libexec/gnome-vfs-daemon:  System Environment/Libraries
+/usr/libexec/gnupg:  Applications/System
+/usr/libexec/gnupg/gpgkeys_curl:  Applications/System
+/usr/libexec/gnupg/gpgkeys_finger:  Applications/System
+/usr/libexec/gnupg/gpgkeys_hkp:  Applications/System
+/usr/libexec/gnupg/gpgkeys_ldap:  Applications/System
+/usr/libexec/gnupg-pcsc-wrapper:  Applications/System
+/usr/libexec/gnuplot/4.4:  Applications/Engineering
+/usr/libexec/gnuplot/4.4/gnuplot_x11:  Applications/Engineering
+/usr/libexec/gnuplot:  Applications/Engineering
+/usr/libexec/goa-daemon:  System Environment/Libraries
+/usr/libexec/gpg2keys_curl:  Applications/System
+/usr/libexec/gpg2keys_finger:  Applications/System
+/usr/libexec/gpg2keys_hkp:  Applications/System
+/usr/libexec/gpg2keys_ldap:  Applications/System
+/usr/libexec/gpg-check-pattern:  Applications/System
+/usr/libexec/gpg-preset-passphrase:  Applications/System
+/usr/libexec/gpg-protect-tool:  Applications/System
+/usr/libexec/gpilot-applet:  Applications/Communications
+/usr/libexec/gpilotd:  Applications/Communications
+/usr/libexec/gsd-backlight-helper:  System Environment/Daemons
+/usr/libexec/gsd-datetime-mechanism:  System Environment/Daemons
+/usr/libexec/gsd-locate-pointer:  System Environment/Daemons
+/usr/libexec/gsd-printer:  System Environment/Daemons
+/usr/libexec/gst-install-plugins-helper:  Development/Libraries
+/usr/libexec/gstreamer-0.10:  Applications/Multimedia
+/usr/libexec/gstreamer-0.10/gst-plugin-scanner:  Applications/Multimedia
+/usr/libexec/gvfs-afc-volume-monitor:  System Environment/Libraries
+/usr/libexec/gvfsd-afc:  System Environment/Libraries
+/usr/libexec/gvfsd-afp-browse:  System Environment/Libraries
+/usr/libexec/gvfsd-afp:  System Environment/Libraries
+/usr/libexec/gvfsd-archive:  System Environment/Libraries
+/usr/libexec/gvfsd-burn:  System Environment/Libraries
+/usr/libexec/gvfsd-cdda:  System Environment/Libraries
+/usr/libexec/gvfsd-computer:  System Environment/Libraries
+/usr/libexec/gvfsd-dav:  System Environment/Libraries
+/usr/libexec/gvfsd-dnssd:  System Environment/Libraries
+/usr/libexec/gvfsd-ftp:  System Environment/Libraries
+/usr/libexec/gvfsd-gphoto2:  System Environment/Libraries
+/usr/libexec/gvfsd-http:  System Environment/Libraries
+/usr/libexec/gvfsd-localtest:  System Environment/Libraries
+/usr/libexec/gvfsd-metadata:  System Environment/Libraries
+/usr/libexec/gvfsd-network:  System Environment/Libraries
+/usr/libexec/gvfsd-obexftp:  System Environment/Libraries
+/usr/libexec/gvfsd-sftp:  System Environment/Libraries
+/usr/libexec/gvfsd-smb-browse:  System Environment/Libraries
+/usr/libexec/gvfsd-smb:  System Environment/Libraries
+/usr/libexec/gvfsd:  System Environment/Libraries
+/usr/libexec/gvfsd-trash:  System Environment/Libraries
+/usr/libexec/gvfs-fuse-daemon:  System Environment/Libraries
+/usr/libexec/gvfs-gdu-volume-monitor:  System Environment/Libraries
+/usr/libexec/gvfs-gphoto2-volume-monitor:  System Environment/Libraries
+/usr/libexec/gypsy-daemon:  System Environment/Libraries
+/usr/libexec/hald-addon-acpi:  System Environment/Libraries
+/usr/libexec/hald-addon-generic-backlight:  System Environment/Libraries
+/usr/libexec/hald-addon-hid-ups:  System Environment/Libraries
+/usr/libexec/hald-addon-imac-backlight:  System Environment/Libraries
+/usr/libexec/hald-addon-input:  System Environment/Libraries
+/usr/libexec/hald-addon-ipw-killswitch:  System Environment/Libraries
+/usr/libexec/hald-addon-leds:  System Environment/Libraries
+/usr/libexec/hald-addon-macbook-backlight:  System Environment/Libraries
+/usr/libexec/hald-addon-macbookpro-backlight:  System Environment/Libraries
+/usr/libexec/hald-addon-pmu:  System Environment/Libraries
+/usr/libexec/hald-addon-rfkill-killswitch:  System Environment/Libraries
+/usr/libexec/hald-generate-fdi-cache:  System Environment/Libraries
+/usr/libexec/hald-probe-hiddev:  System Environment/Libraries
+/usr/libexec/hald-probe-ieee1394-unit:  System Environment/Libraries
+/usr/libexec/hald-probe-input:  System Environment/Libraries
+/usr/libexec/hald-probe-net-bluetooth:  System Environment/Libraries
+/usr/libexec/hald-probe-pc-floppy:  System Environment/Libraries
+/usr/libexec/hald-probe-printer:  System Environment/Libraries
+/usr/libexec/hald-probe-serial:  System Environment/Libraries
+/usr/libexec/hald-probe-smbios:  System Environment/Libraries
+/usr/libexec/hald-probe-storage:  System Environment/Libraries
+/usr/libexec/hald-probe-video4linux:  System Environment/Libraries
+/usr/libexec/hald-probe-volume:  System Environment/Libraries
+/usr/libexec/hald-runner:  System Environment/Libraries
+/usr/libexec/hal-storage-cleanup-all-mountpoints:  System Environment/Libraries
+/usr/libexec/hal-storage-cleanup-mountpoint:  System Environment/Libraries
+/usr/libexec/hal-storage-closetray:  System Environment/Libraries
+/usr/libexec/hal-storage-eject:  System Environment/Libraries
+/usr/libexec/hal-storage-mount:  System Environment/Libraries
+/usr/libexec/hal-storage-unmount:  System Environment/Libraries
+/usr/libexec/hal-system-power-pm-is-supported:  System Environment/Libraries
+/usr/libexec/hal-system-power-pmu:  System Environment/Libraries
+/usr/libexec/hal-system-setserial:  System Environment/Libraries
+/usr/libexec/httpd-ssl-pass-dialog:  System Environment/Daemons
+/usr/libexec/ibus-engine-anthy:  System Environment/Libraries
+/usr/libexec/ibus-engine-chewing:  System Environment/Libraries
+/usr/libexec/ibus-engine-hangul:  System Environment/Libraries
+/usr/libexec/ibus-engine-m17n:  System Environment/Libraries
+/usr/libexec/ibus-engine-pinyin:  System Environment/Libraries
+/usr/libexec/ibus-engine-rawcode:  System Environment/Libraries
+/usr/libexec/ibus-engine-xkb:  System Environment/Libraries
+/usr/libexec/ibus-gconf:  System Environment/Libraries
+/usr/libexec/ibus-setup-anthy:  System Environment/Libraries
+/usr/libexec/ibus-setup-hangul:  System Environment/Libraries
+/usr/libexec/ibus-setup-m17n:  System Environment/Libraries
+/usr/libexec/ibus-setup-pinyin:  System Environment/Libraries
+/usr/libexec/ibus-ui-gtk:  System Environment/Libraries
+/usr/libexec/ibus-x11:  System Environment/Libraries
+/usr/libexec/ibus-xkb:  System Environment/Libraries
+/usr/libexec/imsettings-daemon:  Applications/System
+/usr/libexec/ip6tables.init:  System Environment/Base
+/usr/libexec/ipsec/addconn:  System Environment/Daemons
+/usr/libexec/ipsec/auto:  System Environment/Daemons
+/usr/libexec/ipsec/barf:  System Environment/Daemons
+/usr/libexec/ipsec/_copyright:  System Environment/Daemons
+/usr/libexec/ipsec/eroute:  System Environment/Daemons
+/usr/libexec/ipsec/ikeping:  System Environment/Daemons
+/usr/libexec/ipsec/_include:  System Environment/Daemons
+/usr/libexec/ipsec/_keycensor:  System Environment/Daemons
+/usr/libexec/ipsec/klipsdebug:  System Environment/Daemons
+/usr/libexec/ipsec/look:  System Environment/Daemons
+/usr/libexec/ipsec/newhostkey:  System Environment/Daemons
+/usr/libexec/ipsec/pf_key:  System Environment/Daemons
+/usr/libexec/ipsec/_pluto_adns:  System Environment/Daemons
+/usr/libexec/ipsec/_plutoload:  System Environment/Daemons
+/usr/libexec/ipsec/_plutorun:  System Environment/Daemons
+/usr/libexec/ipsec/pluto:  System Environment/Daemons
+/usr/libexec/ipsec/policy:  System Environment/Daemons
+/usr/libexec/ipsec/ranbits:  System Environment/Daemons
+/usr/libexec/ipsec/_realsetup:  System Environment/Daemons
+/usr/libexec/ipsec/rsasigkey:  System Environment/Daemons
+/usr/libexec/ipsec/_secretcensor:  System Environment/Daemons
+/usr/libexec/ipsec/secrets:  System Environment/Daemons
+/usr/libexec/ipsec/setup:  System Environment/Daemons
+/usr/libexec/ipsec/showdefaults:  System Environment/Daemons
+/usr/libexec/ipsec/showhostkey:  System Environment/Daemons
+/usr/libexec/ipsec/spigrp:  System Environment/Daemons
+/usr/libexec/ipsec/spi:  System Environment/Daemons
+/usr/libexec/ipsec/_startklips:  System Environment/Daemons
+/usr/libexec/ipsec/_startnetkey:  System Environment/Daemons
+/usr/libexec/ipsec:  System Environment/Daemons
+/usr/libexec/ipsec/tncfg:  System Environment/Daemons
+/usr/libexec/ipsec/_updown.klips:  System Environment/Daemons
+/usr/libexec/ipsec/_updown.mast:  System Environment/Daemons
+/usr/libexec/ipsec/_updown.netkey:  System Environment/Daemons
+/usr/libexec/ipsec/_updown:  System Environment/Daemons
+/usr/libexec/ipsec/verify:  System Environment/Daemons
+/usr/libexec/ipsec/whack:  System Environment/Daemons
+/usr/libexec/iptables.init:  System Environment/Base
+/usr/libexec/kde4/apper-sentinel:  Unspecified
+/usr/libexec/kde4/backlighthelper:  User Interface/Desktops
+/usr/libexec/kde4/bluedevil-authorize:  Applications/Communications
+/usr/libexec/kde4/bluedevil-confirmmodechange:  Applications/Communications
+/usr/libexec/kde4/bluedevil-requestconfirmation:  Applications/Communications
+/usr/libexec/kde4/bluedevil-requestpin:  Applications/Communications
+/usr/libexec/kde4/digikamdatabaseserver:  Unspecified
+/usr/libexec/kde4/drkonqi:  User Interface/Desktops
+/usr/libexec/kde4/filesharelist:  System Environment/Libraries
+/usr/libexec/kde4/fileshareset:  System Environment/Libraries
+/usr/libexec/kde4/fontinst_helper:  User Interface/Desktops
+/usr/libexec/kde4/fontinst:  User Interface/Desktops
+/usr/libexec/kde4/fontinst_x11:  User Interface/Desktops
+/usr/libexec/kde4/installdbgsymbols.sh:  User Interface/Desktops
+/usr/libexec/kde4/kaccessibleapp:  User Interface/Desktops
+/usr/libexec/kde4/kalarm_helper:  Applications/Productivity
+/usr/libexec/kde4/kauth-policy-gen:  System Environment/Libraries
+/usr/libexec/kde4/kcheckpass:  User Interface/Desktops
+/usr/libexec/kde4/kcmdatetimehelper:  User Interface/Desktops
+/usr/libexec/kde4/kcmkdmhelper:  User Interface/Desktops
+/usr/libexec/kde4/kcmremotewidgetshelper:  User Interface/Desktops
+/usr/libexec/kde4/kconf_update:  System Environment/Libraries
+/usr/libexec/kde4/kdeeject:  User Interface/Desktops
+/usr/libexec/kde4/kdesud:  User Interface/Desktops
+/usr/libexec/kde4/kdesu_stub:  System Environment/Libraries
+/usr/libexec/kde4/kdesu:  User Interface/Desktops
+/usr/libexec/kde4/kdm_config:  User Interface/X
+/usr/libexec/kde4/kdm_greet:  User Interface/X
+/usr/libexec/kde4/kdontchangethehostname:  User Interface/Desktops
+/usr/libexec/kde4/kfontprint:  User Interface/Desktops
+/usr/libexec/kde4/khc_docbookdig.pl:  User Interface/Desktops
+/usr/libexec/kde4/khc_htdig.pl:  User Interface/Desktops
+/usr/libexec/kde4/khc_htsearch.pl:  User Interface/Desktops
+/usr/libexec/kde4/khc_indexbuilder:  User Interface/Desktops
+/usr/libexec/kde4/khc_mansearch.pl:  User Interface/Desktops
+/usr/libexec/kde4/kioexec:  User Interface/Desktops
+/usr/libexec/kde4/kio_http_cache_cleaner:  System Environment/Libraries
+/usr/libexec/kde4/kioslave:  System Environment/Libraries
+/usr/libexec/kde4/klauncher:  System Environment/Libraries
+/usr/libexec/kde4/kmailservice:  System Environment/Libraries
+/usr/libexec/kde4/knetattach:  User Interface/Desktops
+/usr/libexec/kde4/kpac_dhcp_helper:  System Environment/Libraries
+/usr/libexec/kde4/krootimage:  User Interface/Desktops
+/usr/libexec/kde4/kscreenlocker:  User Interface/Desktops
+/usr/libexec/kde4/ksendbugmail:  System Environment/Libraries
+/usr/libexec/kde4/ksysguardprocesslist_helper:  User Interface/Desktops
+/usr/libexec/kde4/ktelnetservice:  System Environment/Libraries
+/usr/libexec/kde4/kwin_killer_helper:  User Interface/Desktops
+/usr/libexec/kde4/kwin_opengl_test:  User Interface/Desktops
+/usr/libexec/kde4/kwin_rules_dialog:  User Interface/Desktops
+/usr/libexec/kde4/lnusertemp:  System Environment/Libraries
+/usr/libexec/kde4/networkmanagement_configshell:  Applications/Internet
+/usr/libexec/kde4/polkit-kde-authentication-agent-1:  Applications/System
+/usr/libexec/kde4/start_kdeinit:  System Environment/Libraries
+/usr/libexec/kde4/start_kdeinit_wrapper:  System Environment/Libraries
+/usr/libexec/kde4:  System Environment/Base
+/usr/libexec/kde4/test_kcm_xinerama:  User Interface/Desktops
+/usr/libexec/libsocialweb-core:  Applications/Internet
+/usr/libexec/libvirt_iohelper:  Development/Libraries
+/usr/libexec/libvirt_lxc:  Development/Libraries
+/usr/libexec/libvirt_parthelper:  Development/Libraries
+/usr/libexec/linux-boot-probes/50mounted-tests:  System Environment/Base
+/usr/libexec/linux-boot-probes/mounted/40grub2:  System Environment/Base
+/usr/libexec/linux-boot-probes/mounted/40grub:  System Environment/Base
+/usr/libexec/linux-boot-probes/mounted/50lilo:  System Environment/Base
+/usr/libexec/linux-boot-probes/mounted/90fallback:  System Environment/Base
+/usr/libexec/linux-boot-probes/mounted:  System Environment/Base
+/usr/libexec/linux-boot-probes:  System Environment/Base
+/usr/libexec/man-db/globbing:  System Environment/Base
+/usr/libexec/man-db/manconv:  System Environment/Base
+/usr/libexec/man-db:  System Environment/Base
+/usr/libexec/maxima/5.25.0:  Applications/Engineering
+/usr/libexec/maxima/5.25.0/mgnuplot:  Applications/Engineering
+/usr/libexec/maxima:  Applications/Engineering
+/usr/libexec/mission-control-5:  System Environment/Libraries
+/usr/libexec/mysqld:  Applications/Databases
+/usr/libexec/mysqld-prepare-db-dir:  Applications/Databases
+/usr/libexec/mysqld-wait-ready:  Applications/Databases
+/usr/libexec/nautilus-convert-metadata:  User Interface/Desktops
+/usr/libexec/newns:  System Environment/Base
+/usr/libexec/nm-avahi-autoipd.action:  System Environment/Base
+/usr/libexec/nm-crash-logger:  System Environment/Base
+/usr/libexec/nm-dhcp-client.action:  System Environment/Base
+/usr/libexec/nm-dispatcher.action:  System Environment/Base
+/usr/libexec/nm-openconnect-auth-dialog:  System Environment/Base
+/usr/libexec/nm-openconnect-service-openconnect-helper:  System Environment/Base
+/usr/libexec/nm-openconnect-service:  System Environment/Base
+/usr/libexec/nm-openvpn-auth-dialog:  System Environment/Base
+/usr/libexec/nm-openvpn-service-openvpn-helper:  System Environment/Base
+/usr/libexec/nm-openvpn-service:  System Environment/Base
+/usr/libexec/nm-pptp-auth-dialog:  System Environment/Base
+/usr/libexec/nm-pptp-service:  System Environment/Base
+/usr/libexec/nm-vpnc-auth-dialog:  System Environment/Base
+/usr/libexec/nm-vpnc-service:  System Environment/Base
+/usr/libexec/nm-vpnc-service-vpnc-helper:  System Environment/Base
+/usr/libexec/notification-area-applet:  User Interface/Desktops
+/usr/libexec/notification-daemon:  System Environment/Libraries
+/usr/libexec/ntpdate-wrapper:  Applications/System
+/usr/libexec/obex-client:  System Environment/Daemons
+/usr/libexec/openssh:  Applications/Internet
+/usr/libexec/openssh/gnome-ssh-askpass:  Applications/Internet
+/usr/libexec/openssh/sftp-server:  System Environment/Daemons
+/usr/libexec/openssh/ssh-askpass:  Applications/Internet
+/usr/libexec/openssh/ssh-keysign:  Applications/Internet
+/usr/libexec/openssh/ssh-pkcs11-helper:  Applications/Internet
+/usr/libexec/os-probes/50mounted-tests:  System Environment/Base
+/usr/libexec/os-probes/init/10filesystems:  System Environment/Base
+/usr/libexec/os-probes/init:  System Environment/Base
+/usr/libexec/os-probes/mounted/10freedos:  System Environment/Base
+/usr/libexec/os-probes/mounted/10qnx:  System Environment/Base
+/usr/libexec/os-probes/mounted/20macosx:  System Environment/Base
+/usr/libexec/os-probes/mounted/20microsoft:  System Environment/Base
+/usr/libexec/os-probes/mounted/30utility:  System Environment/Base
+/usr/libexec/os-probes/mounted/40lsb:  System Environment/Base
+/usr/libexec/os-probes/mounted/70hurd:  System Environment/Base
+/usr/libexec/os-probes/mounted/80minix:  System Environment/Base
+/usr/libexec/os-probes/mounted/83haiku:  System Environment/Base
+/usr/libexec/os-probes/mounted/90linux-distro:  System Environment/Base
+/usr/libexec/os-probes/mounted/90solaris:  System Environment/Base
+/usr/libexec/os-probes/mounted:  System Environment/Base
+/usr/libexec/os-probes:  System Environment/Base
+/usr/libexec/p7zip/7z:  Applications/Archiving
+/usr/libexec/p7zip/7z.so:  Applications/Archiving
+/usr/libexec/p7zip:  Applications/File
+/usr/libexec/packagekitd:  Unspecified
+/usr/libexec/perf-core:  Development/System
+/usr/libexec/perf-core/perf-archive:  Development/System
+/usr/libexec/perf-core/scripts:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/check-perf-trace-record:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/failed-syscalls-record:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/failed-syscalls-report:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/rw-by-file-record:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/rw-by-file-report:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/rw-by-pid-record:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/rw-by-pid-report:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/rwtop-record:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/rwtop-report:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/wakeup-latency-record:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/wakeup-latency-report:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/workqueue-stats-record:  Development/System
+/usr/libexec/perf-core/scripts/perl/bin/workqueue-stats-report:  Development/System
+/usr/libexec/perf-core/scripts/perl/check-perf-trace.pl:  Development/System
+/usr/libexec/perf-core/scripts/perl:  Development/System
+/usr/libexec/perf-core/scripts/perl/failed-syscalls.pl:  Development/System
+/usr/libexec/perf-core/scripts/perl/Perf-Trace-Util:  Development/System
+/usr/libexec/perf-core/scripts/perl/Perf-Trace-Util/lib:  Development/System
+/usr/libexec/perf-core/scripts/perl/Perf-Trace-Util/lib/Perf:  Development/System
+/usr/libexec/perf-core/scripts/perl/Perf-Trace-Util/lib/Perf/Trace/Context.pm:  Development/System
+/usr/libexec/perf-core/scripts/perl/Perf-Trace-Util/lib/Perf/Trace/Core.pm:  Development/System
+/usr/libexec/perf-core/scripts/perl/Perf-Trace-Util/lib/Perf/Trace:  Development/System
+/usr/libexec/perf-core/scripts/perl/Perf-Trace-Util/lib/Perf/Trace/Util.pm:  Development/System
+/usr/libexec/perf-core/scripts/perl/rw-by-file.pl:  Development/System
+/usr/libexec/perf-core/scripts/perl/rw-by-pid.pl:  Development/System
+/usr/libexec/perf-core/scripts/perl/rwtop.pl:  Development/System
+/usr/libexec/perf-core/scripts/perl/wakeup-latency.pl:  Development/System
+/usr/libexec/perf-core/scripts/perl/workqueue-stats.pl:  Development/System
+/usr/libexec/perf-core/scripts/python/bin:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/failed-syscalls-by-pid-record:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/failed-syscalls-by-pid-report:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/futex-contention-record:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/futex-contention-report:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/netdev-times-record:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/netdev-times-report:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/sched-migration-record:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/sched-migration-report:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/sctop-record:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/sctop-report:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/syscall-counts-by-pid-record:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/syscall-counts-by-pid-report:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/syscall-counts-record:  Development/System
+/usr/libexec/perf-core/scripts/python/bin/syscall-counts-report:  Development/System
+/usr/libexec/perf-core/scripts/python/check-perf-trace.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/check-perf-trace.py:  Development/System
+/usr/libexec/perf-core/scripts/python/check-perf-trace.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python:  Development/System
+/usr/libexec/perf-core/scripts/python/failed-syscalls-by-pid.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/failed-syscalls-by-pid.py:  Development/System
+/usr/libexec/perf-core/scripts/python/failed-syscalls-by-pid.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/futex-contention.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/futex-contention.py:  Development/System
+/usr/libexec/perf-core/scripts/python/futex-contention.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/netdev-times.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/netdev-times.py:  Development/System
+/usr/libexec/perf-core/scripts/python/netdev-times.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/Core.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/Core.py:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/Core.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/SchedGui.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/SchedGui.py:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/SchedGui.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/Util.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/Util.py:  Development/System
+/usr/libexec/perf-core/scripts/python/Perf-Trace-Util/lib/Perf/Trace/Util.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/sched-migration.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/sched-migration.py:  Development/System
+/usr/libexec/perf-core/scripts/python/sched-migration.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/sctop.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/sctop.py:  Development/System
+/usr/libexec/perf-core/scripts/python/sctop.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/syscall-counts-by-pid.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/syscall-counts-by-pid.py:  Development/System
+/usr/libexec/perf-core/scripts/python/syscall-counts-by-pid.pyo:  Development/System
+/usr/libexec/perf-core/scripts/python/syscall-counts.pyc:  Development/System
+/usr/libexec/perf-core/scripts/python/syscall-counts.py:  Development/System
+/usr/libexec/perf-core/scripts/python/syscall-counts.pyo:  Development/System
+/usr/libexec/pk-command-not-found:  Development/Libraries
+/usr/libexec/pk-gstreamer-install:  Development/Libraries
+/usr/libexec/plymouth/plymouth-generate-initrd:  Applications/System
+/usr/libexec/plymouth/plymouth-populate-initrd:  Applications/System
+/usr/libexec/plymouth/plymouth-update-initrd:  Applications/System
+/usr/libexec/plymouth:  System Environment/Base
+/usr/libexec/polkit-1/polkit-agent-helper-1:  System Environment/Libraries
+/usr/libexec/polkit-1/polkitd:  System Environment/Libraries
+/usr/libexec/polkit-1:  System Environment/Libraries
+/usr/libexec/polkit-gnome-authentication-agent-1:  Applications/System
+/usr/libexec/pt_chown:  System Environment/Base
+/usr/libexec/pulse/gconf-helper:  System Environment/Daemons
+/usr/libexec/pulse/proximity-helper:  System Environment/Daemons
+/usr/libexec/pulse:  System Environment/Daemons
+/usr/libexec/rhythmbox-metadata:  Applications/Multimedia
+/usr/libexec/rtkit-daemon:  System Environment/Base
+/usr/libexec/scripts/hal-dockstation-undock:  System Environment/Libraries
+/usr/libexec/scripts/hal-functions:  System Environment/Libraries
+/usr/libexec/scripts/hal-luks-remove:  System Environment/Libraries
+/usr/libexec/scripts/hal-luks-setup:  System Environment/Libraries
+/usr/libexec/scripts/hal-luks-teardown:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-killswitch-get-power:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-killswitch-set-power:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-lcd-get-brightness:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-lcd-set-brightness:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-power-hibernate:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-power-reboot:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-power-set-power-save:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-power-shutdown:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-power-suspend-hybrid:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-power-suspend:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-wol-enabled:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-wol-enable:  System Environment/Libraries
+/usr/libexec/scripts/hal-system-wol-supported:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-dockstation-undock-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-luks-remove-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-luks-setup-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-luks-teardown-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-killswitch-get-power-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-killswitch-set-power-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-lcd-get-brightness-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-lcd-set-brightness-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-power-hibernate-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-power-reboot-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-power-set-power-save-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-power-shutdown-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-power-suspend-hybrid-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-power-suspend-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-wol-enabled-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-wol-enable-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-wol-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux/hal-system-wol-supported-linux:  System Environment/Libraries
+/usr/libexec/scripts/linux:  System Environment/Libraries
+/usr/libexec/scripts:  System Environment/Libraries
+/usr/libexec/sesh:  Applications/System
+/usr/libexec/smartmontools/smartdnotify:  System Environment/Base
+/usr/libexec/smartmontools:  System Environment/Base
+/usr/libexec/sssd:  Applications/System
+/usr/libexec/sssd/krb5_child:  Applications/System
+/usr/libexec/sssd/ldap_child:  Applications/System
+/usr/libexec/sssd/proxy_child:  Applications/System
+/usr/libexec/sssd/sssd_be:  Applications/System
+/usr/libexec/sssd/sssd_nss:  Applications/System
+/usr/libexec/sssd/sssd_pam:  Applications/System
+/usr/libexec/sudoers.so:  Applications/System
+/usr/libexec/sudo_noexec.so:  Applications/System
+/usr/libexec:  System Environment/Base
+/usr/libexec/systemtap:  Applications/File
+/usr/libexec/systemtap/stap-authorize-cert:  Development/System
+/usr/libexec/systemtap/stap-env:  Development/System
+/usr/libexec/systemtap/stapio:  Development/System
+/usr/libexec/tcawmgr.cgi:  Development/Libraries
+/usr/libexec/telepathy-butterfly:  Applications/Communications
+/usr/libexec/telepathy-gabble:  Applications/Communications
+/usr/libexec/telepathy-haze:  Applications/Communications
+/usr/libexec/telepathy-idle:  Applications/Communications
+/usr/libexec/telepathy-logger:  Applications/Communications
+/usr/libexec/telepathy-salut:  Applications/Communications
+/usr/libexec/totem:  Applications/Multimedia
+/usr/libexec/totem-plugin-viewer:  Applications/Internet
+/usr/libexec/totem/totem-bugreport.py:  Applications/Multimedia
+/usr/libexec/tracker-extract:  Applications/System
+/usr/libexec/tracker-miner-flickr:  Applications/System
+/usr/libexec/tracker-miner-fs:  Applications/System
+/usr/libexec/tracker-store:  Applications/System
+/usr/libexec/tracker-writeback:  Applications/System
+/usr/libexec/twisted-dropin-cache:  Development/Libraries
+/usr/libexec/udisks-daemon:  System Environment/Libraries
+/usr/libexec/udisks-helper-ata-smart-collect:  System Environment/Libraries
+/usr/libexec/udisks-helper-ata-smart-selftest:  System Environment/Libraries
+/usr/libexec/udisks-helper-change-filesystem-label:  System Environment/Libraries
+/usr/libexec/udisks-helper-change-luks-password:  System Environment/Libraries
+/usr/libexec/udisks-helper-create-partition:  System Environment/Libraries
+/usr/libexec/udisks-helper-create-partition-table:  System Environment/Libraries
+/usr/libexec/udisks-helper-delete-partition:  System Environment/Libraries
+/usr/libexec/udisks-helper-drive-benchmark:  System Environment/Libraries
+/usr/libexec/udisks-helper-drive-detach:  System Environment/Libraries
+/usr/libexec/udisks-helper-drive-poll:  System Environment/Libraries
+/usr/libexec/udisks-helper-fstab-mounter:  System Environment/Libraries
+/usr/libexec/udisks-helper-linux-md-check:  System Environment/Libraries
+/usr/libexec/udisks-helper-linux-md-remove-component:  System Environment/Libraries
+/usr/libexec/udisks-helper-mdadm-expand:  System Environment/Libraries
+/usr/libexec/udisks-helper-mkfs:  System Environment/Libraries
+/usr/libexec/udisks-helper-modify-partition:  System Environment/Libraries
+/usr/libexec/upowerd:  System Environment/Libraries
+/usr/libexec/utempter:  System Environment/Libraries
+/usr/libexec/utempter/utempter:  System Environment/Libraries
+/usr/libexec/vino-server:  User Interface/Desktops
+/usr/libexec/virt-manager-launch:  Applications/Emulators
+/usr/libexec/virtuoso:  Applications/Databases
+/usr/libexec/webkitgtk3:  Development/Libraries
+/usr/libexec/webkitgtk3/GtkLauncher:  Development/Libraries
+/usr/libexec/webkitgtk:  Development/Libraries
+/usr/libexec/webkitgtk/GtkLauncher:  Development/Libraries
+/usr/libexec/wnck-applet:  User Interface/Desktops
+/usr/libexec/xfce4:  Applications/File
+/usr/libexec/xinputinfo.sh:  Applications/System
+/usr/libexec/xscreensaver/abstractile:  Amusements/Graphics
+/usr/libexec/xscreensaver:  Amusements/Graphics
+/usr/libexec/xscreensaver/anemone:  Amusements/Graphics
+/usr/libexec/xscreensaver/anemotaxis:  Amusements/Graphics
+/usr/libexec/xscreensaver/antinspect:  Amusements/Graphics
+/usr/libexec/xscreensaver/antmaze:  Amusements/Graphics
+/usr/libexec/xscreensaver/antspotlight:  Amusements/Graphics
+/usr/libexec/xscreensaver/apollonian:  Amusements/Graphics
+/usr/libexec/xscreensaver/apple2:  Amusements/Graphics
+/usr/libexec/xscreensaver/atlantis:  Amusements/Graphics
+/usr/libexec/xscreensaver/attraction:  Amusements/Graphics
+/usr/libexec/xscreensaver/atunnel:  Amusements/Graphics
+/usr/libexec/xscreensaver-autostart:  Amusements/Graphics
+/usr/libexec/xscreensaver/barcode:  Amusements/Graphics
+/usr/libexec/xscreensaver/blaster:  Amusements/Graphics
+/usr/libexec/xscreensaver/blinkbox:  Amusements/Graphics
+/usr/libexec/xscreensaver/blitspin:  Amusements/Graphics
+/usr/libexec/xscreensaver/blocktube:  Amusements/Graphics
+/usr/libexec/xscreensaver/boing:  Amusements/Graphics
+/usr/libexec/xscreensaver/bouboule:  Amusements/Graphics
+/usr/libexec/xscreensaver/bouncingcow:  Amusements/Graphics
+/usr/libexec/xscreensaver/boxed:  Amusements/Graphics
+/usr/libexec/xscreensaver/boxfit:  Amusements/Graphics
+/usr/libexec/xscreensaver/braid:  Amusements/Graphics
+/usr/libexec/xscreensaver/bsod:  Amusements/Graphics
+/usr/libexec/xscreensaver/bubble3d:  Amusements/Graphics
+/usr/libexec/xscreensaver/bumps:  Amusements/Graphics
+/usr/libexec/xscreensaver/cage:  Amusements/Graphics
+/usr/libexec/xscreensaver/carousel:  Amusements/Graphics
+/usr/libexec/xscreensaver/ccurve:  Amusements/Graphics
+/usr/libexec/xscreensaver/celtic:  Amusements/Graphics
+/usr/libexec/xscreensaver/circuit:  Amusements/Graphics
+/usr/libexec/xscreensaver/cloudlife:  Amusements/Graphics
+/usr/libexec/xscreensaver/companioncube:  Amusements/Graphics
+/usr/libexec/xscreensaver/compass:  Amusements/Graphics
+/usr/libexec/xscreensaver/coral:  Amusements/Graphics
+/usr/libexec/xscreensaver/crackberg:  Amusements/Graphics
+/usr/libexec/xscreensaver/crystal:  Amusements/Graphics
+/usr/libexec/xscreensaver/cube21:  Amusements/Graphics
+/usr/libexec/xscreensaver/cubenetic:  Amusements/Graphics
+/usr/libexec/xscreensaver/cubestorm:  Amusements/Graphics
+/usr/libexec/xscreensaver/cubicgrid:  Amusements/Graphics
+/usr/libexec/xscreensaver/cwaves:  Amusements/Graphics
+/usr/libexec/xscreensaver/cynosure:  Amusements/Graphics
+/usr/libexec/xscreensaver/dangerball:  Amusements/Graphics
+/usr/libexec/xscreensaver/decayscreen:  Amusements/Graphics
+/usr/libexec/xscreensaver/deco:  Amusements/Graphics
+/usr/libexec/xscreensaver/deluxe:  Amusements/Graphics
+/usr/libexec/xscreensaver/demon:  Amusements/Graphics
+/usr/libexec/xscreensaver/discrete:  Amusements/Graphics
+/usr/libexec/xscreensaver/distort:  Amusements/Graphics
+/usr/libexec/xscreensaver/drift:  Amusements/Graphics
+/usr/libexec/xscreensaver/endgame:  Amusements/Graphics
+/usr/libexec/xscreensaver/engine:  Amusements/Graphics
+/usr/libexec/xscreensaver/epicycle:  Amusements/Graphics
+/usr/libexec/xscreensaver/eruption:  Amusements/Graphics
+/usr/libexec/xscreensaver/euler2d:  Amusements/Graphics
+/usr/libexec/xscreensaver/extrusion:  Amusements/Graphics
+/usr/libexec/xscreensaver/fadeplot:  Amusements/Graphics
+/usr/libexec/xscreensaver/fiberlamp:  Amusements/Graphics
+/usr/libexec/xscreensaver/fireworkx:  Amusements/Graphics
+/usr/libexec/xscreensaver/flame:  Amusements/Graphics
+/usr/libexec/xscreensaver/flipflop:  Amusements/Graphics
+/usr/libexec/xscreensaver/flipscreen3d:  Amusements/Graphics
+/usr/libexec/xscreensaver/fliptext:  Amusements/Graphics
+/usr/libexec/xscreensaver/flow:  Amusements/Graphics
+/usr/libexec/xscreensaver/fluidballs:  Amusements/Graphics
+/usr/libexec/xscreensaver/flurry:  Amusements/Graphics
+/usr/libexec/xscreensaver/flyingtoasters:  Amusements/Graphics
+/usr/libexec/xscreensaver/fontglide:  Amusements/Graphics
+/usr/libexec/xscreensaver/fuzzyflakes:  Amusements/Graphics
+/usr/libexec/xscreensaver/galaxy:  Amusements/Graphics
+/usr/libexec/xscreensaver/gears:  Amusements/Graphics
+/usr/libexec/xscreensaver/gflux:  Amusements/Graphics
+/usr/libexec/xscreensaver/glblur:  Amusements/Graphics
+/usr/libexec/xscreensaver/glcells:  Amusements/Graphics
+/usr/libexec/xscreensaver/gleidescope:  Amusements/Graphics
+/usr/libexec/xscreensaver/glhanoi:  Amusements/Graphics
+/usr/libexec/xscreensaver/glknots:  Amusements/Graphics
+/usr/libexec/xscreensaver/glmatrix:  Amusements/Graphics
+/usr/libexec/xscreensaver/glplanet:  Amusements/Graphics
+/usr/libexec/xscreensaver/glschool:  Amusements/Graphics
+/usr/libexec/xscreensaver/glslideshow:  Amusements/Graphics
+/usr/libexec/xscreensaver/glsnake:  Amusements/Graphics
+/usr/libexec/xscreensaver/gltext:  Amusements/Graphics
+/usr/libexec/xscreensaver/goop:  Amusements/Graphics
+/usr/libexec/xscreensaver/grav:  Amusements/Graphics
+/usr/libexec/xscreensaver/greynetic:  Amusements/Graphics
+/usr/libexec/xscreensaver/halftone:  Amusements/Graphics
+/usr/libexec/xscreensaver/halo:  Amusements/Graphics
+/usr/libexec/xscreensaver/helix:  Amusements/Graphics
+/usr/libexec/xscreensaver/hilbert:  Amusements/Graphics
+/usr/libexec/xscreensaver/hopalong:  Amusements/Graphics
+/usr/libexec/xscreensaver/hypertorus:  Amusements/Graphics
+/usr/libexec/xscreensaver/hypnowheel:  Amusements/Graphics
+/usr/libexec/xscreensaver/ifs:  Amusements/Graphics
+/usr/libexec/xscreensaver/imsmap:  Amusements/Graphics
+/usr/libexec/xscreensaver/interaggregate:  Amusements/Graphics
+/usr/libexec/xscreensaver/interference:  Amusements/Graphics
+/usr/libexec/xscreensaver/intermomentary:  Amusements/Graphics
+/usr/libexec/xscreensaver/jigglypuff:  Amusements/Graphics
+/usr/libexec/xscreensaver/jigsaw:  Amusements/Graphics
+/usr/libexec/xscreensaver/juggler3d:  Amusements/Graphics
+/usr/libexec/xscreensaver/julia:  Amusements/Graphics
+/usr/libexec/xscreensaver/kaleidescope:  Amusements/Graphics
+/usr/libexec/xscreensaver/klein:  Amusements/Graphics
+/usr/libexec/xscreensaver/kumppa:  Amusements/Graphics
+/usr/libexec/xscreensaver/lament:  Amusements/Graphics
+/usr/libexec/xscreensaver/lavalite:  Amusements/Graphics
+/usr/libexec/xscreensaver/lcdscrub:  Amusements/Graphics
+/usr/libexec/xscreensaver/ljlatest:  Amusements/Graphics
+/usr/libexec/xscreensaver/lockward:  Amusements/Graphics
+/usr/libexec/xscreensaver/loop:  Amusements/Graphics
+/usr/libexec/xscreensaver/m6502:  Amusements/Graphics
+/usr/libexec/xscreensaver/maze:  Amusements/Graphics
+/usr/libexec/xscreensaver/memscroller:  Amusements/Graphics
+/usr/libexec/xscreensaver/menger:  Amusements/Graphics
+/usr/libexec/xscreensaver/metaballs:  Amusements/Graphics
+/usr/libexec/xscreensaver/mirrorblob:  Amusements/Graphics
+/usr/libexec/xscreensaver/moebius:  Amusements/Graphics
+/usr/libexec/xscreensaver/moebiusgears:  Amusements/Graphics
+/usr/libexec/xscreensaver/moire2:  Amusements/Graphics
+/usr/libexec/xscreensaver/moire:  Amusements/Graphics
+/usr/libexec/xscreensaver/molecule:  Amusements/Graphics
+/usr/libexec/xscreensaver/morph3d:  Amusements/Graphics
+/usr/libexec/xscreensaver/mountain:  Amusements/Graphics
+/usr/libexec/xscreensaver/munch:  Amusements/Graphics
+/usr/libexec/xscreensaver/nerverot:  Amusements/Graphics
+/usr/libexec/xscreensaver/noof:  Amusements/Graphics
+/usr/libexec/xscreensaver/noseguy:  Amusements/Graphics
+/usr/libexec/xscreensaver/pacman:  Amusements/Graphics
+/usr/libexec/xscreensaver/pedal:  Amusements/Graphics
+/usr/libexec/xscreensaver/penetrate:  Amusements/Graphics
+/usr/libexec/xscreensaver/penrose:  Amusements/Graphics
+/usr/libexec/xscreensaver/petri:  Amusements/Graphics
+/usr/libexec/xscreensaver/phosphor:  Amusements/Graphics
+/usr/libexec/xscreensaver/photopile:  Amusements/Graphics
+/usr/libexec/xscreensaver/piecewise:  Amusements/Graphics
+/usr/libexec/xscreensaver/pinion:  Amusements/Graphics
+/usr/libexec/xscreensaver/pipes:  Amusements/Graphics
+/usr/libexec/xscreensaver/polyhedra:  Amusements/Graphics
+/usr/libexec/xscreensaver/polyominoes:  Amusements/Graphics
+/usr/libexec/xscreensaver/polytopes:  Amusements/Graphics
+/usr/libexec/xscreensaver/pong:  Amusements/Graphics
+/usr/libexec/xscreensaver/popsquares:  Amusements/Graphics
+/usr/libexec/xscreensaver/providence:  Amusements/Graphics
+/usr/libexec/xscreensaver/pulsar:  Amusements/Graphics
+/usr/libexec/xscreensaver/pyro:  Amusements/Graphics
+/usr/libexec/xscreensaver/qix:  Amusements/Graphics
+/usr/libexec/xscreensaver/queens:  Amusements/Graphics
+/usr/libexec/xscreensaver/rd-bomb:  Amusements/Graphics
+/usr/libexec/xscreensaver/ripples:  Amusements/Graphics
+/usr/libexec/xscreensaver/rocks:  Amusements/Graphics
+/usr/libexec/xscreensaver/rorschach:  Amusements/Graphics
+/usr/libexec/xscreensaver/rotzoomer:  Amusements/Graphics
+/usr/libexec/xscreensaver/rubik:  Amusements/Graphics
+/usr/libexec/xscreensaver/rubikblocks:  Amusements/Graphics
+/usr/libexec/xscreensaver/sballs:  Amusements/Graphics
+/usr/libexec/xscreensaver/shadebobs:  Amusements/Graphics
+/usr/libexec/xscreensaver/sierpinski3d:  Amusements/Graphics
+/usr/libexec/xscreensaver/sierpinski:  Amusements/Graphics
+/usr/libexec/xscreensaver/skytentacles:  Amusements/Graphics
+/usr/libexec/xscreensaver/slidescreen:  Amusements/Graphics
+/usr/libexec/xscreensaver/slip:  Amusements/Graphics
+/usr/libexec/xscreensaver/sonar:  Amusements/Graphics
+/usr/libexec/xscreensaver/speedmine:  Amusements/Graphics
+/usr/libexec/xscreensaver/spheremonics:  Amusements/Graphics
+/usr/libexec/xscreensaver/spotlight:  Amusements/Graphics
+/usr/libexec/xscreensaver/sproingies:  Amusements/Graphics
+/usr/libexec/xscreensaver/squiral:  Amusements/Graphics
+/usr/libexec/xscreensaver/stairs:  Amusements/Graphics
+/usr/libexec/xscreensaver/starfish:  Amusements/Graphics
+/usr/libexec/xscreensaver/starwars:  Amusements/Graphics
+/usr/libexec/xscreensaver/stonerview:  Amusements/Graphics
+/usr/libexec/xscreensaver/strange:  Amusements/Graphics
+/usr/libexec/xscreensaver/substrate:  Amusements/Graphics
+/usr/libexec/xscreensaver/superquadrics:  Amusements/Graphics
+/usr/libexec/xscreensaver/surfaces:  Amusements/Graphics
+/usr/libexec/xscreensaver/swirl:  Amusements/Graphics
+/usr/libexec/xscreensaver/tangram:  Amusements/Graphics
+/usr/libexec/xscreensaver/thornbird:  Amusements/Graphics
+/usr/libexec/xscreensaver/timetunnel:  Amusements/Graphics
+/usr/libexec/xscreensaver/topblock:  Amusements/Graphics
+/usr/libexec/xscreensaver/triangle:  Amusements/Graphics
+/usr/libexec/xscreensaver/tronbit:  Amusements/Graphics
+/usr/libexec/xscreensaver/truchet:  Amusements/Graphics
+/usr/libexec/xscreensaver/twang:  Amusements/Graphics
+/usr/libexec/xscreensaver/vermiculate:  Amusements/Graphics
+/usr/libexec/xscreensaver/vidwhacker:  Amusements/Graphics
+/usr/libexec/xscreensaver/voronoi:  Amusements/Graphics
+/usr/libexec/xscreensaver/wander:  Amusements/Graphics
+/usr/libexec/xscreensaver/webcollage:  Amusements/Graphics
+/usr/libexec/xscreensaver/webcollage-helper:  Amusements/Graphics
+/usr/libexec/xscreensaver/webcollage.original:  Amusements/Graphics
+/usr/libexec/xscreensaver/whirlwindwarp:  Amusements/Graphics
+/usr/libexec/xscreensaver/wormhole:  Amusements/Graphics
+/usr/libexec/xscreensaver/xanalogtv:  Amusements/Graphics
+/usr/libexec/xscreensaver/xflame:  Amusements/Graphics
+/usr/libexec/xscreensaver/xjack:  Amusements/Graphics
+/usr/libexec/xscreensaver/xlyap:  Amusements/Graphics
+/usr/libexec/xscreensaver/xmatrix:  Amusements/Graphics
+/usr/libexec/xscreensaver/xrayswarm:  Amusements/Graphics
+/usr/libexec/xscreensaver/xspirograph:  Amusements/Graphics
+/usr/libexec/xscreensaver/zoom:  Amusements/Graphics
 /usr/lib/freetype-freeworld/libfreetype.so.6.7.1:  System Environment/Libraries
 /usr/lib/freetype-freeworld/libfreetype.so.6:  System Environment/Libraries
 /usr/lib/gcc/x86_64-redhat-linux/4.6.2/32/libgcc_s.so:  Development/Languages
@@ -18067,6 +19135,7 @@
 /usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre/lib/x86_64/client/libjvm.so:  Development/Languages
 /usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre/lib/x86_64/libjawt.so:  Development/Languages
 /usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre/lib/x86_64/server/libjvm.so:  Development/Languages
+/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/bin/java:  Development/Languages
 /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/headless/libmawt.so:  Development/Languages
 /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/IcedTeaPlugin.so:  Applications/Internet
 /usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/jli/libjli.so:  Development/Languages
@@ -19401,6 +20470,7 @@
 /vivopay-serial:  Kernel
 /vlsi_ir:  Kernel
 /vmac:  Kernel
+/vmlinux-unknown:  Kernel
 /vmw_balloon:  Kernel
 /vmwgfx:  Kernel
 /vmw_pvscsi:  Kernel
