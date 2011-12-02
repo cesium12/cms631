@@ -1,1 +1,6 @@
-{"description": {"_main": "foobar"}, "binary": {"google chrome": "_opt_google_chrome_chrome", "gnome shell": "_usr_bin_gnome-shell", "gnome terminal": "_usr_bin_gnome-terminal"}}
+{
+    "description":
+    {"_main": "Computers are everywhere.  In our pockets.  On our desks.  In our\nlaps.  But few people actually know what's going on in a\ncomputer. It's a bit of a mystical thing: you press the on button, and\nthen you can do anything.  But how are these things possible?\nPrograms have to be able to interact with a user, but all of the\ncomputers out there are different.  Not to mention programs have to\ntalk to other programs as well, to make the Internet work.  How do all\nof these things happen?  Why is the brand-new computer you just bought\nfeel as slow as the old one under your desk?\nAs computers have gotten faster, the interactions between programs\nhave increased.  So once-simple tasks are actually quite complex.\nWhat a tangled web."},
+    "binary":
+    {"google chrome": "_opt_google_chrome_chrome", "gnome shell": "_usr_bin_gnome-shell", "gnome terminal": "_usr_bin_gnome-terminal"}
+}
