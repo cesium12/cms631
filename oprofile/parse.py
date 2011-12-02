@@ -47,7 +47,7 @@ def try_get_count(element):
     return count
 
 
-data = etree.parse(open('session.callgraph.xml'))
+data = etree.parse(open('session-two.callgraph.xml'))
 
 modules = []
 idd = 0
