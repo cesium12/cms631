@@ -1,1 +1,1 @@
-{"callgrind": ["firefox", "ltris", "oprofile"]}
+{"callgrind": ["oprofile"], "description": {"oprofile": "oprofile? yaprofile", "_main": "foobar"}}

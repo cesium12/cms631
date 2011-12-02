@@ -132,15 +132,19 @@ function Callgrind(id, destroy, center) {
       colorlist.sort();
       for(var i = 0; i < colorlist.length; ++i) {
         colormap[colorlist[i]] = i;
-        colorplot($('<div>').attr('h', 6 * i / colorlist.length)
-                            .text(colorlist[i]).appendTo('#legend'), 128, 0.5);
+        var h = 6 * i / colorlist.length,
+            l = $('<div>').attr('h', h).text(colorlist[i]).appendTo('#legend');
+        colorplot(l, 128, 0.5);
+        l.mouseover((function(hh) {
+          return function() {
+            drawover();
+            colorplot($('div[h="' + hh + '"]').addClass('highlight'), 256, 1);
+          };
+        })(h));
       }
       for(var i = 0; i < num; ++i)
         colorplot($('<div>').attr('h', 6 * colormap[libname(nodes[i][1])] / colorlist.length)
                             .attr('id', i).appendTo('#plot'), 128, 0.5);
-      for(var i = 0; i < num; ++i)
-        if(libname(nodes[i][1]) === '(unknown)')
-          console.log(nodes[i][1]);
     }
     
     function drawline() {
@@ -168,7 +172,10 @@ function Callgrind(id, destroy, center) {
           if(d2 < m)
             n = i, m = d2;
         }
-      drawover(n);
+      if(parseInt($('#legend').css('padding-right')))
+        loctx.clearRect(0, 0, lsize, gsize);
+      else
+        drawover(n);
     }
     
     function move() {

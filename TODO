@@ -1,9 +1,6 @@
 add explanatory text and clarify existing text
 page title
-remove WinXP background?
 
-unknown modules?
-integrate callgrind with oprofile? or drop callgrind?
 new layout algorithm for oprofile
 filter oprofile nodes
 decide on UI (for oprofile, and overall)

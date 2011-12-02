@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>insert title here</title>
+  <title>oprofile</title>
   <style type="text/css">
 html, body {
   height: 100%;
@@ -25,6 +25,23 @@ body {
 #back {
   position: absolute;
   width: 100%;
+  height: 100%;
+  background: url(swirl.png) center center;
+}
+
+#spiel {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 480px;
+  margin-left: -240px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid lightgray;
+  border-bottom: none;
+  -webkit-border-radius: 3px 3px 0px 0px;
+  -moz-border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
 }
 
 #lover {
@@ -76,6 +93,10 @@ body {
   text-align: left;
 }
 
+#legend:hover {
+  padding-right: 1px;
+}
+
 #info {
   right: 0;
   text-align: right;
@@ -125,7 +146,6 @@ var lctx, loctx, gsize, lsize, minsize, select = null, zoom = 0, minzoom = 0, en
 function main() {
   lctx = $('#line')[0].getContext('2d');
   loctx = $('#lover')[0].getContext('2d');
-  $('.topbox').fadeOut(0);
   
   $(window).resize(function() {
     gsize = $(window).height();
@@ -150,6 +170,8 @@ function main() {
   });
   
   $.getJSON('config.json', function(config) {
+    $('.topbox,#plot').fadeOut(0);
+    $('#spiel').html(config.description._main);
     for(var i = 0; i < config.callgrind.length; ++i) {
       var id = config.callgrind[i],
           dim = function(x) { return { width: x, height: x }; },
@@ -164,25 +186,39 @@ function main() {
           if(!enable)
             return;
           enable = false;
-          $('.topbox').html('').fadeIn(2000);
+          $('.topbox').html('');
+          $('.topbox,#plot').fadeIn(2000);
+          $('#back').fadeTo(2000, 0.25);
+          $('#container').fadeOut(2000);
+          $('#spiel').html(config.description[id]);
+          logo.animate(dim(320), {
+            duration: 3000,
+            step: function(now) { zoom = now; },
+            complete: function() { logo.css(dim(160)); minzoom = 160; }
+          });
           var cg = new Callgrind(id, function() {
             minzoom = 0;
-            $('#back,#container').fadeIn(2000);
-            $('.topbox').fadeOut(2000);
+            $('.topbox,#plot').fadeOut(2000);
+            $('#back').fadeTo(2000, 1);
+            $('#container').fadeIn(2000);
+            $('#spiel').html(config.description._main);
             logo.animate(dim(80), {
               duration: 3000,
               step: function(now) { zoom = now; },
               complete: function() { cg.kill(); delete cg; enable = true; }
             });
           }, [ logo.offset().left + 40, logo.offset().top + 40 ]);
-          $('#back,#container').fadeOut(2000);
-          logo.animate(dim(320), {
-            duration: 3000,
-            step: function(now) { zoom = now; },
-            complete: function() { logo.css(dim(160)); minzoom = 160; }
-          });
         };
       })(id));
+      var ex = function(size) {
+        var logo = button.find('img');
+        return function() {
+          if(!enable)
+            return;
+          logo.stop().animate(dim(size), 'fast');
+        };
+      };
+      button.mouseover(ex(100)).mouseout(ex(80));
     }
   }).overrideMimeType("application/json");
 }
@@ -195,15 +231,16 @@ WebFontConfig = {
   <script async="async" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 </head>
 <body>
+  <div id="back"></div>
   <div class="full" id="plot">
     <canvas class="full" id="line"></canvas>
     <canvas class="full" id="lover"></canvas>
   </div>
-  <img id="back" src="bliss.jpg">
   <div class="text topbox" id="legend"></div>
   <div class="text topbox" id="info"></div>
   <table id="container">
     <tr></tr>
   </table>
+  <div class="text label" id="spiel"></div>
 </body>
 </html>
