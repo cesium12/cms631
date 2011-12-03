@@ -88,7 +88,7 @@ body {
   font-family: "Droid Sans Mono", sans-serif;
 }
 
-#container, #spiel {
+#container, #descr {
   font-family: "Tinos", serif;
 }
 
@@ -97,7 +97,7 @@ body {
   vertical-align: middle;
 }
 
-#legend, #spiel {
+#legend, #descr {
   width: 270pt;
   vertical-align: top;
 }
@@ -111,7 +111,12 @@ body {
   padding-right: 1px;
 }
 
+#cats {
+  position: absolute;
+}
+
 #spiel {
+  position: absolute;
   white-space: normal;
   text-align: justify;
   padding: 1em;
@@ -240,14 +245,16 @@ WebFontConfig = {
   <table id="all" class="full">
     <tr>
       <td rowspan="2" class="text" id="legend">
-        <div id="cats" style="position: absolute;"></div>
+        <div id="cats"></div>
       </td>
       <td id="bar">
         <table id="container">
           <tr></tr>
         </table>
       </td>
-      <td rowspan="2" class="text" id="spiel"></td>
+      <td rowspan="2" class="text" id="descr">
+        <div id="spiel"></div>
+      </td>
     </tr>
     <tr class="full">
       <td id="plot">
