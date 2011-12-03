@@ -54,30 +54,22 @@ function Callgrind(nodes) {
       $('#cats div[h="' + $('#' + i).attr('h') + '"]').show();
   }
   
-  this.add = function(fn, button) {
-    return function() {
-      $(window).resize();
-      button.addClass('used');
-      $.getJSON('oprofile/' + fn + '.json', function(list) {
-        cache[fn] = list;
-        for(var i = 0; i < list.length; ++i)
-          view[list[i][0]] = true;
-        recalc();
-      });
-    };
+  this.add = function(fn) {
+    $.getJSON('oprofile/' + fn + '.json', function(list) {
+      cache[fn] = list;
+      for(var i = 0; i < list.length; ++i)
+        view[list[i][0]] = true;
+      recalc();
+    });
   };
   
-  this.remove = function(fn, button) {
-    return function() {
-      $(window).resize();
-      button.removeClass('used');
-      delete cache[fn];
-      view = {};
-      for(var f in cache)
-        for(var i = 0; i < cache[f].length; ++i)
-          view[cache[f][i][0]] = true;
-      recalc();
-    };
+  this.remove = function(fn) {
+    delete cache[fn];
+    view = {};
+    for(var f in cache)
+      for(var i = 0; i < cache[f].length; ++i)
+        view[cache[f][i][0]] = true;
+    recalc();
   };
   
   function libname(fname) {

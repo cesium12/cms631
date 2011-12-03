@@ -112,7 +112,9 @@ body {
 }
 
 #spiel {
-  text-align: right;
+  white-space: normal;
+  text-align: justify;
+  padding: 1em;
 }
 
 #bar {
@@ -142,11 +144,11 @@ body {
   text-shadow: 0px 0px 1em white, 0px 0px 1em white, 0px 0px 1em white;
 }
 
-.label.used > img:last-of-type, .label:hover > img:last-of-type {
+.label:not(.used):not(:hover) > img:first-of-type {
   opacity: 0;
 }
 
-.label:not(.used):not(:hover) > img:first-of-type {
+.label.used > img:last-of-type, .label:hover > img:last-of-type {
   opacity: 0;
 }
   </style>
@@ -199,7 +201,20 @@ function main() {
                                    '<img src="logos/' + id + '.png">' +
                                    '<div>' + id + '</div>');
         $('<td>').html(button).appendTo('#container tr');
-        button.toggle(cg.add(fn, button), cg.remove(fn, button));
+        button.toggle((function(fn, button) {
+          return function() {
+            $(window).resize();
+            button.addClass('used');
+            cg.add(fn);
+            $('#spiel').html(config.description[fn]);
+          };
+        })(fn, button), (function(fn, button) {
+          return function() {
+            $(window).resize();
+            button.removeClass('used');
+            cg.remove(fn);
+          }
+        })(fn, button));
         function ex(size) {
           var logo = button.find('img');
           return function() {

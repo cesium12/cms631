@@ -1,0 +1,157 @@
+Motivation
+----------
+
+Computers are everywhere.  In our pockets.  On our desks.  In our
+laps.  But few people actually know what's going on in a
+computer. It's a bit of a mystical thing: you press the on button, and
+then you can do anything.  But how are these things possible?
+Programs have to be able to interact with a user, but all of the
+computers out there are different.  Not to mention programs have to
+talk to other programs as well, to make the Internet work.  How do all
+of these things happen?  Why is the brand-new computer you just bought
+feel as slow as the old one under your desk?
+
+As computers have gotten faster, the interactions between programs
+have increased.  So seemingly simple tasks are actually quite complex.
+What a tangled web.
+
+
+Kernel
+------
+
+For a computer to be useful, there has to be a program that managed
+all of the hardware resources.  This program is traditionally called
+the "kernel".  Any program that needs to talk to another program, or
+use the computer hardware, must make a request to the kernel.
+Depending on what the program needs, different parts of the kernel
+will service the request.  These different parts are called "modules".
+
+Xorg
+----
+
+The graphics system is called Xorg, and has its roots from the MIT X
+Window System project.  Xorg is responsible for performing the actual
+drawing-on-the-screen for graphical programs.
+
+Chrome
+------
+
+Chrome is a popular internet browser built by Google.  Chrome needs to
+talk to the internet to download web pages, as well the graphics
+system to display content and react to user actions, like typing and
+mouse clicks.  Chrome also runs multiple copies of itself, one per web
+page, to prevent the whole thing from crashing if something goes
+wrong.  That means Chrome also needs to talk other Chrome processes.
+
+Gnome Shell
+-----------
+
+Gnome is a Desktop Environment, providing the ability to launch
+programs from the familiar menu, as well as switching between
+graphical applications.  The Shell is the program that provides these
+features, such as drawing the background image and fancy transition
+effects when you minimize/maximize a program.
+
+Gnome Terminal
+--------------
+
+The Terminal is a program that allows the user to issue commands in a
+text-based client, similar to how users interacted with computers
+before graphical user interfaces existed at all.
+
+RhythmBox
+---------
+
+RhythmBox is Gnome's music player.
+
+
+CATEGORIES
+----------
+
+Applications/Databases
+----------------------
+
+Programs need to store data.  Often times, this data needs to be read
+and written rapidly.  Programmers have developed "databases",
+specialized programs that handle data extremely efficiently.
+Databases are used by other programs instead of customized data
+handling.  Popular databases include MySQL (typically used in web
+development) and SQLite (typically used by smaller programs that have
+structured data).
+
+Applications/File
+-----------------
+
+Computers operate on files, and sometimes you need to manage lots of
+files.  Programs in this category provide features like mass-file-copy
+and reading old file formats, as well as identifying files by looking
+at fingerprints.
+
+Applications/Internet
+---------------------
+
+Web browsers aren't the only internet enabled programs.  Programs in
+this category include chat clients, web-based printing, and all of the
+supporting libraries.
+
+Development/Debug
+-----------------
+
+Debugging information is used by programmers to find out what went
+wrong in a program.  Programs in this category are installed either
+for use by programmers or by automatic programs that collect error
+reports, so that they can be filled out before being sent to the
+programmers.
+
+Development/Languages
+---------------------
+
+Programming languages are used by programmers to make programs.  Some
+programs can't but run without the programming language installed.
+
+Development/Libraries
+---------------------
+
+Development libraries are additional libraries used by programmers to
+make programs.
+
+Kernel
+------
+SEE ABOVE
+
+System Environment/Base
+-----------------------
+
+Programs and libraries in this group are part of the core system.
+Your computer will not work without them.
+
+System Environment/Daemons
+--------------------------
+
+Daemons are long-running programs that provide important
+services. Examples of daemons include "cron", the
+run-a-program-at-a-scheduled-time service.
+
+System Environment/Libraries
+----------------------------
+
+Additional libraries that are installed to provide common, but not
+critical, system services.
+
+
+User Interface/Desktops
+-----------------------
+
+Programs in this group provide the familiar "desktop".  You can run
+programs using the familiar menus, and drag windows around.
+
+User Interface/X
+----------------
+
+SEE Xorg Above
+
+User Interface/X Hardware Support
+---------------------------------
+
+Programs in this group enable all features of your computer's graphics
+hardware, like faster 3D graphics.
