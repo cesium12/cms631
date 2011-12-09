@@ -10,11 +10,23 @@ function Callgrind(nodes) {
   tctx.fillRect(0, 0, 8, 1);
   colors = [ null, 'orange', 'blue', loctx.createPattern(tcanvas, 'repeat') ];
   
+  var grab = undefined;
+  $('#lover').mousedown(function(event) {
+    grab = $('#plot div.select').attr('id');
+    event.preventDefault();
+  }).mouseup(function(event) {
+    grab = undefined;
+  }).mouseout(function(event) {
+    grab = undefined;
+  });
+  
   for(var i = 0; i < num; ++i) {
     xy.push([ ( Math.sin(i * 2 * Math.PI / num)) / 2,
               (-Math.cos(i * 2 * Math.PI / num)) / 2 ]);
     v.push([ 0, 0 ]);
     adj.push({});
+    nodes[i][2] = 0;
+    nodes[i][3] = 0;
     any[i] = false;
     for(var j in nodes[i][6])
       if(i != j)
@@ -22,6 +34,8 @@ function Callgrind(nodes) {
   }
   for(var i = 0; i < num; ++i)
     for(var j in nodes[i][6]) {
+      ++nodes[i][2];
+      ++nodes[j][3];
       adj[i][j] |= 1;
       adj[j][i] |= 2;
     }
@@ -38,7 +52,7 @@ function Callgrind(nodes) {
       sys.pruneNode(kill.pop());
     for(var i in view)
       if(!sys.getNode(nodes[i][1]))
-        sys.addNode(nodes[i][1], { i: i });
+        sys.addNode(nodes[i][1], { i: i, mass: nodes[i][2] + 1 });
     sys.eachEdge(function(edge) {
       if(!view[edge.source.data.i] || !view[edge.target.data.i])
         kill.push(edge);
@@ -48,10 +62,11 @@ function Callgrind(nodes) {
     for(var i in view)
       for(var j in nodes[i][6])
         if(view[j] && !sys.getEdges(nodes[i][1], nodes[j][1]).length)
-          sys.addEdge(nodes[i][1], nodes[j][1], { length: 10 });
-    $('#cats div').hide();
+          sys.addEdge(nodes[i][1], nodes[j][1], { length: 10 / (nodes[j][3] + 1) });
+    $('.cat').hide();
     for(var i in view)
-      $('#cats div[h="' + $('#' + i).attr('h') + '"]').show();
+      $('.cat[h="' + $('#' + i).attr('h') + '"]').show();
+    sys.start();
   }
   
   this.add = function(fn) {
@@ -102,7 +117,7 @@ function Callgrind(nodes) {
     $('#info').html('&nbsp;');
     if(i !== undefined) {
       $('#info').html('<b>' + nodes[i][1] + '</b>');
-      colorplot($('#cats div[h="' + $('#' + i).attr('h') + '"]').addClass('select'), 192, 1);
+      colorplot($('.cat[h="' + $('#' + i).attr('h') + '"]').addClass('select'), 192, 1);
       colorplot($('#' + i).addClass('select'), 256, 1);
       for(j in adj[i])
         if(j != i)
@@ -159,18 +174,25 @@ function Callgrind(nodes) {
     for(var i = 0; i < colorlist.length; ++i) {
       colormap[colorlist[i]] = i;
       var h = 6 * i / colorlist.length,
-          l = $('<div>').attr('h', h).text(colorlist[i]).appendTo('#cats');
+          l = $('<div>').attr('h', h).addClass('cat').text(colorlist[i]).appendTo('#legend');
       colorplot(l, 128, 0.5);
-      l.mouseover((function(hh) {
+      l.mouseover((function(hh, t) {
         return function() {
           drawover();
           colorplot($('div[h="' + hh + '"]').addClass('highlight'), 256, 1);
+          spiel(2, t, true);
         };
-      })(h)).mouseout(function() { drawover(); });
+      })(h, colorlist[i])).mouseout((function(t) {
+        return function() {
+          drawover();
+          spiel(2, t, false);
+        };
+      })(colorlist[i]));
     }
-    for(var i = 0; i < num; ++i)
+    for(var i = 0; i < num; ++i) {
       colorplot($('<div>').attr('h', 6 * colormap[libname(nodes[i][1])] / colorlist.length)
-                          .attr('id', i).appendTo('#plotc'), 128, 0.5);
+                          .attr('id', i).appendTo('#plot'), 128, 0.5);
+    }
     recalc();
   }
   
@@ -232,7 +254,7 @@ function Callgrind(nodes) {
       drawover(n);
   }
   
-  var sys = arbor.ParticleSystem(10, 20, 0.6, true, 20);
+  var sys = arbor.ParticleSystem(1000, 600, 0.6, false, 10);
   //repulsion, stiffness, friction, gravity, fps, and dt
   sys.renderer = renderer;
   $.getJSON('libscan/things.json', drawplot).overrideMimeType('application/json');

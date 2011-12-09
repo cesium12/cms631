@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html class="full">
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>oprofile</title>
+  <title>the tangled web</title>
   <style type="text/css">
+html, body {
+  width: 100%;
+  height: 100%;
+}
 body {
   margin: 0;
   line-height: 0;
@@ -11,50 +15,71 @@ body {
   background: url(swirla.png) center center;
   background-color: black;
 }
+body > div { position: fixed; }
 
-.full {
-  width: 100%;
-  height: 100%;
+.mono, .serif {
+  font-size: 11pt;
+  line-height: 1.5em;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.mono  { font-family: "Droid Sans Mono", monospace; }
+.serif { font-family: "Tinos", serif;               }
+
+#legend, #spiel {
+  width: 270px;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+#legend       { left: 0;            }
+#legend:hover { padding-right: 1px; }
+#spiel {
+  right: 0;
+  white-space: pre-line;
+  text-align: justify;
+  padding: 0 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-#all {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-spacing: 0;
+#menu, #info {
+  text-align: center;
+  vertical-align: middle;
 }
-
+#menu {
+  margin: auto;
+  border-spacing: 40px 0px;
+  height: 135px;
+}
 #info {
   border: 2px solid lightgray;
   border-bottom: none;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  position: absolute;
+  left: 270px;
+  right: 270px;
   bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 4;
 }
 
-#plot, #plot > div {
-  z-index: 0;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
+#container {
+  left: 270px;
+  right: 270px;
+  top: 135px;
+  bottom: 0;
 }
-
-#line, #lover, #plotc {
+#container > * {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-#lover {
-  z-index: 2;
-}
-
-#plotc > div {
+#plot > div {
   border: 1px solid gray;
   position: absolute;
   margin: -8px;
@@ -64,95 +89,32 @@ body {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-
-#plotc > div.select {
+#plot > div.select {
   margin: -11px;
   width: 20px;
   height: 20px;
   box-shadow: 0 0 20px white;
 }
-
-#plotc > div.highlight {
+#plot > div.highlight {
   box-shadow: 0 0 14px lightgray;
-}
-
-.text {
-  font-size: 12pt;
-  line-height: 1.5em;
-  color: white;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-#legend, #info {
-  font-family: "Droid Sans Mono", sans-serif;
-}
-
-#container, #descr {
-  font-family: "Tinos", serif;
-}
-
-#container, #info {
-  text-align: center;
-  vertical-align: middle;
-}
-
-#legend, #descr {
-  width: 270pt;
-  vertical-align: top;
-}
-
-#legend {
-  text-align: left;
-  padding-right: 0px;
-}
-
-#legend:hover {
-  padding-right: 1px;
-}
-
-#cats {
-  position: absolute;
-}
-
-#spiel {
-  position: absolute;
-  white-space: normal;
-  text-align: justify;
-  padding: 1em;
-}
-
-#bar {
-  height: 120px;
-}
-
-#container {
-  margin: auto;
-  border-spacing: 40px 0px;
-  height: 100%;
 }
 
 .label img {
   height: 80px;
   width: 80px;
 }
-
 .label div {
   margin-top: -1em;
 }
-
 .label img:first-of-type {
   position: absolute;
 }
-
 .label.used, .label:hover {
   text-shadow: 0px 0px 1em white, 0px 0px 1em white, 0px 0px 1em white;
 }
-
 .label:not(.used):not(:hover) > img:first-of-type {
   opacity: 0;
 }
-
 .label.used > img:last-of-type, .label:hover > img:last-of-type {
   opacity: 0;
 }
@@ -166,6 +128,24 @@ var lctx, loctx, gsize, lsize, minsize, select = null, zoom, enable = true, inte
 interval = setInterval(function() {
   $('#info').text(($('#info').text() + '.').replace('....', ''));
 }, 500);
+
+var spiel, slist = [ [], [], [] ];
+function makespiel(descs) {
+  spiel = function(i, which, add) {
+    if(add)
+      slist[i].push(which);
+    else {
+      var j = slist[i].indexOf(which);
+      if(j > -1)
+        slist[i].splice(j, 1);
+    }
+    for(var i = slist.length - 1; i >= 0; --i)
+      if(slist[i].length) {
+        $('#spiel').html(descs[slist[i][slist[i].length - 1].toLowerCase()]);
+        break;
+      }
+  };
+}
 
 function main() {
   lctx = $('#line')[0].getContext('2d');
@@ -181,7 +161,7 @@ function main() {
   $(document).mousemove(function(event) {
     select = [ event.pageX - $('#lover').offset().left,
                event.pageY - $('#lover').offset().top ];
-  }).mouseout(function() {
+  }).mouseout(function(event) {
     select = null;
   }).keypress(function(event) {
     switch(event.which) {
@@ -196,30 +176,30 @@ function main() {
     clearInterval(interval);
     var cg = new Callgrind(nodes);
     $.getJSON('config.json', function(config) {
-      $('#spiel').html(config.description._main);
+      makespiel(config.description);
+      spiel(0, '_main', true);
       $('#info').html('&nbsp;');
       for(var id in config.binary) {
         var fn = config.binary[id],
             dim = function(x) { return { width: x, height: x }; },
-            button = $('<a>').addClass('text label').attr('href', '#')
+            button = $('<a>').addClass('label serif').attr('href', '#')
                              .html('<img src="logos/' + id + ' s.png">' +
                                    '<img src="logos/' + id + '.png">' +
                                    '<div>' + id + '</div>');
-        $('<td>').html(button).appendTo('#container tr');
-        button.toggle((function(fn, button) {
+        $('<td>').html(button).appendTo('#menu tr');
+        button.toggle((function(fn, button, id) {
           return function() {
-            $(window).resize();
             button.addClass('used');
             cg.add(fn);
-            $('#spiel').html(config.description[fn]);
+            spiel(1, id, true);
           };
-        })(fn, button), (function(fn, button) {
+        })(fn, button, id), (function(fn, button, id) {
           return function() {
-            $(window).resize();
             button.removeClass('used');
             cg.remove(fn);
+            spiel(1, id, false);
           }
-        })(fn, button));
+        })(fn, button, id));
         function ex(size) {
           var logo = button.find('img');
           return function() {
@@ -241,31 +221,17 @@ WebFontConfig = {
   </script>
   <script async="async" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 </head>
-<body class="full">
-  <table id="all" class="full">
-    <tr>
-      <td rowspan="2" class="text" id="legend">
-        <div id="cats"></div>
-      </td>
-      <td id="bar">
-        <table id="container">
-          <tr></tr>
-        </table>
-      </td>
-      <td rowspan="2" class="text" id="descr">
-        <div id="spiel"></div>
-      </td>
-    </tr>
-    <tr class="full">
-      <td id="plot">
-        <div class="full">
-          <canvas class="full" id="line"></canvas>
-          <canvas class="full" id="lover"></canvas>
-          <div class="text" id="info">loading</div>
-          <div class="full" id="plotc"></div>
-        </div>
-      </td>
-    </tr>
+<body>
+  <div id="container">
+    <canvas id="line"></canvas>
+    <div id="plot"></div>
+    <canvas id="lover"></canvas>
+  </div>
+  <div id="legend" class="mono"></div>
+  <div id="spiel" class="serif"></div>
+  <div class="mono" id="info">loading</div>
+  <table id="menu" class="serif">
+    <tr></tr>
   </table>
 </body>
 </html>
