@@ -28,9 +28,10 @@ body > div { position: fixed; }
 .serif { font-family: "Tinos", serif;               }
 
 #legend, #spiel {
-  width: 270px;
+  width: 320px;
   top: 0;
   bottom: 0;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 #legend       { left: 0;            }
@@ -52,7 +53,13 @@ body > div { position: fixed; }
 #menu {
   margin: auto;
   border-spacing: 40px 0px;
-  height: 135px;
+  height: 140px;
+}
+
+#info, #container {
+  left: 300px;
+  right: 300px;
+  bottom: 0;
 }
 #info {
   border: 2px solid lightgray;
@@ -60,16 +67,9 @@ body > div { position: fixed; }
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  left: 270px;
-  right: 270px;
-  bottom: 0;
 }
-
 #container {
-  left: 270px;
-  right: 270px;
-  top: 135px;
-  bottom: 0;
+  top: 140px;
   overflow: hidden;
 }
 #container > * {
